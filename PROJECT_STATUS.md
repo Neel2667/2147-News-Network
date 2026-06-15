@@ -26,6 +26,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Created first HTML visual preview template.
 - Added realism guide for names, organizations, quotes, sources, timestamps, and continuity.
 - Added causal event engine plan and initial data files for events, people, organizations, locations, and source agencies.
+- Added curated chat context file so future agents can understand the planning history without reading raw chat logs.
 
 ## In Progress
 

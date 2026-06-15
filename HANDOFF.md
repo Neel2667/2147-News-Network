@@ -108,7 +108,8 @@ Visual style:
 Read in this order:
 1. README.md
 2. PROJECT_STATUS.md
-3. docs/MASTER_PLAN.md
+3. docs/CHAT_CONTEXT.md
+4. docs/MASTER_PLAN.md
 4. docs/CONTENT_BIBLE.md
 5. docs/VISUAL_POLICY.md
 6. docs/PRODUCTION_PIPELINE.md
@@ -130,3 +131,8 @@ The user wants the channel to feel extremely real and specific. Avoid vague refe
 ## Causal Event Engine Update
 
 The user wants news to emerge from cause-and-effect, not isolated headline generation. Every event should have causes and ripple effects. Use data/events.json as the beginning of the world timeline. Read docs/CAUSAL_EVENT_ENGINE.md before changing the generator.
+
+
+## Chat Context File
+
+A curated planning record has been saved at docs/CHAT_CONTEXT.md. It excludes secrets and should be read by any future agent before continuing.
