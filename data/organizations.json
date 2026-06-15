@@ -1,0 +1,60 @@
+[
+  {
+    "id": "org_2147_news_network",
+    "name": "2147 News Network",
+    "type": "orbital news broadcaster",
+    "headquarters": "New Delhi Orbital Broadcast Hub",
+    "founded": 2124
+  },
+  {
+    "id": "org_mars_civic_council",
+    "name": "Mars Civic Council",
+    "type": "planetary civil administration",
+    "headquarters": "Valles Marineris Capital Zone",
+    "founded": 2091,
+    "current_leader": "Leila Moreau"
+  },
+  {
+    "id": "org_earth_union_senate",
+    "name": "Earth Union Senate",
+    "type": "planetary legislative body",
+    "headquarters": "Geneva Continuity District",
+    "founded": 2076
+  },
+  {
+    "id": "org_lunar_resource_authority",
+    "name": "Lunar Resource Authority",
+    "type": "lunar industrial regulator",
+    "headquarters": "Lunar South Pole Administrative Ring",
+    "founded": 2088
+  },
+  {
+    "id": "org_lunar_workers_guild",
+    "name": "Lunar Workers Guild",
+    "type": "off-world labor federation",
+    "headquarters": "Shackleton Habitat Cluster",
+    "founded": 2112
+  },
+  {
+    "id": "org_helion_grid_systems",
+    "name": "Helion Grid Systems",
+    "type": "fusion infrastructure corporation",
+    "headquarters": "Singapore Arcology Finance District",
+    "founded": 2089,
+    "current_ceo": "Jiang Lau"
+  },
+  {
+    "id": "org_synthetic_rights_tribunal",
+    "name": "Synthetic Rights Tribunal",
+    "type": "civil rights court for synthetic and augmented persons",
+    "headquarters": "Geneva Continuity Court Complex",
+    "founded": 2131
+  },
+  {
+    "id": "org_orbital_transit_authority",
+    "name": "Orbital Transit Authority",
+    "type": "interplanetary cargo and passenger transit regulator",
+    "headquarters": "Low Earth Orbit Transit Ring",
+    "founded": 2098
+  }
+]

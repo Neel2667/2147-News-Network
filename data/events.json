@@ -1,0 +1,99 @@
+[
+  {
+    "id": "event_2136_oxygen_credit_protests",
+    "date": "2136-04-22",
+    "time": "11:20 Lunar Standard Time",
+    "title": "Oxygen-credit protests spread across Lunar South Pole mining belt",
+    "category": "labor_action",
+    "location_id": "loc_lunar_south_pole_mining_belt",
+    "actors": ["org_lunar_resource_authority", "org_lunar_workers_guild"],
+    "summary": "Lunar miners protest rising oxygen-credit costs after three consecutive habitat maintenance surcharges.",
+    "causes": [],
+    "direct_effects": [
+      "Lunar Resource Authority introduces temporary oxygen subsidy",
+      "Mars labor groups cite Luna as warning about off-world governance"
+    ],
+    "ripple_seeds": [
+      {
+        "type": "labor_action",
+        "probability": 0.8,
+        "delay_days": 30,
+        "description": "Off-world worker guilds coordinate over life-support pricing rights."
+      }
+    ],
+    "status": "archive",
+    "importance": 8,
+    "episode_refs": []
+  },
+  {
+    "id": "event_2142_mars_trade_autonomy_dispute",
+    "date": "2142-09-03",
+    "time": "16:05 UTC-Orbital",
+    "title": "Mars Civic Council challenges Earth Union cargo tariff authority",
+    "category": "legal_challenge",
+    "location_id": "loc_valles_marineris_capital_zone",
+    "actors": ["org_mars_civic_council", "org_earth_union_senate", "org_orbital_transit_authority"],
+    "summary": "Mars officials argue Earth Union cargo tariffs violate the 2118 interplanetary trade corridor agreement.",
+    "causes": ["event_2136_oxygen_credit_protests"],
+    "direct_effects": [
+      "Earth-Mars cargo insurers increase premiums",
+      "Mars autonomy movement gains support in settlement zones"
+    ],
+    "ripple_seeds": [
+      {
+        "type": "political_decision",
+        "probability": 0.9,
+        "delay_days": 180,
+        "description": "Mars Civic Council prepares formal autonomy referendum framework."
+      }
+    ],
+    "status": "archive",
+    "importance": 9,
+    "episode_refs": []
+  },
+  {
+    "id": "event_2147_001_mars_referendum_final_cycle",
+    "date": "2147-10-18",
+    "time": "19:42 UTC-Orbital",
+    "title": "Mars enters final voting cycle in independence referendum",
+    "category": "space_politics",
+    "location_id": "loc_valles_marineris_capital_zone",
+    "actors": ["org_mars_civic_council", "org_earth_union_senate", "person_leila_moreau", "person_ilyan_sen"],
+    "summary": "Mars begins the final voting cycle on whether to become the first independent off-world republic.",
+    "causes": ["event_2136_oxygen_credit_protests", "event_2142_mars_trade_autonomy_dispute"],
+    "direct_effects": [
+      "Earth Union legal review begins",
+      "Mars settlement markets suspend long-term infrastructure contracts",
+      "Outer Belt Cooperative offers to observe post-vote talks"
+    ],
+    "ripple_seeds": [
+      {
+        "type": "political_response",
+        "probability": 0.9,
+        "delay_days": 2,
+        "description": "Earth Union Senate schedules emergency hearing on Mars sovereignty."
+      },
+      {
+        "type": "market_reaction",
+        "probability": 0.75,
+        "delay_days": 1,
+        "description": "Helion Grid Systems warns investors about Earth-Mars energy-contract uncertainty."
+      },
+      {
+        "type": "labor_action",
+        "probability": 0.55,
+        "delay_days": 7,
+        "description": "Lunar Workers Guild links oxygen-credit demands to Mars autonomy debate."
+      },
+      {
+        "type": "legal_challenge",
+        "probability": 0.65,
+        "delay_days": 5,
+        "description": "Synthetic Rights Tribunal receives petition on voting rights for AI residents of Mars."
+      }
+    ],
+    "status": "active",
+    "importance": 10,
+    "episode_refs": ["2147-001"]
+  }
+]

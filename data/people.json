@@ -1,0 +1,46 @@
+[
+  {
+    "id": "person_anaya_rao",
+    "name": "Anaya Rao",
+    "role": "Senior Anchor",
+    "organization": "2147 News Network",
+    "location": "New Delhi Orbital Broadcast Hub",
+    "voice_style": "calm, authoritative, precise"
+  },
+  {
+    "id": "person_jiang_lau",
+    "name": "Jiang Lau",
+    "role": "Chief Executive Officer",
+    "organization": "Helion Grid Systems",
+    "location": "Singapore Arcology Finance District",
+    "stance": "Supports stable energy-grid treaties and warns against sudden trade shocks",
+    "voice_style": "careful, corporate, data-focused"
+  },
+  {
+    "id": "person_leila_moreau",
+    "name": "Leila Moreau",
+    "role": "President",
+    "organization": "Mars Civic Council",
+    "location": "Valles Marineris Capital Zone",
+    "stance": "Supports Martian sovereignty through negotiated legal transition",
+    "voice_style": "measured, political, historic"
+  },
+  {
+    "id": "person_ilyan_sen",
+    "name": "Dr. Ilyan Sen",
+    "role": "Political Historian",
+    "organization": "University of Valles Marineris",
+    "location": "Mars Colony Seven Academic District",
+    "stance": "Frames Mars independence as political maturation rather than separation",
+    "voice_style": "analytical, academic, concise"
+  },
+  {
+    "id": "person_selene_armitage",
+    "name": "Selene Armitage",
+    "role": "Senior Counsel",
+    "organization": "Synthetic Rights Tribunal",
+    "location": "Geneva Continuity Court Complex",
+    "stance": "Supports consent-based memory and identity rights for synthetic persons",
+    "voice_style": "legal, precise, rights-focused"
+  }
+]

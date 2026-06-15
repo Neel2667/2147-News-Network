@@ -1,0 +1,32 @@
+[
+  {
+    "id": "source_mars_election_board",
+    "name": "Mars Civic Council Election Board",
+    "trust_level": "official provisional count",
+    "used_for": ["elections", "referendums", "settlement turnout"]
+  },
+  {
+    "id": "source_earth_union_records",
+    "name": "Earth Union Senate Records Office",
+    "trust_level": "official legislative records",
+    "used_for": ["votes", "hearings", "bills", "senate statements"]
+  },
+  {
+    "id": "source_lunar_labor_desk",
+    "name": "Lunar Resource Authority Labor Desk",
+    "trust_level": "official labor statistics",
+    "used_for": ["strikes", "oxygen credits", "worker safety"]
+  },
+  {
+    "id": "source_orbital_transit_incident_desk",
+    "name": "Orbital Transit Authority Incident Desk",
+    "trust_level": "official transit alerts",
+    "used_for": ["cargo delays", "transit shutdowns", "orbital safety"]
+  },
+  {
+    "id": "source_outer_belt_trade_registry",
+    "name": "Outer Belt Trade Registry",
+    "trust_level": "market registry",
+    "used_for": ["asteroid commodities", "cargo insurance", "trade volume"]
+  }
+]

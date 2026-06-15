@@ -25,6 +25,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Created first episode seed data.
 - Created first HTML visual preview template.
 - Added realism guide for names, organizations, quotes, sources, timestamps, and continuity.
+- Added causal event engine plan and initial data files for events, people, organizations, locations, and source agencies.
 
 ## In Progress
 
@@ -51,7 +52,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - editable scene list
    - scene template selection
    - export JSON/text files
-4. Add realism database files for recurring people, organizations, locations, and source agencies.
+4. Connect app.py to data/events.json and generate stories from event ripples.
 5. Add more visual templates:
    - anchor desk
    - Mars dashboard

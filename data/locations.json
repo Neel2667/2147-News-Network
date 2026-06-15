@@ -1,0 +1,37 @@
+[
+  {
+    "id": "loc_new_delhi_orbital_broadcast_hub",
+    "name": "New Delhi Orbital Broadcast Hub",
+    "type": "orbital media facility",
+    "region": "Low Earth Orbit",
+    "description": "Primary 2147 News Network transmission center serving Earth, Luna, Mars, and Outer Belt feeds."
+  },
+  {
+    "id": "loc_valles_marineris_capital_zone",
+    "name": "Valles Marineris Capital Zone",
+    "type": "Martian administrative capital",
+    "region": "Mars",
+    "description": "Central political district of the Mars Civic Council."
+  },
+  {
+    "id": "loc_lunar_south_pole_mining_belt",
+    "name": "Lunar South Pole Mining Belt",
+    "type": "lunar industrial region",
+    "region": "Luna",
+    "description": "Cluster of helium-3, ice, and regolith processing sites near permanently shadowed craters."
+  },
+  {
+    "id": "loc_singapore_arcology_finance_district",
+    "name": "Singapore Arcology Finance District",
+    "type": "high-density financial district",
+    "region": "Earth",
+    "description": "Major energy, insurance, and orbital logistics finance hub."
+  },
+  {
+    "id": "loc_geneva_continuity_court_complex",
+    "name": "Geneva Continuity Court Complex",
+    "type": "international legal district",
+    "region": "Earth",
+    "description": "Home to courts handling identity, memory, synthetic rights, and interplanetary jurisdiction cases."
+  }
+]

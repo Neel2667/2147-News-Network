@@ -113,9 +113,20 @@ Read in this order:
 5. docs/VISUAL_POLICY.md
 6. docs/PRODUCTION_PIPELINE.md
 7. docs/REALISM_GUIDE.md
-8. episodes/episode-001-mars-independence.json
+8. docs/CAUSAL_EVENT_ENGINE.md
+9. data/events.json
+10. data/people.json
+11. data/organizations.json
+12. data/locations.json
+13. data/source_agencies.json
+14. episodes/episode-001-mars-independence.json
 
 
 ## Realism Update
 
 The user wants the channel to feel extremely real and specific. Avoid vague references like "the CEO said". Use full names, titles, organizations, locations, timestamps, and source labels. Example: "Helion Grid Systems CEO Jiang Lau said..." Read docs/REALISM_GUIDE.md before generating scripts.
+
+
+## Causal Event Engine Update
+
+The user wants news to emerge from cause-and-effect, not isolated headline generation. Every event should have causes and ripple effects. Use data/events.json as the beginning of the world timeline. Read docs/CAUSAL_EVENT_ENGINE.md before changing the generator.
