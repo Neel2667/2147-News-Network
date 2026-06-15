@@ -112,4 +112,10 @@ Read in this order:
 4. docs/CONTENT_BIBLE.md
 5. docs/VISUAL_POLICY.md
 6. docs/PRODUCTION_PIPELINE.md
-7. episodes/episode-001-mars-independence.json
+7. docs/REALISM_GUIDE.md
+8. episodes/episode-001-mars-independence.json
+
+
+## Realism Update
+
+The user wants the channel to feel extremely real and specific. Avoid vague references like "the CEO said". Use full names, titles, organizations, locations, timestamps, and source labels. Example: "Helion Grid Systems CEO Jiang Lau said..." Read docs/REALISM_GUIDE.md before generating scripts.

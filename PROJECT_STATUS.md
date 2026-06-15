@@ -24,6 +24,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Created initial Hugging Face/Gradio app scaffold.
 - Created first episode seed data.
 - Created first HTML visual preview template.
+- Added realism guide for names, organizations, quotes, sources, timestamps, and continuity.
 
 ## In Progress
 
@@ -50,7 +51,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - editable scene list
    - scene template selection
    - export JSON/text files
-4. Add more visual templates:
+4. Add realism database files for recurring people, organizations, locations, and source agencies.
+5. Add more visual templates:
    - anchor desk
    - Mars dashboard
    - breaking news alert
