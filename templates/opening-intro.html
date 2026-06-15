@@ -1,0 +1,86 @@
+<div class="nn2147-preview">
+  <style>
+    .nn2147-preview {
+      width: 100%;
+      min-height: 420px;
+      background: radial-gradient(circle at center, #10224b 0%, #050914 58%, #010208 100%);
+      color: white;
+      overflow: hidden;
+      position: relative;
+      border-radius: 18px;
+      font-family: Inter, system-ui, sans-serif;
+      display: grid;
+      place-items: center;
+    }
+    .nn2147-preview:before {
+      content: "";
+      position: absolute;
+      inset: -50%;
+      background-image: linear-gradient(rgba(0,229,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,.08) 1px, transparent 1px);
+      background-size: 44px 44px;
+      transform: perspective(600px) rotateX(60deg);
+      animation: gridMove 8s linear infinite;
+    }
+    @keyframes gridMove { to { transform: perspective(600px) rotateX(60deg) translateY(44px); } }
+    .orb {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,229,255,.9);
+      box-shadow: 0 0 70px rgba(0,229,255,.45), inset 0 0 45px rgba(0,229,255,.25);
+      position: relative;
+      animation: pulse 3s ease-in-out infinite;
+    }
+    .orb:before, .orb:after {
+      content: "";
+      position: absolute;
+      inset: 20%;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.35);
+    }
+    .orb:after {
+      inset: 45% 0;
+    }
+    @keyframes pulse { 50% { transform: scale(1.04); } }
+    .title2147 {
+      position: absolute;
+      text-align: center;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .title2147 h1 {
+      margin: 0;
+      font-size: clamp(38px, 8vw, 82px);
+      line-height: .9;
+      text-shadow: 0 0 30px rgba(0,229,255,.85);
+    }
+    .title2147 p {
+      margin: 16px 0 0;
+      color: #ffb020;
+      font-weight: 800;
+    }
+    .ticker2147 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 12px;
+      background: rgba(0,0,0,.55);
+      color: #00e5ff;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: 700;
+    }
+    .ticker2147 span {
+      display: inline-block;
+      animation: ticker 18s linear infinite;
+    }
+    @keyframes ticker { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+  </style>
+  <div class="orb"></div>
+  <div class="title2147">
+    <h1>2147<br>NEWS</h1>
+    <p>Broadcasting from tomorrow</p>
+  </div>
+  <div class="ticker2147"><span>EARTH • LUNA • MARS • OUTER BELT — LIVE FROM THE EARTH-ORBIT MEDIA RING — END-TO-END TRANSMISSION VERIFIED</span></div>
+</div>

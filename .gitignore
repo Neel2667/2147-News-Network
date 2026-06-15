@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Secrets
+*.pem
+*.key
+secrets.json
+credentials.json
+.netrc
+
+# Generated video/output
+output/
+renders/
+exports/
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

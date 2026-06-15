@@ -1,0 +1,77 @@
+{
+  "episode_id": "2147-001",
+  "title": "Mars Votes for Independence From Earth",
+  "youtube_title": "Mars Votes for Independence From Earth | 2147 News Network",
+  "runtime_target_minutes": 8,
+  "year": 2147,
+  "broadcast_location": "Earth-Orbit Media Ring",
+  "disclaimer": "This is a fictional speculative news broadcast set in the year 2147.",
+  "headlines": [
+    "Mars enters final voting cycle in historic independence referendum.",
+    "Lunar miners demand oxygen-credit reform as strike enters ninth day.",
+    "Pacific floating cities activate storm shields before superstorm season.",
+    "Earth Union Senate passes sweeping neural privacy treaty.",
+    "Europa ocean probe detects repeating acoustic signal beneath the ice."
+  ],
+  "main_story": {
+    "headline": "Mars enters final voting cycle in historic independence referendum",
+    "summary": "After decades of autonomy disputes, Mars residents vote on whether to form the first fully independent off-world republic.",
+    "data_points": {
+      "mars_population": "38.2 million",
+      "eligible_voters": "29.4 million",
+      "projected_turnout": "91%",
+      "independence_support": "57%",
+      "union_support": "39%",
+      "undecided": "4%"
+    },
+    "fictional_quote": {
+      "person": "Dr. Ilyan Sen",
+      "title": "Political historian, University of Valles Marineris",
+      "quote": "Mars is no longer an outpost. It is a civilization asking for political recognition."
+    }
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "duration_seconds": 15,
+      "template": "opening_intro",
+      "visuals": "Rotating Earth grid, cyan transmission lines, 2147 News Network logo.",
+      "narration": "This is 2147 News Network, broadcasting from the Earth-Orbit Media Ring."
+    },
+    {
+      "id": "headlines",
+      "duration_seconds": 45,
+      "template": "headline_cards",
+      "visuals": "Five fast animated headline cards with ticker.",
+      "narration": "Tonight: Mars votes, Luna strikes, ocean cities brace for impact, and Europa sends back a mystery signal."
+    },
+    {
+      "id": "main_mars",
+      "duration_seconds": 90,
+      "template": "mars_dashboard",
+      "visuals": "Mars globe, colony markers, referendum dashboard, voting bars.",
+      "narration": "After more than eight decades under Earth Union administration, Mars is entering the final voting cycle of its independence referendum."
+    },
+    {
+      "id": "timeline",
+      "duration_seconds": 60,
+      "template": "timeline",
+      "visuals": "Animated timeline from early Mars bases to 2147 referendum.",
+      "narration": "The question of Martian sovereignty has been building for generations."
+    },
+    {
+      "id": "quote",
+      "duration_seconds": 30,
+      "template": "quote_card",
+      "visuals": "Expert quote card with waveform and silhouette icon.",
+      "narration": "Political historian Dr. Ilyan Sen says Mars is no longer an outpost."
+    },
+    {
+      "id": "closing",
+      "duration_seconds": 30,
+      "template": "closing_transmission",
+      "visuals": "Earth and Mars split-screen, end transmission animation.",
+      "narration": "For Earth, Luna, Mars, and the Outer Belt, this is 2147 News Network. End transmission."
+    }
+  ]
+}
