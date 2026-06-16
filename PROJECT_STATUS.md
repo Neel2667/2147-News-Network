@@ -273,3 +273,9 @@ The MVP is complete when a user can:
 - Updated pilot scene plan to use all approved variants.
 - Added `s05b Archive Context` scene using archive variant.
 - Regenerated `static/pilot-v2-approval.html`.
+
+
+## Pilot Studio Wall Preview Video
+
+- Generated `outputs/pilot-preview/2147-pilot-studio-wall-preview.mp4` using approved Studio Wall variants.
+- Added generator script `scripts/generate_pilot_studio_wall_preview.py`.
