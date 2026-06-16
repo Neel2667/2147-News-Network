@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import re
+import zipfile
 from pathlib import Path
 from typing import Any
 
@@ -35,6 +36,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+EXPORT_DIR.mkdir(exist_ok=True)
+app.mount("/exports", StaticFiles(directory=EXPORT_DIR), name="exports")
 app.mount("/renders", StaticFiles(directory=RENDER_DIR), name="renders")
 
 
@@ -368,6 +371,16 @@ def build_template_context(*contexts: dict[str, Any]) -> dict[str, str]:
     return {k: str(v) for k, v in merged.items() if v is not None}
 
 
+def zip_directory(source_dir: Path, zip_path: Path) -> None:
+    if zip_path.exists():
+        zip_path.unlink()
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        for file_path in source_dir.rglob("*"):
+            if file_path == zip_path or file_path.is_dir():
+                continue
+            zf.write(file_path, file_path.relative_to(source_dir))
+
+
 def scene_render_context(scene: dict[str, Any]) -> dict[str, str]:
     return build_template_context(scene.get("template_controls", {}), {
         "headline": scene.get("headline") or scene.get("scene") or "2147 News Network",
@@ -470,11 +483,14 @@ Total runtime: {manifest['total_runtime_seconds']} seconds
 - `scenes/*.html` - standalone video-ready scene pages
 """
     (package_dir / "README.md").write_text(readme, encoding="utf-8")
+    zip_path = package_dir / f"{package_id}-render-package.zip"
+    zip_directory(package_dir, zip_path)
     return {
         "status": "ok",
         "package_id": package_id,
         "manifest_url": f"/renders/{package_id}/manifest.json",
         "readme_url": f"/renders/{package_id}/README.md",
+        "zip_url": f"/renders/{package_id}/{package_id}-render-package.zip",
         "scene_urls": [s["url"] for s in manifest_scenes],
         "manifest": manifest,
     }
@@ -585,7 +601,24 @@ def api_create_render_package(req: RenderPackageRequest) -> JSONResponse:
 @app.post("/api/export")
 def api_export(req: ExportRequest) -> JSONResponse:
     EXPORT_DIR.mkdir(exist_ok=True)
-    (EXPORT_DIR / "episode-script.txt").write_text(req.script, encoding="utf-8")
-    (EXPORT_DIR / "scene-plan.json").write_text(json.dumps(req.scene_plan, indent=2), encoding="utf-8")
-    (EXPORT_DIR / "youtube-metadata.json").write_text(json.dumps(req.metadata, indent=2), encoding="utf-8")
-    return JSONResponse({"status": "ok", "files": ["exports/episode-script.txt", "exports/scene-plan.json", "exports/youtube-metadata.json"]})
+    script_path = EXPORT_DIR / "episode-script.txt"
+    scene_path = EXPORT_DIR / "scene-plan.json"
+    metadata_path = EXPORT_DIR / "youtube-metadata.json"
+    readme_path = EXPORT_DIR / "README.md"
+    script_path.write_text(req.script, encoding="utf-8")
+    scene_path.write_text(json.dumps(req.scene_plan, indent=2, ensure_ascii=False), encoding="utf-8")
+    metadata_path.write_text(json.dumps(req.metadata, indent=2, ensure_ascii=False), encoding="utf-8")
+    readme_path.write_text(
+        "# 2147 News Network Export\n\nFiles in this package:\n\n- episode-script.txt\n- scene-plan.json\n- youtube-metadata.json\n",
+        encoding="utf-8",
+    )
+    zip_path = EXPORT_DIR / "2147-production-export.zip"
+    zip_directory(EXPORT_DIR, zip_path)
+    files = [
+        {"name": "episode-script.txt", "url": "/exports/episode-script.txt"},
+        {"name": "scene-plan.json", "url": "/exports/scene-plan.json"},
+        {"name": "youtube-metadata.json", "url": "/exports/youtube-metadata.json"},
+        {"name": "README.md", "url": "/exports/README.md"},
+        {"name": "2147-production-export.zip", "url": "/exports/2147-production-export.zip"},
+    ]
+    return JSONResponse({"status": "ok", "files": files, "zip_url": "/exports/2147-production-export.zip"})

@@ -107,3 +107,12 @@ Read:
 ```text
 docs/RENDER_EXPORT_WORKFLOW.md
 ```
+
+
+## Downloads
+
+The app provides download links for exported production files and render packages. See:
+
+```text
+docs/DOWNLOADS_AND_PACKAGES.md
+```

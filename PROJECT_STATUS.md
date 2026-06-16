@@ -37,6 +37,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Built Science Desk, Earth Climate Map, and Lunar Report premium templates with template-specific controls.
 - Added polished one-click pilot loader, dashboard pilot card, health endpoint, and Hugging Face Docker deployment guide.
 - Built render/export workflow that creates standalone 1920x1080 scene HTML files, manifest.json, README, and draft.json for OBS/browser recording.
+- Added download buttons/links and ZIP bundles for exported production files and render packages.
 
 
 ## In Progress
@@ -65,8 +66,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - scene template selection
    - export JSON/text files
 4. Connect app.py to data/events.json and generate stories from event ripples.
-5. Add download buttons for exported production packages.
-6. Add optional Playwright/FFmpeg automated scene recording later.
+5. Add optional Playwright/FFmpeg automated scene recording later.
+6. Add persistent storage/download strategy for Hugging Face production use.
 6. Add video render/export workflow later.
    - anchor desk
    - Mars dashboard

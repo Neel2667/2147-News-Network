@@ -187,3 +187,8 @@ The custom app now has a one-click Load Pilot Episode button in the top bar and 
 ## Render Export Workflow
 
 The app now has a render package workflow via `POST /api/render/package` and a UI button in Save, Load & Export Center. It creates standalone 1920x1080 HTML scene pages under `render_packages/{episode_id}/`, served from `/renders/{episode_id}/`. Read `docs/RENDER_EXPORT_WORKFLOW.md` and `reports/REPORT_2026-06-16_RENDER_EXPORT_WORKFLOW.md`.
+
+
+## Download Buttons
+
+The Export Center now shows download links for exported files and render packages, including ZIP bundles. `/exports` serves production exports; `/renders` serves render packages. Runtime artifacts are ignored by Git. Read `docs/DOWNLOADS_AND_PACKAGES.md`.

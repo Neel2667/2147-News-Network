@@ -26,3 +26,4 @@ exports/
 .DS_Store
 .vscode/
 .idea/
+render_packages/

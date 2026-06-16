@@ -402,9 +402,10 @@ async function createRenderPackage(){
   })});
   $('renderStatus').textContent = `Render package created: ${result.package_id} • ${result.manifest.scene_count} scenes • ${result.manifest.total_runtime_seconds}s`;
   const links = [
-    `<a href="${result.manifest_url}" target="_blank">Open manifest.json</a>`,
-    `<a href="${result.readme_url}" target="_blank">Open render README</a>`,
-    ...result.scene_urls.map((url, index)=>`<a href="${url}" target="_blank">Open Scene ${String(index+1).padStart(2,'0')} Render Page</a>`)
+    `<a href="${result.zip_url}" download><span>Download full render package ZIP</span><span>ZIP</span></a>`,
+    `<a href="${result.manifest_url}" target="_blank" download><span>Download/Open manifest.json</span><span>JSON</span></a>`,
+    `<a href="${result.readme_url}" target="_blank" download><span>Download/Open render README</span><span>MD</span></a>`,
+    ...result.scene_urls.map((url, index)=>`<a href="${url}" target="_blank" download><span>Open Scene ${String(index+1).padStart(2,'0')} Render Page</span><span>HTML</span></a>`)
   ];
   $('renderLinks').innerHTML = links.join('');
 }
@@ -416,7 +417,8 @@ async function exportDraft(){
     scene_plan: state.currentDraft.scene_plan,
     metadata: state.currentDraft.metadata
   })});
-  $('exportStatus').textContent = `Exported: ${result.files.join(', ')}`;
+  $('exportStatus').textContent = `Exported ${result.files.length} production files.`;
+  $('exportLinks').innerHTML = result.files.map(file => `<a href="${file.url}" download target="_blank"><span>${file.name}</span><span>${file.name.endsWith('.zip') ? 'ZIP' : 'Download'}</span></a>`).join('');
 }
 
 $('analyzeBtn').addEventListener('click', analyzeEvent);
