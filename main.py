@@ -267,6 +267,68 @@ def load_saved_episode(episode_id: str) -> dict[str, Any]:
     return read_json(path, {})
 
 
+def template_default_context() -> dict[str, str]:
+    return {
+        "headline": "Mars Enters Final Voting Cycle",
+        "summary": "A historic referendum could reshape political authority across Earth, Mars, Luna, and the Outer Belt.",
+        "ticker": "MARS TURNOUT PROJECTION RISES TO 91% • LUNAR OXYGEN-CREDIT STRIKE ENTERS NINTH DAY • EUROPA SIGNAL UNDER REVIEW",
+        "lower_name": "ANAYA RAO",
+        "lower_title": "Senior Anchor • Earth-Orbit Media Ring",
+        "source": "Mars Civic Council Election Board",
+        "headline1": "Mars Enters Final Voting Cycle",
+        "headline2": "CEO Jiang Lau Warns of Energy Contract Instability",
+        "headline3": "Synthetic Rights Tribunal Receives AI Voting Petition",
+        "timeline_year_1": "2136",
+        "timeline_title_1": "Lunar oxygen-credit protests",
+        "timeline_desc_1": "Life-support pricing becomes a political issue across off-world settlements.",
+        "timeline_year_2": "2142",
+        "timeline_title_2": "Mars challenges cargo tariff authority",
+        "timeline_desc_2": "The Mars Civic Council disputes Earth Union control over interplanetary trade corridors.",
+        "timeline_year_3": "2147",
+        "timeline_title_3": "Final referendum cycle begins",
+        "timeline_desc_3": "The autonomy dispute becomes a direct sovereignty vote across 42 Martian settlement zones.",
+        "timeline_year_4": "Next",
+        "timeline_title_4": "Emergency legal and market ripples",
+        "timeline_desc_4": "Earth Union committees, energy companies, labor guilds, and tribunals prepare responses.",
+        "finance_person_name": "JIANG LAU",
+        "finance_person_title": "CEO • Helion Grid Systems",
+        "finance_quote": "Energy markets can absorb political change. They cannot absorb legal uncertainty across two planets.",
+        "metric_1_value": "+18.6%",
+        "metric_1_label": "Cargo Insurance",
+        "metric_2_value": "14 mo.",
+        "metric_2_label": "Contract Delay Risk",
+        "metric_3_value": "−4.2%",
+        "metric_3_label": "Mars Infra Bonds",
+        "finance_location": "Singapore Arcology Finance District",
+        "legal_case_title": "Petition for referendum certification review",
+        "legal_case_desc": "Filed on behalf of registered memory-continuity residents in Martian settlement zones.",
+        "legal_person_name": "SELENE ARMITAGE",
+        "legal_person_title": "Senior Counsel • Synthetic Rights Tribunal",
+        "legal_quote": "Memory deletion without consent is no longer a technical action. It is a civil rights violation.",
+        "legal_metric_1_value": "42",
+        "legal_metric_1_label": "Settlement Zones",
+        "legal_metric_2_value": "3.8M",
+        "legal_metric_2_label": "Synthetic Residents",
+        "legal_metric_3_value": "Pending",
+        "legal_metric_3_label": "Jurisdiction",
+        "legal_metric_4_value": "2147-CV",
+        "legal_metric_4_label": "Case Track",
+        "legal_location": "Geneva Continuity Court Complex",
+        "breaking_status": "LIVE",
+        "breaking_time": "19:42",
+        "breaking_impact": "High",
+        "breaking_verification": "2147NN Editorial Desk",
+    }
+
+
+def build_template_context(*contexts: dict[str, Any]) -> dict[str, str]:
+    merged: dict[str, Any] = template_default_context()
+    for ctx in contexts:
+        if ctx:
+            merged.update(ctx)
+    return {k: str(v) for k, v in merged.items() if v is not None}
+
+
 @app.get("/", response_class=HTMLResponse)
 def home() -> HTMLResponse:
     return HTMLResponse((STATIC_DIR / "index.html").read_text(encoding="utf-8"))
@@ -310,15 +372,15 @@ def api_templates() -> JSONResponse:
 def api_template_preview(req: TemplatePreviewRequest) -> HTMLResponse:
     html = render_template(
         req.template_name,
-        headline=req.headline,
-        summary=req.summary,
-        ticker=req.ticker,
-        lower_name=req.lower_name,
-        lower_title=req.lower_title,
-        source=req.source,
-        headline1=req.headline,
-        headline2="CEO Jiang Lau Warns of Energy Contract Instability",
-        headline3="Synthetic Rights Tribunal Receives AI Voting Petition",
+        **build_template_context({
+            "headline": req.headline,
+            "summary": req.summary,
+            "ticker": req.ticker,
+            "lower_name": req.lower_name,
+            "lower_title": req.lower_title,
+            "source": req.source,
+            "headline1": req.headline,
+        }),
     )
     return HTMLResponse(html)
 
@@ -330,15 +392,15 @@ def api_scene_preview(req: ScenePreviewRequest) -> HTMLResponse:
     template_name = scene.get("template") or controls.get("template_name") or "premium-base.html"
     html = render_template(
         template_name,
-        headline=controls.get("headline") or scene.get("scene") or "Mars Enters Final Voting Cycle",
-        summary=controls.get("summary") or scene.get("purpose") or "A developing story from the 2147 causal timeline.",
-        ticker=controls.get("ticker") or "MARS TURNOUT PROJECTION RISES TO 91% • LUNAR OXYGEN-CREDIT STRIKE ENTERS NINTH DAY • EUROPA SIGNAL UNDER REVIEW",
-        lower_name=controls.get("lower_name") or "ANAYA RAO",
-        lower_title=controls.get("lower_title") or "Senior Anchor • Earth-Orbit Media Ring",
-        source=controls.get("source") or "Mars Civic Council Election Board",
-        headline1=controls.get("headline") or "Mars Enters Final Voting Cycle",
-        headline2="CEO Jiang Lau Warns of Energy Contract Instability",
-        headline3="Synthetic Rights Tribunal Receives AI Voting Petition",
+        **build_template_context(scene.get("template_controls", {}), controls, {
+            "headline": controls.get("headline") or scene.get("headline") or scene.get("scene") or "Mars Enters Final Voting Cycle",
+            "summary": controls.get("summary") or scene.get("summary") or scene.get("purpose") or "A developing story from the 2147 causal timeline.",
+            "ticker": controls.get("ticker") or scene.get("ticker"),
+            "lower_name": controls.get("lower_name") or scene.get("lower_name"),
+            "lower_title": controls.get("lower_title") or scene.get("lower_title"),
+            "source": controls.get("source") or scene.get("source"),
+            "headline1": controls.get("headline") or scene.get("headline") or scene.get("scene"),
+        }),
     )
     return HTMLResponse(html)
 

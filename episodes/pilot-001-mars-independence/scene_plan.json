@@ -54,7 +54,21 @@
     "summary": "The referendum follows the 2136 oxygen-credit protests and the 2142 Earth-Mars cargo tariff dispute.",
     "purpose": "Explain causal history so the story feels real, not random.",
     "ticker": "2136 LUNAR OXYGEN-CREDIT PROTESTS • 2142 MARS CARGO TARIFF CHALLENGE • 2147 REFERENDUM FINAL CYCLE",
-    "source": "2147 News Network Timeline Archive"
+    "source": "2147 News Network Timeline Archive",
+    "template_controls": {
+      "timeline_year_1": "2136",
+      "timeline_title_1": "Lunar oxygen-credit protests",
+      "timeline_desc_1": "Life-support pricing becomes a political issue across off-world settlements.",
+      "timeline_year_2": "2142",
+      "timeline_title_2": "Mars challenges cargo tariff authority",
+      "timeline_desc_2": "The Mars Civic Council disputes Earth Union control over interplanetary trade corridors.",
+      "timeline_year_3": "2147",
+      "timeline_title_3": "Final referendum cycle begins",
+      "timeline_desc_3": "The autonomy dispute becomes a direct sovereignty vote across 42 Martian settlement zones.",
+      "timeline_year_4": "Next",
+      "timeline_title_4": "Emergency legal and market ripples",
+      "timeline_desc_4": "Earth Union committees, energy companies, labor guilds, and tribunals prepare responses."
+    }
   },
   {
     "id": "s06",
@@ -76,7 +90,19 @@
     "summary": "Helion Grid Systems says unresolved treaty language could delay fusion-grid contracts and cargo insurance pricing.",
     "purpose": "Show economic consequences and introduce Episode 3 ripple.",
     "ticker": "HELION GRID SYSTEMS • EARTH-MARS ENERGY CONTRACTS • INFRASTRUCTURE BOND VOLATILITY",
-    "source": "Outer Belt Trade Registry"
+    "source": "Outer Belt Trade Registry",
+    "template_controls": {
+      "finance_person_name": "JIANG LAU",
+      "finance_person_title": "CEO • Helion Grid Systems",
+      "finance_quote": "Energy markets can absorb political change. They cannot absorb legal uncertainty across two planets.",
+      "metric_1_value": "+18.6%",
+      "metric_1_label": "Cargo Insurance",
+      "metric_2_value": "14 mo.",
+      "metric_2_label": "Contract Delay Risk",
+      "metric_3_value": "−4.2%",
+      "metric_3_label": "Mars Infra Bonds",
+      "finance_location": "Singapore Arcology Finance District"
+    }
   },
   {
     "id": "s08",
@@ -87,7 +113,23 @@
     "summary": "The Synthetic Rights Tribunal receives a petition over AI residents registered in Martian settlement zones.",
     "purpose": "Show legal consequences and introduce Episode 5 ripple.",
     "ticker": "SYNTHETIC RIGHTS TRIBUNAL • MEMORY-CONTINUITY CITIZENS • OFF-WORLD VOTING LAW",
-    "source": "Synthetic Rights Tribunal"
+    "source": "Synthetic Rights Tribunal",
+    "template_controls": {
+      "legal_case_title": "Petition for referendum certification review",
+      "legal_case_desc": "Filed on behalf of registered memory-continuity residents in Martian settlement zones.",
+      "legal_person_name": "SELENE ARMITAGE",
+      "legal_person_title": "Senior Counsel • Synthetic Rights Tribunal",
+      "legal_quote": "Memory deletion without consent is no longer a technical action. It is a civil rights violation.",
+      "legal_metric_1_value": "42",
+      "legal_metric_1_label": "Settlement Zones",
+      "legal_metric_2_value": "3.8M",
+      "legal_metric_2_label": "Synthetic Residents",
+      "legal_metric_3_value": "Pending",
+      "legal_metric_3_label": "Jurisdiction",
+      "legal_metric_4_value": "2147-CV",
+      "legal_metric_4_label": "Case Track",
+      "legal_location": "Geneva Continuity Court Complex"
+    }
   },
   {
     "id": "s09",

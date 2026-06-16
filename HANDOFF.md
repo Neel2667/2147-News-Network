@@ -167,3 +167,8 @@ The custom app now supports saving and loading episode drafts via `/api/episodes
 ## Specialized Premium Templates
 
 Built `historical-timeline.html`, `financial-desk.html`, `legal-desk.html`, and `breaking-news.html`. The pilot saved draft now uses specialized templates for historical context, market ripple, and legal ripple scenes. See `reports/REPORT_2026-06-16_SPECIALIZED_PREMIUM_TEMPLATES.md`.
+
+
+## Template-Specific Controls
+
+The Scene Timeline panel now shows template-specific controls for Historical Timeline, Financial Desk, Legal Desk, and Breaking News. Values are saved under `scene.template_controls` and passed into template rendering. See `reports/REPORT_2026-06-16_TEMPLATE_SPECIFIC_CONTROLS.md`.

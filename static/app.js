@@ -108,6 +108,67 @@ function sceneLabel(scene, index){
   return scene.scene || scene.name || `Scene ${index+1}`;
 }
 
+const templateSpecificSchemas = {
+  'historical-timeline.html': [
+    ['control-subtitle','Timeline Event 1'], ['timeline_year_1','Year 1'], ['timeline_title_1','Title 1'], ['timeline_desc_1','Description 1','textarea','wide-field'],
+    ['control-subtitle','Timeline Event 2'], ['timeline_year_2','Year 2'], ['timeline_title_2','Title 2'], ['timeline_desc_2','Description 2','textarea','wide-field'],
+    ['control-subtitle','Timeline Event 3'], ['timeline_year_3','Year 3'], ['timeline_title_3','Title 3'], ['timeline_desc_3','Description 3','textarea','wide-field'],
+    ['control-subtitle','Timeline Event 4'], ['timeline_year_4','Year 4'], ['timeline_title_4','Title 4'], ['timeline_desc_4','Description 4','textarea','wide-field']
+  ],
+  'financial-desk.html': [
+    ['finance_person_name','Person Name'], ['finance_person_title','Person Title'], ['finance_quote','Quote','textarea','wide-field'],
+    ['control-subtitle','Metric Cards'], ['metric_1_value','Metric 1 Value'], ['metric_1_label','Metric 1 Label'], ['metric_2_value','Metric 2 Value'], ['metric_2_label','Metric 2 Label'], ['metric_3_value','Metric 3 Value'], ['metric_3_label','Metric 3 Label'],
+    ['finance_location','Finance Location']
+  ],
+  'legal-desk.html': [
+    ['legal_case_title','Case/Filing Title'], ['legal_case_desc','Case Description','textarea','wide-field'],
+    ['legal_person_name','Legal Expert Name'], ['legal_person_title','Legal Expert Title'], ['legal_quote','Legal Quote','textarea','wide-field'],
+    ['control-subtitle','Case Metrics'], ['legal_metric_1_value','Metric 1 Value'], ['legal_metric_1_label','Metric 1 Label'], ['legal_metric_2_value','Metric 2 Value'], ['legal_metric_2_label','Metric 2 Label'], ['legal_metric_3_value','Metric 3 Value'], ['legal_metric_3_label','Metric 3 Label'], ['legal_metric_4_value','Metric 4 Value'], ['legal_metric_4_label','Metric 4 Label'],
+    ['legal_location','Legal Location']
+  ],
+  'breaking-news.html': [
+    ['breaking_status','Status'], ['breaking_time','Time'], ['breaking_impact','Impact Level'], ['breaking_verification','Verification Desk']
+  ]
+};
+
+const templateSpecificDefaults = {
+  timeline_year_1:'2136', timeline_title_1:'Lunar oxygen-credit protests', timeline_desc_1:'Life-support pricing becomes a political issue across off-world settlements.',
+  timeline_year_2:'2142', timeline_title_2:'Mars challenges cargo tariff authority', timeline_desc_2:'The Mars Civic Council disputes Earth Union control over interplanetary trade corridors.',
+  timeline_year_3:'2147', timeline_title_3:'Final referendum cycle begins', timeline_desc_3:'The autonomy dispute becomes a direct sovereignty vote across 42 Martian settlement zones.',
+  timeline_year_4:'Next', timeline_title_4:'Emergency legal and market ripples', timeline_desc_4:'Earth Union committees, energy companies, labor guilds, and tribunals prepare responses.',
+  finance_person_name:'JIANG LAU', finance_person_title:'CEO • Helion Grid Systems', finance_quote:'Energy markets can absorb political change. They cannot absorb legal uncertainty across two planets.',
+  metric_1_value:'+18.6%', metric_1_label:'Cargo Insurance', metric_2_value:'14 mo.', metric_2_label:'Contract Delay Risk', metric_3_value:'−4.2%', metric_3_label:'Mars Infra Bonds', finance_location:'Singapore Arcology Finance District',
+  legal_case_title:'Petition for referendum certification review', legal_case_desc:'Filed on behalf of registered memory-continuity residents in Martian settlement zones.', legal_person_name:'SELENE ARMITAGE', legal_person_title:'Senior Counsel • Synthetic Rights Tribunal', legal_quote:'Memory deletion without consent is no longer a technical action. It is a civil rights violation.',
+  legal_metric_1_value:'42', legal_metric_1_label:'Settlement Zones', legal_metric_2_value:'3.8M', legal_metric_2_label:'Synthetic Residents', legal_metric_3_value:'Pending', legal_metric_3_label:'Jurisdiction', legal_metric_4_value:'2147-CV', legal_metric_4_label:'Case Track', legal_location:'Geneva Continuity Court Complex',
+  breaking_status:'LIVE', breaking_time:'19:42', breaking_impact:'High', breaking_verification:'2147NN Editorial Desk'
+};
+
+function renderTemplateSpecificControls(scene){
+  const template = $('sceneTemplateInput').value;
+  const schema = templateSpecificSchemas[template] || [];
+  const wrap = $('templateSpecificControls');
+  $('specificTemplateLabel').textContent = schema.length ? template : 'No specialized controls';
+  wrap.classList.toggle('two', schema.length > 0);
+  if(!schema.length){ wrap.innerHTML = '<p style="margin:0;color:var(--muted);font-size:13px;line-height:1.4">This template uses the standard headline, summary, lower-third, ticker, and source controls.</p>'; return; }
+  const controls = scene.template_controls || {};
+  wrap.innerHTML = schema.map(field => {
+    if(field[0] === 'control-subtitle') return `<div class="control-subtitle">${field[1]}</div>`;
+    const [key,label,type='input',klass=''] = field;
+    const value = controls[key] ?? templateSpecificDefaults[key] ?? '';
+    if(type === 'textarea') return `<label class="${klass}">${label}<textarea class="specific-input" data-key="${key}">${value}</textarea></label>`;
+    return `<label class="${klass}">${label}<input class="specific-input" data-key="${key}" value="${value}" /></label>`;
+  }).join('');
+  wrap.querySelectorAll('.specific-input').forEach(input => input.addEventListener('change', saveSelectedScene));
+}
+
+function collectTemplateSpecificControls(){
+  const controls = {};
+  document.querySelectorAll('#templateSpecificControls .specific-input').forEach(input => {
+    controls[input.dataset.key] = input.value;
+  });
+  return controls;
+}
+
 function renderSceneTimeline(){
   const scenes = currentScenes();
   const total = scenes.reduce((sum,s)=>sum + Number(s.duration || s.duration_seconds || 0), 0);
@@ -156,6 +217,7 @@ function loadSelectedSceneControls(){
   $('lowerTitleInput').value = scene.lower_title || 'Senior Anchor • Earth-Orbit Media Ring';
   $('tickerInput').value = scene.ticker || 'MARS TURNOUT PROJECTION RISES TO 91% • LUNAR OXYGEN-CREDIT STRIKE ENTERS NINTH DAY • EUROPA SIGNAL UNDER REVIEW';
   $('sourceInput').value = scene.source || 'Mars Civic Council Election Board';
+  renderTemplateSpecificControls(scene);
 }
 
 function saveSelectedScene(){
@@ -173,6 +235,7 @@ function saveSelectedScene(){
   scene.lower_title = $('lowerTitleInput').value;
   scene.ticker = $('tickerInput').value;
   scene.source = $('sourceInput').value;
+  scene.template_controls = collectTemplateSpecificControls();
   $('sceneOutput').textContent = JSON.stringify(scenes, null, 2);
   renderSceneTimeline();
   loadSelectedSceneControls();
@@ -238,6 +301,7 @@ async function previewSelectedScene(){
   const html = await api('/api/scenes/preview', { method:'POST', body: JSON.stringify({
     scene,
     controls: {
+      ...collectTemplateSpecificControls(),
       headline: $('sceneHeadlineInput').value,
       summary: $('sceneSummaryInput').value,
       ticker: $('tickerInput').value,
@@ -329,9 +393,10 @@ $('duplicateSceneBtn').addEventListener('click', duplicateScene);
 $('deleteSceneBtn').addEventListener('click', deleteScene);
 $('saveSceneBtn').addEventListener('click', () => { saveSelectedScene(); previewSelectedScene(); });
 $('previewSceneBtn').addEventListener('click', previewSelectedScene);
-['sceneNameInput','sceneDurationInput','sceneTemplateInput','sceneHeadlineInput','sceneSummaryInput','lowerNameInput','lowerTitleInput','tickerInput','sourceInput'].forEach(id => {
+['sceneNameInput','sceneDurationInput','sceneHeadlineInput','sceneSummaryInput','lowerNameInput','lowerTitleInput','tickerInput','sourceInput'].forEach(id => {
   $(id).addEventListener('change', saveSelectedScene);
 });
+$('sceneTemplateInput').addEventListener('change', () => { saveSelectedScene(); loadSelectedSceneControls(); previewSelectedScene(); });
 
 (async function init(){
   await loadWorld();
