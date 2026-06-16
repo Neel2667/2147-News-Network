@@ -1,0 +1,54 @@
+<div class="nn2147-premium-frame">
+  <style>
+    .nn2147-premium-frame, .nn2147-premium-frame * { box-sizing: border-box; }
+    .nn2147-premium-frame {
+      --black:#03040A; --navy:#050914; --cyan:#00D9FF; --blue:#2F80FF;
+      --white:#F8FAFC; --muted:#94A3B8; --glass:rgba(255,255,255,.075);
+      --border:rgba(255,255,255,.14); --ease:cubic-bezier(.22,1,.36,1);
+      width:100%; min-height:620px; border-radius:34px; overflow:hidden; position:relative;
+      color:var(--white); font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(47,128,255,.32), transparent 34%),
+        radial-gradient(circle at 85% 20%, rgba(0,217,255,.18), transparent 30%),
+        linear-gradient(135deg, #070B18 0%, #03040A 64%, #02030A 100%);
+      box-shadow:0 40px 120px rgba(0,0,0,.55);
+      isolation:isolate;
+    }
+    .nn2147-premium-frame::before {
+      content:""; position:absolute; inset:-30%; opacity:.38; z-index:-2;
+      background-image:
+        linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+      background-size:72px 72px; transform:perspective(900px) rotateX(62deg) translateY(20%);
+      animation:nnGrid 18s linear infinite;
+    }
+    .nn2147-premium-frame::after {
+      content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+      background:linear-gradient(115deg, transparent 0%, rgba(255,255,255,.12) 42%, transparent 52%);
+      transform:translateX(-80%); animation:nnLightSweep 7s var(--ease) infinite;
+    }
+    @keyframes nnGrid { to { transform:perspective(900px) rotateX(62deg) translateY(calc(20% + 72px)); } }
+    @keyframes nnLightSweep { 0%,48%{transform:translateX(-90%)} 78%,100%{transform:translateX(90%)} }
+    .nn-glass { background:linear-gradient(180deg, rgba(255,255,255,.105), rgba(255,255,255,.045)); border:1px solid var(--border); border-radius:30px; box-shadow:0 24px 80px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.12); backdrop-filter:blur(26px); }
+    .nn-meta { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-weight:700; }
+    .nn-chip { display:inline-flex; align-items:center; gap:8px; padding:9px 13px; border-radius:999px; background:rgba(255,255,255,.075); border:1px solid rgba(255,255,255,.12); color:var(--white); font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+    .nn-chip::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--cyan); box-shadow:0 0 18px var(--cyan); }
+    .nn-ticker { position:absolute; left:24px; right:24px; bottom:22px; height:46px; display:flex; align-items:center; overflow:hidden; padding:0 18px; border-radius:999px; background:rgba(0,0,0,.38); border:1px solid rgba(255,255,255,.1); backdrop-filter:blur(20px); color:#DDFBFF; font-size:14px; font-weight:650; letter-spacing:.06em; white-space:nowrap; }
+    .nn-ticker span { display:inline-block; padding-left:100%; animation:nnTicker 28s linear infinite; }
+    @keyframes nnTicker { to { transform:translateX(-100%); } }
+    .nn-bug { position:absolute; top:24px; left:28px; display:flex; align-items:center; gap:12px; z-index:20; }
+    .nn-logo-mark { width:42px; height:42px; border-radius:14px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(0,217,255,.22), rgba(255,255,255,.06)); border:1px solid rgba(255,255,255,.16); box-shadow:0 0 40px rgba(0,217,255,.16); font-weight:900; }
+    .nn-bug-title { font-size:13px; line-height:1.1; font-weight:850; letter-spacing:.12em; text-transform:uppercase; }
+  </style>
+  <div class="nn-bug"><div class="nn-logo-mark">47</div><div class="nn-bug-title">2147<br>News Network</div></div>
+  <div style="position:absolute; top:28px; right:28px" class="nn-chip">Live Orbital</div>
+  <section style="min-height:620px; display:grid; place-items:center; padding:90px 56px 92px; text-align:center;">
+    <div class="nn-glass" style="padding:54px; max-width:900px; animation:baseReveal 1.2s var(--ease) both;">
+      <div class="nn-meta">Premium Broadcast System</div>
+      <h1 style="margin:16px 0 14px; font-size:clamp(46px,7vw,92px); line-height:.94; letter-spacing:-.07em;">2147 News Network</h1>
+      <p style="margin:0 auto; max-width:720px; color:var(--muted); font-size:clamp(18px,2vw,26px); line-height:1.35;">Apple-inspired visual foundation: glass depth, restrained color, cinematic motion, international news clarity.</p>
+    </div>
+  </section>
+  <div class="nn-ticker"><span>EARTH • LUNA • MARS • OUTER BELT — PREMIUM UI SYSTEM ONLINE — BROADCASTING FROM TOMORROW</span></div>
+  <style>@keyframes baseReveal{from{opacity:0; transform:translateY(24px) scale(.98)}to{opacity:1; transform:none}}</style>
+</div>
