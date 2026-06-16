@@ -362,8 +362,7 @@ async function saveDraft(){
   $('savedEpisodeSelect').value = result.episode.episode_id;
 }
 
-async function loadDraft(){
-  const id = $('savedEpisodeSelect').value;
+async function loadDraftById(id, options={ switchToTimeline:true }){
   if(!id){ $('loadStatus').textContent = 'No saved draft selected.'; return; }
   const payload = await api(`/api/episodes/${id}`);
   const draft = payload.draft || {};
@@ -378,7 +377,18 @@ async function loadDraft(){
   loadSelectedSceneControls();
   previewSelectedScene();
   $('loadStatus').textContent = `Loaded: ${payload.episode_id} — ${payload.title}`;
-  switchPanel('timeline');
+  $('saveStatus').textContent = `Active draft: ${payload.episode_id}`;
+  if($('savedEpisodeSelect')) $('savedEpisodeSelect').value = payload.episode_id || id;
+  if(options.switchToTimeline) switchPanel('timeline');
+}
+
+async function loadDraft(){
+  await loadDraftById($('savedEpisodeSelect').value);
+}
+
+async function loadPilotEpisode(){
+  await refreshSavedEpisodes();
+  await loadDraftById('2147-001-mars-independence');
 }
 
 async function exportDraft(){
@@ -400,6 +410,8 @@ $('exportBtn').addEventListener('click', exportDraft);
 $('saveDraftBtn').addEventListener('click', saveDraft);
 $('loadDraftBtn').addEventListener('click', loadDraft);
 $('refreshSavedBtn').addEventListener('click', refreshSavedEpisodes);
+$('loadPilotBtn').addEventListener('click', loadPilotEpisode);
+$('loadPilotDashboardBtn').addEventListener('click', loadPilotEpisode);
 $('addSceneBtn').addEventListener('click', addScene);
 $('duplicateSceneBtn').addEventListener('click', duplicateScene);
 $('deleteSceneBtn').addEventListener('click', deleteScene);

@@ -54,3 +54,35 @@ A serious fictional broadcast covering:
 - Pacific floating city storm shields
 - neural privacy law
 - Europa ocean probe signal
+
+
+## Custom Studio App
+
+The production tool is now a custom FastAPI app, not a Gradio-first interface.
+
+Run locally:
+
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload --host 0.0.0.0 --port 7860
+```
+
+Open:
+
+```text
+http://localhost:7860
+```
+
+Use the **Load Pilot Episode** button to open the first production package:
+
+```text
+2147-001-mars-independence
+```
+
+## Hugging Face Deployment
+
+Deploy as a **Docker Space**. See:
+
+```text
+docs/HUGGING_FACE_DEPLOYMENT.md
+```

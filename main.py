@@ -362,6 +362,11 @@ def home() -> HTMLResponse:
     return HTMLResponse((STATIC_DIR / "index.html").read_text(encoding="utf-8"))
 
 
+@app.get("/health")
+def health() -> JSONResponse:
+    return JSONResponse({"status": "ok", "app": "2147 News Network Studio"})
+
+
 @app.get("/api/world")
 def api_world() -> JSONResponse:
     world = load_world()

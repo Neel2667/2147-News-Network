@@ -177,3 +177,8 @@ The Scene Timeline panel now shows template-specific controls for Historical Tim
 ## Science Climate Lunar Templates
 
 Built `science-desk.html`, `earth-climate-map.html`, and `lunar-report.html` with template-specific controls in the Scene Timeline panel. See `reports/REPORT_2026-06-16_SCIENCE_CLIMATE_LUNAR_TEMPLATES.md`.
+
+
+## Pilot Loader and Deployment Guide
+
+The custom app now has a one-click Load Pilot Episode button in the top bar and dashboard. It loads `2147-001-mars-independence` from `episodes/saved/`. A Hugging Face Docker deployment guide exists at `docs/HUGGING_FACE_DEPLOYMENT.md`. The app has `/health` endpoint.
