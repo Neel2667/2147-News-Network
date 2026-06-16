@@ -202,3 +202,8 @@ The pilot episode has been reviewed and polished scene by scene. See `episodes/p
 ## Pilot Audio Plan
 
 Added sound design, voiceover timing, audio cue sheet, and subtitle draft under `episodes/pilot-001-mars-independence/audio/`. The audio direction is premium international news with restrained futuristic sound design. See `reports/REPORT_2026-06-16_AUDIO_PLAN.md`.
+
+
+## Launch Package
+
+Added pilot launch package under `launch/` and non-AI HTML/CSS thumbnail concept under `thumbnails/pilot-001/`. Read `launch/LAUNCH_PACKAGE.md` and `reports/REPORT_2026-06-16_LAUNCH_PACKAGE.md`.

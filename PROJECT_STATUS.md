@@ -40,6 +40,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Added download buttons/links and ZIP bundles for exported production files and render packages.
 - Reviewed and polished the pilot episode UI scene by scene; tightened pacing, improved tickers/source labels, added UI review notes, dynamic quote-card controls, and contact sheet.
 - Added pilot sound design plan, voiceover timing plan, audio cue sheet, and subtitle draft.
+- Added thumbnail and channel launch package for the pilot, including non-AI HTML/CSS thumbnail concept, channel About, YouTube description, pinned comment, upload checklist, and shorts plan.
 
 
 ## In Progress
@@ -68,7 +69,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - scene template selection
    - export JSON/text files
 4. Connect app.py to data/events.json and generate stories from event ripples.
-5. Add thumbnail and channel launch package for the pilot.
+5. Deploy the custom app to Hugging Face as Docker Space.
 6. Manually preview pilot in custom app at 1920x1080 and perform OBS recording test.
 6. Add video render/export workflow later.
    - anchor desk
