@@ -212,3 +212,8 @@ Added pilot launch package under `launch/` and non-AI HTML/CSS thumbnail concept
 ## Final Hugging Face Deploy Prep
 
 Root README now has Hugging Face Space metadata for Docker. Added `.dockerignore`, `docs/HF_SPACE_METADATA.md`, `docs/FINAL_DEPLOY_CHECKLIST.md`, and `docs/DEPLOYMENT_STATUS.md`. Next action: create a Hugging Face Docker Space and connect this GitHub repo.
+
+
+## Demo Video Generated
+
+A silent code-rendered demo video has been created at `outputs/demo-video/2147-demo-pilot-ui.mp4` with poster `outputs/demo-video/2147-demo-poster.png`. It is not AI-generated video; it is procedural Python/Pillow/OpenCV motion graphics. Generator script: `scripts/generate_demo_video.py`. See `reports/REPORT_2026-06-16_DEMO_VIDEO.md`.
