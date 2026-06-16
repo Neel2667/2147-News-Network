@@ -352,3 +352,8 @@ Built variants: `broadcast-v2-studio-wall-footage.html`, `broadcast-v2-studio-wa
 ## Studio Wall Variants Approval Page
 
 Created `/static/studio-wall-variants-approval.html` with all five Studio Wall variants. Generator: `scripts/build_studio_wall_variants_approval.py`. User should approve variants before pilot scenes are updated.
+
+
+## Studio Wall Variants Approved
+
+User approved all five Studio Wall variants. Pilot now uses footage, map, data, quote, and archive variants; `s05b Archive Context` was added. Regenerated `/static/pilot-v2-approval.html`. See `reports/REPORT_2026-06-16_STUDIO_WALL_VARIANTS_APPROVED.md`.

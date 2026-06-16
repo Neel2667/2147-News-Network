@@ -33,7 +33,7 @@
         "id": "s02",
         "scene": "Anchor Lead-In",
         "duration": 48,
-        "template": "broadcast-v2-studio-video-wall.html",
+        "template": "broadcast-v2-studio-wall-footage.html",
         "headline": "Mars Enters Final Voting Cycle",
         "summary": "A sovereignty referendum across 42 Martian settlement zones could create the first independent off-world republic.",
         "purpose": "Introduce lead story with Anaya Rao lower-third and premium studio environment.",
@@ -59,7 +59,8 @@
           "ticker_label": "Headlines",
           "asset_poster": "demo-assets/earth-observations-sample-poster.jpg"
         },
-        "v2_primary_style": "official_option_b_studio_video_wall"
+        "v2_primary_style": "official_option_b_studio_video_wall",
+        "studio_wall_variant_approved": true
       },
       {
         "id": "s03",
@@ -86,7 +87,7 @@
         "id": "s04",
         "scene": "Mars Referendum Dashboard",
         "duration": 78,
-        "template": "broadcast-v2-mars-data.html",
+        "template": "broadcast-v2-studio-wall-data.html",
         "headline": "Mars Independence Vote",
         "summary": "Turnout and vote model across 42 recognized settlement zones.",
         "purpose": "Show data, numbers, source label, and visual proof layer.",
@@ -97,13 +98,24 @@
           "focus": "data authority and visual proof",
           "notes": "Duration tightened; data remains on screen long enough for readability."
         },
-        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
+        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2",
+        "studio_wall_variant_approved": true,
+        "template_controls": {
+          "segment_label": "Referendum Data Board",
+          "metric_1_value": "38.2M",
+          "metric_1_label": "Population",
+          "metric_2_value": "29.4M",
+          "metric_2_label": "Eligible Voters",
+          "metric_3_value": "91%",
+          "metric_3_label": "Projected Turnout",
+          "ticker_label": "Data"
+        }
       },
       {
         "id": "s05",
         "scene": "Historical Context",
         "duration": 62,
-        "template": "broadcast-v2-timeline.html",
+        "template": "broadcast-v2-studio-wall-map.html",
         "headline": "Why This Vote Exists",
         "summary": "The referendum is the result of decades of life-support pricing disputes, cargo tariff challenges, and settlement autonomy demands.",
         "purpose": "Explain causal history so the story feels real, not random.",
@@ -121,20 +133,49 @@
           "timeline_desc_3": "The autonomy dispute becomes a direct sovereignty vote across 42 Martian settlement zones.",
           "timeline_year_4": "Next",
           "timeline_title_4": "Emergency legal and market ripples",
-          "timeline_desc_4": "Earth Union committees, energy companies, labor guilds, and tribunals prepare responses."
+          "timeline_desc_4": "Earth Union committees, energy companies, labor guilds, and tribunals prepare responses.",
+          "segment_label": "Timeline / Route Context",
+          "source": "2147NN Timeline Archive",
+          "ticker_label": "Context"
         },
         "ui_review": {
           "status": "polished",
           "focus": "cause-and-effect realism",
           "notes": "Makes the story feel earned instead of randomly invented."
         },
-        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
+        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2",
+        "studio_wall_variant_approved": true
+      },
+      {
+        "id": "s05b",
+        "scene": "Archive Context",
+        "duration": 32,
+        "template": "broadcast-v2-studio-wall-archive.html",
+        "headline": "Archive: Oxygen-Credit Protests",
+        "summary": "The 2136 lunar oxygen-credit protests turned life-support pricing into a political rights issue across off-world settlements.",
+        "purpose": "Use approved archive wall variant to show historical cause behind Mars referendum.",
+        "ticker": "2136 OXYGEN-CREDIT PROTESTS • 2142 CARGO TARIFF DISPUTE • 2147 REFERENDUM •",
+        "source": "2147NN Timeline Archive",
+        "template_controls": {
+          "asset_video": "demo-assets/earth-observations-sample.mp4",
+          "asset_poster": "demo-assets/earth-observations-sample-poster.jpg",
+          "archive_label": "Archive Feed",
+          "archive_year": "2136",
+          "archive_metric_label": "Timeline Archive",
+          "segment_label": "Archive Feed",
+          "wall_metric_value": "2136",
+          "wall_metric_label": "Timeline Archive",
+          "lower_role": "Anchor",
+          "lower_location": "Archive",
+          "ticker_label": "Archive"
+        },
+        "studio_wall_variant_approved": true
       },
       {
         "id": "s06",
         "scene": "Expert Quote",
         "duration": 34,
-        "template": "broadcast-v2-expert-split.html",
+        "template": "broadcast-v2-studio-wall-quote.html",
         "headline": "Dr. Ilyan Sen",
         "summary": "Mars is no longer an outpost. It is a civilization asking for political recognition.",
         "purpose": "Add named expert credibility.",
@@ -144,20 +185,23 @@
           "quote_person_name": "DR. ILYAN SEN",
           "quote_person_title": "Political Historian • University of Valles Marineris",
           "quote_text": "Mars is no longer an outpost. It is a civilization asking for political recognition.",
-          "quote_context": "Expert Analysis • University of Valles Marineris"
+          "quote_context": "Expert Analysis • University of Valles Marineris",
+          "segment_label": "Expert Analysis",
+          "ticker_label": "Analysis"
         },
         "ui_review": {
           "status": "polished",
           "focus": "named expert credibility",
           "notes": "Short, memorable quote to improve retention."
         },
-        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
+        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2",
+        "studio_wall_variant_approved": true
       },
       {
         "id": "s07",
         "scene": "Market Ripple",
         "duration": 52,
-        "template": "broadcast-v2-financial-board.html",
+        "template": "broadcast-v2-studio-wall-data.html",
         "headline": "Energy Markets Watch Mars Vote",
         "summary": "Helion Grid Systems warns unresolved treaty language could delay fusion-grid contracts and cargo insurance pricing.",
         "purpose": "Show economic consequences and introduce Episode 3 ripple.",
@@ -170,23 +214,26 @@
           "metric_1_value": "+18.6%",
           "metric_1_label": "Cargo Insurance",
           "metric_2_value": "14 mo.",
-          "metric_2_label": "Contract Delay Risk",
+          "metric_2_label": "Contract Risk",
           "metric_3_value": "−4.2%",
-          "metric_3_label": "Mars Infra Bonds",
-          "finance_location": "Singapore Arcology Finance District"
+          "metric_3_label": "Mars Bonds",
+          "finance_location": "Singapore Arcology Finance District",
+          "segment_label": "Financial Desk",
+          "ticker_label": "Markets"
         },
         "ui_review": {
           "status": "polished",
           "focus": "market consequence and named CEO realism",
           "notes": "Headline reframed as market-news style rather than generic risk."
         },
-        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
+        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2",
+        "studio_wall_variant_approved": true
       },
       {
         "id": "s08",
         "scene": "Legal Ripple",
         "duration": 50,
-        "template": "broadcast-v2-legal-board.html",
+        "template": "broadcast-v2-studio-wall-data.html",
         "headline": "AI Voting Rights Petition Filed",
         "summary": "The Synthetic Rights Tribunal receives a petition over memory-continuity residents registered in Martian settlement zones.",
         "purpose": "Show legal consequences and introduce Episode 5 ripple.",
@@ -206,14 +253,23 @@
           "legal_metric_3_label": "Jurisdiction",
           "legal_metric_4_value": "2147-CV",
           "legal_metric_4_label": "Case Track",
-          "legal_location": "Geneva Continuity Court Complex"
+          "legal_location": "Geneva Continuity Court Complex",
+          "segment_label": "Legal Desk",
+          "metric_1_value": "42",
+          "metric_1_label": "Settlement Zones",
+          "metric_2_value": "3.8M",
+          "metric_2_label": "Synthetic Residents",
+          "metric_3_value": "Pending",
+          "metric_3_label": "Jurisdiction",
+          "ticker_label": "Legal"
         },
         "ui_review": {
           "status": "polished",
           "focus": "legal stakes and future identity law",
           "notes": "Language made more specific and less generic."
         },
-        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
+        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2",
+        "studio_wall_variant_approved": true
       },
       {
         "id": "s09",
@@ -304,7 +360,15 @@
       "remaining_scene_ids": []
     },
     "primary_visual_style": "Option B — Studio + Video Wall",
-    "official_primary_template": "broadcast-v2-studio-video-wall.html"
+    "official_primary_template": "broadcast-v2-studio-video-wall.html",
+    "approved_studio_wall_variants": [
+      "footage",
+      "map",
+      "data",
+      "quote",
+      "archive"
+    ],
+    "runtime_seconds": 434
   },
   "save_format": "2147nn-studio-draft-v1"
 }

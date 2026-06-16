@@ -265,3 +265,11 @@ The MVP is complete when a user can:
 - Created `static/studio-wall-variants-approval.html`.
 - Added generator script `scripts/build_studio_wall_variants_approval.py`.
 - Page shows footage, map, data, quote, and archive variants for approval.
+
+
+## Studio Wall Variants Approved
+
+- User approved all Studio Wall variants: footage, map, data, quote, archive.
+- Updated pilot scene plan to use all approved variants.
+- Added `s05b Archive Context` scene using archive variant.
+- Regenerated `static/pilot-v2-approval.html`.
