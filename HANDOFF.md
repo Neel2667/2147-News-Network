@@ -257,3 +257,8 @@ User said long names cannot be truncated. Updated `static/core-broadcast-element
 ## Apple-Inspired Core Polish
 
 User asked to take inspiration from Apple colors, shapes, and animations. Updated `static/core-broadcast-elements.html` with material-like depth, rounded shapes, subtle shadows, backdrop blur, refined pills, and varied fluid motion. Added report `reports/REPORT_2026-06-16_APPLE_INSPIRED_CORE_POLISH.md`.
+
+
+## Label Alignment Fix
+
+User noted the BREAKING red label extended farther than the HEADLINES label. Fixed by matching ticker label width to strap label width in `static/core-broadcast-elements.html`.

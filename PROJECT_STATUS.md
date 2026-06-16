@@ -142,3 +142,8 @@ The MVP is complete when a user can:
 
 - Applied Apple-inspired polish to core broadcast elements: layered material surfaces, soft depth, rounded shapes, restrained colors, varied fluid motion, and clearer hierarchy.
 - Added Apple-inspired polish section to `static/core-broadcast-elements.html`.
+
+
+## Label Alignment Fix
+
+- Aligned `BREAKING` and `HEADLINES` red label widths in the core broadcast elements page.
