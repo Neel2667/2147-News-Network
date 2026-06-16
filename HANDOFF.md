@@ -367,3 +367,8 @@ Generated silent preview video at `outputs/pilot-preview/2147-pilot-studio-wall-
 ## Exact Template Render Package
 
 The Python-generated MP4 did not match the designed templates and should not be used for approval. Use `outputs/pilot-exact-render/index.html` which renders actual HTML templates. Generator: `scripts/build_exact_pilot_render_pages.py`.
+
+
+## Static Exact Review Fix
+
+User said `outputs/pilot-exact-render/index.html` was not loading. Created `/static/pilot-exact-static-review.html` with inline scenes, no API, no iframes. Use this as current approval page. Generator: `scripts/build_pilot_exact_static_review.py`.

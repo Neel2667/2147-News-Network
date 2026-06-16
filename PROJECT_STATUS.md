@@ -287,3 +287,9 @@ The MVP is complete when a user can:
 - Created `scripts/build_exact_pilot_render_pages.py`.
 - Created `outputs/pilot-exact-render/index.html` and standalone scene pages rendering the actual HTML templates.
 - Old generated MP4 should not be used for visual approval.
+
+
+## Static Exact Review Fix
+
+- Created `/static/pilot-exact-static-review.html` because outputs exact render was not loading.
+- The page has inline rendered scenes, no API calls and no iframes.
