@@ -34,6 +34,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Built episode save/load support and created the first pilot episode package for Mars Votes for Independence From Earth.
 - Built specialized premium templates: Historical Timeline, Financial Desk, Legal Desk, and Breaking News. Updated pilot scenes to use them.
 - Built template-specific controls for Historical Timeline, Financial Desk, Legal Desk, and Breaking News templates.
+- Built Science Desk, Earth Climate Map, and Lunar Report premium templates with template-specific controls.
 
 
 ## In Progress
@@ -62,8 +63,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - scene template selection
    - export JSON/text files
 4. Connect app.py to data/events.json and generate stories from event ripples.
-5. Add remaining premium visual templates: science desk, Earth map, Lunar report.
-6. Add polished pilot loader button and deploy-ready Hugging Face Space instructions.
+5. Add polished pilot loader button and deploy-ready Hugging Face Space instructions.
+6. Add render/export workflow for recording scenes into video.
 6. Add video render/export workflow later.
    - anchor desk
    - Mars dashboard

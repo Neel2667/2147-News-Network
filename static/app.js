@@ -128,6 +128,15 @@ const templateSpecificSchemas = {
   ],
   'breaking-news.html': [
     ['breaking_status','Status'], ['breaking_time','Time'], ['breaking_impact','Impact Level'], ['breaking_verification','Verification Desk']
+  ],
+  'science-desk.html': [
+    ['science_mission','Mission / Consortium'], ['science_signal_status','Signal Status'], ['science_instrument','Instrument'], ['science_depth','Depth'], ['science_review_stage','Review Stage'], ['science_signal_count','Confirmed Repeats'], ['science_location','Science Location']
+  ],
+  'earth-climate-map.html': [
+    ['climate_region','Climate Region'], ['control-subtitle','Climate Metrics'], ['climate_metric_1_value','Metric 1 Value'], ['climate_metric_1_label','Metric 1 Label'], ['climate_metric_2_value','Metric 2 Value'], ['climate_metric_2_label','Metric 2 Label'], ['climate_metric_3_value','Metric 3 Value'], ['climate_metric_3_label','Metric 3 Label'], ['climate_metric_4_value','Metric 4 Value'], ['climate_metric_4_label','Metric 4 Label']
+  ],
+  'lunar-report.html': [
+    ['lunar_region','Lunar Region'], ['lunar_location','Lunar Location'], ['lunar_person_name','Person Name'], ['lunar_person_title','Person Title'], ['control-subtitle','Lunar Metrics'], ['lunar_metric_1_value','Metric 1 Value'], ['lunar_metric_1_label','Metric 1 Label'], ['lunar_metric_2_value','Metric 2 Value'], ['lunar_metric_2_label','Metric 2 Label'], ['lunar_metric_3_value','Metric 3 Value'], ['lunar_metric_3_label','Metric 3 Label'], ['lunar_metric_4_value','Metric 4 Value'], ['lunar_metric_4_label','Metric 4 Label']
   ]
 };
 
@@ -140,7 +149,10 @@ const templateSpecificDefaults = {
   metric_1_value:'+18.6%', metric_1_label:'Cargo Insurance', metric_2_value:'14 mo.', metric_2_label:'Contract Delay Risk', metric_3_value:'−4.2%', metric_3_label:'Mars Infra Bonds', finance_location:'Singapore Arcology Finance District',
   legal_case_title:'Petition for referendum certification review', legal_case_desc:'Filed on behalf of registered memory-continuity residents in Martian settlement zones.', legal_person_name:'SELENE ARMITAGE', legal_person_title:'Senior Counsel • Synthetic Rights Tribunal', legal_quote:'Memory deletion without consent is no longer a technical action. It is a civil rights violation.',
   legal_metric_1_value:'42', legal_metric_1_label:'Settlement Zones', legal_metric_2_value:'3.8M', legal_metric_2_label:'Synthetic Residents', legal_metric_3_value:'Pending', legal_metric_3_label:'Jurisdiction', legal_metric_4_value:'2147-CV', legal_metric_4_label:'Case Track', legal_location:'Geneva Continuity Court Complex',
-  breaking_status:'LIVE', breaking_time:'19:42', breaking_impact:'High', breaking_verification:'2147NN Editorial Desk'
+  breaking_status:'LIVE', breaking_time:'19:42', breaking_impact:'High', breaking_verification:'2147NN Editorial Desk',
+  science_mission:'Europa Oceanic Research Consortium', science_signal_status:'Repeating acoustic pattern', science_instrument:'Cryo-hydrophone array K-4', science_depth:'18.6 km beneath ice', science_review_stage:'Independent verification', science_signal_count:'3', science_location:'Europa Research Base K-4',
+  climate_region:'Pacific Floating City Cluster 12', climate_metric_1_value:'72 hrs', climate_metric_1_label:'Shield Window', climate_metric_2_value:'Category 6', climate_metric_2_label:'Storm Model', climate_metric_3_value:'18.4M', climate_metric_3_label:'Residents Covered', climate_metric_4_value:'94%', climate_metric_4_label:'Grid Readiness',
+  lunar_region:'Lunar South Pole Mining Belt', lunar_location:'Shackleton Habitat Cluster', lunar_metric_1_value:'+22%', lunar_metric_1_label:'Oxygen Credit Cost', lunar_metric_2_value:'9 days', lunar_metric_2_label:'Strike Duration', lunar_metric_3_value:'31 sites', lunar_metric_3_label:'Affected Mines', lunar_metric_4_value:'4.2M t', lunar_metric_4_label:'Helium-3 Delayed', lunar_person_name:'TARO VENN', lunar_person_title:'Lunar Labor Analyst • Shackleton Habitat Cluster'
 };
 
 function renderTemplateSpecificControls(scene){

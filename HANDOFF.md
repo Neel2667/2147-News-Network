@@ -172,3 +172,8 @@ Built `historical-timeline.html`, `financial-desk.html`, `legal-desk.html`, and 
 ## Template-Specific Controls
 
 The Scene Timeline panel now shows template-specific controls for Historical Timeline, Financial Desk, Legal Desk, and Breaking News. Values are saved under `scene.template_controls` and passed into template rendering. See `reports/REPORT_2026-06-16_TEMPLATE_SPECIFIC_CONTROLS.md`.
+
+
+## Science Climate Lunar Templates
+
+Built `science-desk.html`, `earth-climate-map.html`, and `lunar-report.html` with template-specific controls in the Scene Timeline panel. See `reports/REPORT_2026-06-16_SCIENCE_CLIMATE_LUNAR_TEMPLATES.md`.
