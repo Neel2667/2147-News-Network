@@ -247,3 +247,8 @@ User said ticker text disappeared and animations were too similar. Updated `stat
 ## Strap and Name Strap Layout Fix
 
 User reported strap small text overflowing and anchor names disappearing in name straps. Fixed `static/core-broadcast-elements.html` by reducing side column widths, adding overflow/ellipsis handling, reducing font sizes, and extending animation hold time. See `reports/REPORT_2026-06-16_STRAP_AND_NAMESTRAP_LAYOUT_FIX.md`.
+
+
+## Long Name Strap Fix
+
+User said long names cannot be truncated. Updated `static/core-broadcast-elements.html`: lower-third examples are now full-width stacked layouts, names wrap naturally, ellipsis removed, long-name example added. See `reports/REPORT_2026-06-16_LONG_NAME_STRAP_FIX.md`.

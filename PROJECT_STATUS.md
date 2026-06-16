@@ -129,3 +129,10 @@ The MVP is complete when a user can:
 - Fixed small text overflow in headline/breaking straps.
 - Fixed name strap spacing so anchor/expert names remain visible.
 - Added safer ellipsis behavior and longer animation hold times.
+
+
+## Long Name Strap Fix
+
+- Removed truncation from name straps.
+- Rebuilt lower-third review as full-width stacked examples.
+- Long names now wrap instead of disappearing.
