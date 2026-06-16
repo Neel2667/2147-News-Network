@@ -277,3 +277,8 @@ Built the first five full Broadcast V2 templates and updated pilot scenes s01-s0
 ## Broadcast V2 Pilot Complete
 
 All nine pilot scenes now use Broadcast System V2 templates. Approval page: `/static/pilot-v2-approval.html`. New templates: expert split, financial board, legal board, close. See `reports/REPORT_2026-06-16_BROADCAST_V2_REMAINING_TEMPLATES.md`.
+
+
+## Pilot V2 Approval Standalone Fix
+
+User hit fetch parse URL error on `/static/pilot-v2-approval.html`. The page is now standalone with inlined CSS and pre-rendered scenes, no API needed. See `reports/REPORT_2026-06-16_APPROVAL_PAGE_STANDALONE_FIX.md`.

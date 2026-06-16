@@ -168,3 +168,8 @@ The MVP is complete when a user can:
 - Built remaining V2 templates: expert split, financial board, legal board, close.
 - Updated all nine pilot scenes to Broadcast System V2.
 - Added `static/pilot-v2-approval.html` for user approval.
+
+
+## Pilot V2 Approval Standalone Fix
+
+- Fixed approval board API fetch error by making `static/pilot-v2-approval.html` standalone with inlined CSS and pre-rendered scenes.
