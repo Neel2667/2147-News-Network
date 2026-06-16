@@ -232,3 +232,8 @@ The user strongly rejected the first demo as pathetic and not watchable. A new d
 ## Core Broadcast Elements Review Page
 
 Created `static/core-broadcast-elements.html` as the review page for the new V2 news-channel identity system. It showcases the core elements first: bug, LIVE bug, clock, lower thirds, ticker, headline/breaking straps, source chips, motion tests, and palette. User wants to approve these before larger templates are rebuilt.
+
+
+## Core Elements Polish Fixes
+
+User requested more polish: ticker overlapped label, name straps overflowed, and elements felt static. Fixed `static/core-broadcast-elements.html` with protected ticker window, safer lower-third text overflow handling, and animation loops for core elements. See `reports/REPORT_2026-06-16_CORE_ELEMENTS_POLISH_FIXES.md`.

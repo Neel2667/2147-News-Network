@@ -109,3 +109,10 @@ The MVP is complete when a user can:
 
 - Created `static/core-broadcast-elements.html` to review logo bug, LIVE bug, clock, lower thirds, straps, ticker, source chips, motion tests, and palette before rebuilding full templates.
 - Added sidebar link from custom app.
+
+
+## Core Elements Polish Fixes
+
+- Fixed ticker overlap with Headlines label.
+- Fixed lower-third/name-strap text overflow.
+- Added animation pass to core elements: bug, LIVE, clock, sources, story cards, OTS, straps, lower thirds, ticker, and tiles.
