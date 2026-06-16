@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2147 News Network Studio</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar glass">
+      <div class="brand">
+        <div class="brand-mark">47</div>
+        <div>
+          <strong>2147 Studio</strong>
+          <span>Newsroom OS</span>
+        </div>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-panel="dashboard">World Dashboard</button>
+        <button class="nav-btn" data-panel="analyzer">Event Analyzer</button>
+        <button class="nav-btn" data-panel="episode">Episode Builder</button>
+        <button class="nav-btn" data-panel="preview">Visual Preview</button>
+        <button class="nav-btn" data-panel="exports">Export Center</button>
+      </nav>
+      <div class="sidebar-note">
+        <span>Design rule</span>
+        Premium UI first. No cheap cyberpunk clutter.
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar glass">
+        <div>
+          <p class="eyebrow">New Delhi Orbital Broadcast Hub</p>
+          <h1>2147 News Network Studio</h1>
+        </div>
+        <div class="status-pill"><i></i> Custom App Online</div>
+      </header>
+
+      <section id="dashboard" class="panel active">
+        <div class="section-heading">
+          <p class="eyebrow">World State</p>
+          <h2>Living Event Timeline</h2>
+          <p>The newsroom starts with causes, consequences, and ripple events — not random fake headlines.</p>
+        </div>
+        <div id="metricGrid" class="metric-grid"></div>
+        <div class="two-col">
+          <div class="glass card"><h3>Active Events</h3><div id="activeEvents" class="event-list"></div></div>
+          <div class="glass card"><h3>Institutions & Sources</h3><div id="sourceList" class="source-list"></div></div>
+        </div>
+      </section>
+
+      <section id="analyzer" class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Causal Analysis</p>
+          <h2>Analyze Event Ripples</h2>
+          <p>Select an event and inspect what caused it, who is affected, and what story should come next.</p>
+        </div>
+        <div class="control-row glass">
+          <label>World Event <select id="eventSelect"></select></label>
+          <button id="analyzeBtn" class="primary-btn">Analyze Event</button>
+        </div>
+        <div class="two-col analysis-grid">
+          <div class="glass card"><h3>Analysis</h3><div id="analysisOutput"></div></div>
+          <div class="glass card"><h3>Ripple Seeds</h3><div id="rippleOutput"></div></div>
+        </div>
+      </section>
+
+      <section id="episode" class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Episode Builder</p>
+          <h2>Generate Premium Broadcast Draft</h2>
+          <p>Build the first cut of a real-feeling international future news episode from the selected event.</p>
+        </div>
+        <div class="control-grid glass">
+          <label>Manual Topic <input id="manualTopic" value="Mars independence referendum" /></label>
+          <label>Length <select id="targetLength"><option>5 minutes</option><option selected>8 minutes</option><option>12 minutes</option><option>20 minutes</option></select></label>
+          <label>Tone <select id="tone"><option selected>serious</option><option>dramatic</option><option>documentary</option><option>urgent breaking news</option></select></label>
+          <button id="generateBtn" class="primary-btn">Generate Episode</button>
+        </div>
+        <div class="episode-output">
+          <div class="glass card"><h3>Headlines</h3><ul id="headlineOutput"></ul></div>
+          <div class="glass card wide"><h3>Script</h3><pre id="scriptOutput"></pre></div>
+          <div class="glass card wide"><h3>Scene Plan</h3><pre id="sceneOutput"></pre></div>
+        </div>
+      </section>
+
+      <section id="preview" class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Premium UI</p>
+          <h2>Template Preview</h2>
+          <p>Preview the broadcast visuals directly inside our custom app.</p>
+        </div>
+        <div class="control-row glass">
+          <label>Template <select id="templateSelect"></select></label>
+          <label>Headline <input id="previewHeadline" value="Mars Enters Final Voting Cycle" /></label>
+          <button id="renderTemplateBtn" class="primary-btn">Render</button>
+        </div>
+        <div id="templateStage" class="template-stage"></div>
+      </section>
+
+      <section id="exports" class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Production</p>
+          <h2>Export Center</h2>
+          <p>Export the current draft into files for editing, video production, and handoff.</p>
+        </div>
+        <div class="glass card">
+          <button id="exportBtn" class="primary-btn">Export Current Draft</button>
+          <div id="exportStatus" class="export-status">No export yet.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

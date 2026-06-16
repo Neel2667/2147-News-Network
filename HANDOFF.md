@@ -147,3 +147,8 @@ The user emphasized that UI quality is the main success factor. If the UI looks 
 ## Premium UI Templates Built
 
 The first premium UI templates are implemented and pushed. See `reports/REPORT_2026-06-16_PREMIUM_UI_TEMPLATES.md`. The Gradio app now includes a Premium Visual Preview tab. Templates are self-contained HTML/CSS snippets under `templates/`, rendered via `src/template_renderer.py`.
+
+
+## Custom App Direction
+
+The user rejected a Gradio-first URL because they want a fully controlled custom app with all newsroom controls. The production direction is now FastAPI + custom HTML/CSS/JS. Read docs/CUSTOM_APP_ARCHITECTURE.md and prioritize main.py/static files over app.py.

@@ -401,3 +401,8 @@ A future agent should read these in order:
 ## Premium UI Priority Update
 
 The user emphasized that the main thing is the beauty of the UI. If the news writing is good but the UI looks cheap, viewers will not watch. The design should take inspiration from Apple-style premium product design: clean, minimal, elegant, smooth, high-quality animations, beautiful typography, glass-like depth, and restrained color. Avoid cheap cyberpunk clutter, excessive neon, random glitch effects, and generic dashboard aesthetics. Read `docs/PREMIUM_UI_DESIGN_SYSTEM.md`.
+
+
+## Custom App Decision
+
+The user said not to make a Gradio URL because Gradio does not provide enough controls. The project should use a custom app where we can build all controls needed. The production direction is now FastAPI backend with custom premium HTML/CSS/JS frontend, deployable to Hugging Face using Docker.

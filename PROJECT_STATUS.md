@@ -28,7 +28,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Added causal event engine plan and initial data files for events, people, organizations, locations, and source agencies.
 - Added curated chat context file so future agents can understand the planning history without reading raw chat logs.
 - Added premium UI design system emphasizing Apple-inspired polish, minimalism, glass panels, typography, and smooth motion.
-- Built premium UI template system with opening intro, anchor desk, headline cards, Mars dashboard, quote card, closing transmission, template renderer, and Gradio preview tab.
+- Built premium UI template system with opening intro, anchor desk, headline cards, Mars dashboard, quote card, closing transmission, template renderer, and preview support.
+- Started custom FastAPI app to replace Gradio-first workflow, with a premium custom UI and API endpoints.
 
 
 ## In Progress
