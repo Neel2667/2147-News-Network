@@ -372,3 +372,8 @@ The Python-generated MP4 did not match the designed templates and should not be 
 ## Static Exact Review Fix
 
 User said `outputs/pilot-exact-render/index.html` was not loading. Created `/static/pilot-exact-static-review.html` with inline scenes, no API, no iframes. Use this as current approval page. Generator: `scripts/build_pilot_exact_static_review.py`.
+
+
+## Final Pilot Render Package
+
+Created final render package at `outputs/final-pilot-render-package/`. It contains 1920x1080 HTML scene pages, manifest, README, and ZIP. Use this for OBS/browser recording. Generator: `scripts/build_final_pilot_render_package.py`.

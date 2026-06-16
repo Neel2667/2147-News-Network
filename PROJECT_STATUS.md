@@ -293,3 +293,10 @@ The MVP is complete when a user can:
 
 - Created `/static/pilot-exact-static-review.html` because outputs exact render was not loading.
 - The page has inline rendered scenes, no API calls and no iframes.
+
+
+## Final Pilot Render Package
+
+- Created `outputs/final-pilot-render-package/` from approved exact HTML scenes.
+- Includes 1920x1080 scene pages, manifest, README, and ZIP package.
+- Generator: `scripts/build_final_pilot_render_package.py`.
