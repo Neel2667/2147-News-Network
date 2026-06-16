@@ -228,3 +228,10 @@ The MVP is complete when a user can:
 - Reintroduced a CSS-rendered anchor figure in Studio + Video Wall.
 - Added visible real video wall support and fallback footage layer.
 - Copied sample footage to `static/demo-assets/` for reliable preview.
+
+
+## Studio Wall Visible Anchor and Footage Fix
+
+- Added poster image extracted from sample footage so video wall is visible even if video autoplay fails.
+- Enlarged CSS anchor figure and added z-index layering.
+- Regenerated approval pages.

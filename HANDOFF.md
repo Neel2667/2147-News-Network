@@ -322,3 +322,8 @@ User said Studio + Video Wall was not proper. Removed fake anchor silhouette fro
 ## Studio Wall Anchor and Footage Fix
 
 User said Studio + Video Wall had no anchor or footage. Reintroduced CSS-rendered anchor figure and moved sample footage to `static/demo-assets/earth-observations-sample.mp4` for reliable preview. Template has fallback animated footage layer if video fails.
+
+
+## Studio Wall Visible Anchor and Footage Fix
+
+User still saw no anchor/footage. Added `static/demo-assets/earth-observations-sample-poster.jpg`, inserted visible poster under video, enlarged CSS anchor figure, and regenerated approval pages. If old page appears, hard refresh.

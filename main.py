@@ -367,6 +367,7 @@ def template_default_context() -> dict[str, str]:
         "lunar_person_name": "TARO VENN",
         "lunar_person_title": "Lunar Labor Analyst • Shackleton Habitat Cluster",
         "asset_video": "/assets/footage/nasa/earth-observations-sample.mp4",
+        "asset_poster": "/static/demo-assets/earth-observations-sample-poster.jpg",
         "live_label": "Live",
         "timestamp": "18 Oct 2147 / 19:42 UTC-O",
         "segment_label": "Studio Video Wall",
