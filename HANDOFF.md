@@ -282,3 +282,8 @@ All nine pilot scenes now use Broadcast System V2 templates. Approval page: `/st
 ## Pilot V2 Approval Standalone Fix
 
 User hit fetch parse URL error on `/static/pilot-v2-approval.html`. The page is now standalone with inlined CSS and pre-rendered scenes, no API needed. See `reports/REPORT_2026-06-16_APPROVAL_PAGE_STANDALONE_FIX.md`.
+
+
+## Pilot V2 Overlap Fix
+
+User reported elements overlapping in the approval board. Fixed by creating protected lower graphics space in templates, moving anchor lower-third above ticker, making approval page full-size on large screens, and adding `scripts/build_pilot_v2_approval.py` to regenerate approval page. See `reports/REPORT_2026-06-16_PILOT_V2_OVERLAP_FIX.md`.

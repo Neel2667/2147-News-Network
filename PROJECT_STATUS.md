@@ -173,3 +173,11 @@ The MVP is complete when a user can:
 ## Pilot V2 Approval Standalone Fix
 
 - Fixed approval board API fetch error by making `static/pilot-v2-approval.html` standalone with inlined CSS and pre-rendered scenes.
+
+
+## Pilot V2 Overlap Fix
+
+- Fixed overlap between main content, straps, lower thirds, and tickers in V2 templates.
+- Anchor lower third now sits above ticker.
+- Approval page now displays full-size 1280x720 scenes on large screens.
+- Added `scripts/build_pilot_v2_approval.py`.
