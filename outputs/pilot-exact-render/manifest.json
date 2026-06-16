@@ -1,0 +1,82 @@
+[
+  {
+    "index": 1,
+    "id": "s01",
+    "scene": "Opening Transmission",
+    "template": "broadcast-v2-cold-open.html",
+    "duration": 16,
+    "file": "scenes/01-s01.html"
+  },
+  {
+    "index": 2,
+    "id": "s02",
+    "scene": "Anchor Lead-In",
+    "template": "broadcast-v2-studio-wall-footage.html",
+    "duration": 48,
+    "file": "scenes/02-s02.html"
+  },
+  {
+    "index": 3,
+    "id": "s03",
+    "scene": "Top Headlines",
+    "template": "broadcast-v2-top-stories.html",
+    "duration": 38,
+    "file": "scenes/03-s03.html"
+  },
+  {
+    "index": 4,
+    "id": "s04",
+    "scene": "Mars Referendum Dashboard",
+    "template": "broadcast-v2-studio-wall-data.html",
+    "duration": 78,
+    "file": "scenes/04-s04.html"
+  },
+  {
+    "index": 5,
+    "id": "s05",
+    "scene": "Historical Context",
+    "template": "broadcast-v2-studio-wall-map.html",
+    "duration": 62,
+    "file": "scenes/05-s05.html"
+  },
+  {
+    "index": 6,
+    "id": "s05b",
+    "scene": "Archive Context",
+    "template": "broadcast-v2-studio-wall-archive.html",
+    "duration": 32,
+    "file": "scenes/06-s05b.html"
+  },
+  {
+    "index": 7,
+    "id": "s06",
+    "scene": "Expert Quote",
+    "template": "broadcast-v2-studio-wall-quote.html",
+    "duration": 34,
+    "file": "scenes/07-s06.html"
+  },
+  {
+    "index": 8,
+    "id": "s07",
+    "scene": "Market Ripple",
+    "template": "broadcast-v2-studio-wall-data.html",
+    "duration": 52,
+    "file": "scenes/08-s07.html"
+  },
+  {
+    "index": 9,
+    "id": "s08",
+    "scene": "Legal Ripple",
+    "template": "broadcast-v2-studio-wall-data.html",
+    "duration": 50,
+    "file": "scenes/09-s08.html"
+  },
+  {
+    "index": 10,
+    "id": "s09",
+    "scene": "Closing Transmission",
+    "template": "broadcast-v2-close.html",
+    "duration": 24,
+    "file": "scenes/10-s09.html"
+  }
+]

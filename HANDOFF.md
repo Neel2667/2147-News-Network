@@ -362,3 +362,8 @@ User approved all five Studio Wall variants. Pilot now uses footage, map, data, 
 ## Pilot Studio Wall Preview Video
 
 Generated silent preview video at `outputs/pilot-preview/2147-pilot-studio-wall-preview.mp4` using approved Studio Wall variants. Generator: `scripts/generate_pilot_studio_wall_preview.py`.
+
+
+## Exact Template Render Package
+
+The Python-generated MP4 did not match the designed templates and should not be used for approval. Use `outputs/pilot-exact-render/index.html` which renders actual HTML templates. Generator: `scripts/build_exact_pilot_render_pages.py`.

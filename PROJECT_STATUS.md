@@ -279,3 +279,11 @@ The MVP is complete when a user can:
 
 - Generated `outputs/pilot-preview/2147-pilot-studio-wall-preview.mp4` using approved Studio Wall variants.
 - Added generator script `scripts/generate_pilot_studio_wall_preview.py`.
+
+
+## Exact Template Render Package
+
+- User reported generated MP4 did not match designed templates.
+- Created `scripts/build_exact_pilot_render_pages.py`.
+- Created `outputs/pilot-exact-render/index.html` and standalone scene pages rendering the actual HTML templates.
+- Old generated MP4 should not be used for visual approval.
