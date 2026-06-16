@@ -161,3 +161,10 @@ The MVP is complete when a user can:
 
 - Built first five full templates using `broadcast-system.css`: cold open, anchor studio, top stories, Mars data board, and timeline.
 - Updated first five pilot scenes to use V2 templates.
+
+
+## Broadcast V2 Pilot Complete
+
+- Built remaining V2 templates: expert split, financial board, legal board, close.
+- Updated all nine pilot scenes to Broadcast System V2.
+- Added `static/pilot-v2-approval.html` for user approval.

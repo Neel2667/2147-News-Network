@@ -272,3 +272,8 @@ Approved core elements have been extracted into `static/broadcast-system.css` an
 ## First Broadcast V2 Templates
 
 Built the first five full Broadcast V2 templates and updated pilot scenes s01-s05 to use them. See `reports/REPORT_2026-06-16_BROADCAST_V2_FIRST_TEMPLATES.md`. Next rebuild s06-s09: expert split, financial board, legal board, close.
+
+
+## Broadcast V2 Pilot Complete
+
+All nine pilot scenes now use Broadcast System V2 templates. Approval page: `/static/pilot-v2-approval.html`. New templates: expert split, financial board, legal board, close. See `reports/REPORT_2026-06-16_BROADCAST_V2_REMAINING_TEMPLATES.md`.

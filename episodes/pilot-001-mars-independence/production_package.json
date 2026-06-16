@@ -2,7 +2,7 @@
   "episode_id": "2147-001-mars-independence",
   "title": "Mars Votes for Independence From Earth",
   "main_event_id": "event_2147_001_mars_referendum_final_cycle",
-  "status": "pilot_partially_rebuilt_with_broadcast_v2_templates",
+  "status": "pilot_fully_rebuilt_with_broadcast_v2_templates",
   "runtime_seconds": 402,
   "runtime_target": "8-10 minutes after narration expansion and pacing",
   "headlines": [
@@ -123,7 +123,7 @@
       "id": "s06",
       "scene": "Expert Quote",
       "duration": 34,
-      "template": "quote-card.html",
+      "template": "broadcast-v2-expert-split.html",
       "headline": "Dr. Ilyan Sen",
       "summary": "Mars is no longer an outpost. It is a civilization asking for political recognition.",
       "purpose": "Add named expert credibility.",
@@ -139,13 +139,14 @@
         "status": "polished",
         "focus": "named expert credibility",
         "notes": "Short, memorable quote to improve retention."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     },
     {
       "id": "s07",
       "scene": "Market Ripple",
       "duration": 52,
-      "template": "financial-desk.html",
+      "template": "broadcast-v2-financial-board.html",
       "headline": "Energy Markets Watch Mars Vote",
       "summary": "Helion Grid Systems warns unresolved treaty language could delay fusion-grid contracts and cargo insurance pricing.",
       "purpose": "Show economic consequences and introduce Episode 3 ripple.",
@@ -167,13 +168,14 @@
         "status": "polished",
         "focus": "market consequence and named CEO realism",
         "notes": "Headline reframed as market-news style rather than generic risk."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     },
     {
       "id": "s08",
       "scene": "Legal Ripple",
       "duration": 50,
-      "template": "legal-desk.html",
+      "template": "broadcast-v2-legal-board.html",
       "headline": "AI Voting Rights Petition Filed",
       "summary": "The Synthetic Rights Tribunal receives a petition over memory-continuity residents registered in Martian settlement zones.",
       "purpose": "Show legal consequences and introduce Episode 5 ripple.",
@@ -199,13 +201,14 @@
         "status": "polished",
         "focus": "legal stakes and future identity law",
         "notes": "Language made more specific and less generic."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     },
     {
       "id": "s09",
       "scene": "Closing Transmission",
       "duration": 24,
-      "template": "closing-transmission.html",
+      "template": "broadcast-v2-close.html",
       "headline": "End Transmission",
       "summary": "For Earth, Luna, Mars, and the Outer Belt — this is 2147 News Network.",
       "purpose": "Premium signoff and continuity handoff to next episode.",
@@ -215,7 +218,8 @@
         "status": "polished",
         "focus": "premium signoff and next-episode continuity",
         "notes": "Clean ending with teaser for episode 2."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     }
   ],
   "metadata": {
@@ -268,14 +272,22 @@
       "s02",
       "s03",
       "s04",
-      "s05"
+      "s05",
+      "s06",
+      "s07",
+      "s08",
+      "s09"
     ],
     "templates": {
       "s01": "broadcast-v2-cold-open.html",
       "s02": "broadcast-v2-anchor-studio.html",
       "s03": "broadcast-v2-top-stories.html",
       "s04": "broadcast-v2-mars-data.html",
-      "s05": "broadcast-v2-timeline.html"
+      "s05": "broadcast-v2-timeline.html",
+      "s06": "broadcast-v2-expert-split.html",
+      "s07": "broadcast-v2-financial-board.html",
+      "s08": "broadcast-v2-legal-board.html",
+      "s09": "broadcast-v2-close.html"
     },
     "next_scene_ids": [
       "s06",
@@ -283,6 +295,7 @@
       "s08",
       "s09"
     ],
-    "note": "First five pilot scenes now use reusable Broadcast System V2 components."
+    "note": "All nine pilot scenes now use reusable Broadcast System V2 components.",
+    "remaining_scene_ids": []
   }
 }

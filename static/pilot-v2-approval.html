@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pilot V2 Approval Board</title>
+  <link rel="stylesheet" href="/static/broadcast-system.css" />
+  <style>
+    body{margin:0;background:#05070d;color:#f8fafc;font-family:var(--bcast-font);padding:30px}.wrap{max-width:1500px;margin:auto}.head{display:flex;justify-content:space-between;gap:24px;align-items:end;border-bottom:1px solid var(--bcast-line);padding-bottom:22px;margin-bottom:24px}.eyebrow{color:var(--bcast-cyan);font-size:12px;font-weight:950;letter-spacing:.18em;text-transform:uppercase}h1{font-family:var(--bcast-condensed);font-size:76px;line-height:.84;text-transform:uppercase;margin:0}.grid{display:grid;gap:26px}.scene{background:rgba(255,255,255,.07);border:1px solid var(--bcast-line);border-radius:24px;padding:18px;box-shadow:0 20px 55px rgba(0,0,0,.24)}.scene-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:14px}.scene-head strong{font-size:18px}.scene-head span{color:var(--bcast-muted);font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.stage{height:540px;overflow:hidden;border-radius:18px;background:#03050a;border:1px solid rgba(255,255,255,.12)}.stage-inner{width:1280px;height:720px;transform:scale(.75);transform-origin:0 0}.loading{color:var(--bcast-muted);padding:30px}.status{padding:10px 14px;border-radius:999px;background:rgba(22,163,74,.1);border:1px solid rgba(22,163,74,.35);color:#d9ffe7;font-weight:950;letter-spacing:.12em;text-transform:uppercase;font-size:12px}@media(max-width:1000px){.head{display:block}.stage{height:360px}.stage-inner{transform:scale(.5)}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="head"><div><div class="eyebrow">Approval Board</div><h1>Pilot Broadcast V2</h1></div><div class="status">All 9 scenes rebuilt</div></div>
+    <div id="scenes" class="grid"><div class="loading">Loading pilot scenes from app API...</div></div>
+  </main>
+  <script>
+    async function api(path, options={}){const r=await fetch(path,{headers:{'Content-Type':'application/json'},...options}); if(!r.ok) throw new Error(await r.text()); return r.headers.get('content-type')?.includes('json')?r.json():r.text();}
+    async function main(){
+      const payload=await api('/api/episodes/2147-001-mars-independence');
+      const scenes=payload.draft.scene_plan;
+      const root=document.getElementById('scenes'); root.innerHTML='';
+      for(const scene of scenes){
+        const html=await api('/api/scenes/preview',{method:'POST',body:JSON.stringify({scene,controls:{}})});
+        const el=document.createElement('section'); el.className='scene';
+        el.innerHTML=`<div class="scene-head"><strong>${scene.id} — ${scene.scene}</strong><span>${scene.template} • ${scene.duration}s</span></div><div class="stage"><div class="stage-inner">${html}</div></div>`;
+        root.appendChild(el);
+      }
+    }
+    main().catch(err=>{document.getElementById('scenes').innerHTML='<div class="loading">Error loading approval board: '+err.message+'</div>'});
+  </script>
+</body>
+</html>
