@@ -397,3 +397,7 @@ A future agent should read these in order:
 4. Update `app.py` to analyze `data/events.json` instead of using only a deterministic topic prompt.
 5. Add visual templates for anchor desk, headline cards, Mars dashboard, quote card, and closing transmission.
 6. Add export buttons to the Hugging Face app.
+
+## Premium UI Priority Update
+
+The user emphasized that the main thing is the beauty of the UI. If the news writing is good but the UI looks cheap, viewers will not watch. The design should take inspiration from Apple-style premium product design: clean, minimal, elegant, smooth, high-quality animations, beautiful typography, glass-like depth, and restrained color. Avoid cheap cyberpunk clutter, excessive neon, random glitch effects, and generic dashboard aesthetics. Read `docs/PREMIUM_UI_DESIGN_SYSTEM.md`.

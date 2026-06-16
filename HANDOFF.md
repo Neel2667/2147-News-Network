@@ -109,7 +109,8 @@ Read in this order:
 1. README.md
 2. PROJECT_STATUS.md
 3. docs/CHAT_CONTEXT.md
-4. docs/MASTER_PLAN.md
+4. docs/PREMIUM_UI_DESIGN_SYSTEM.md
+5. docs/MASTER_PLAN.md
 4. docs/CONTENT_BIBLE.md
 5. docs/VISUAL_POLICY.md
 6. docs/PRODUCTION_PIPELINE.md
@@ -136,3 +137,8 @@ The user wants news to emerge from cause-and-effect, not isolated headline gener
 ## Chat Context File
 
 A curated planning record has been saved at docs/CHAT_CONTEXT.md. It excludes secrets and should be read by any future agent before continuing.
+
+
+## Premium UI Priority
+
+The user emphasized that UI quality is the main success factor. If the UI looks cheap, nobody will watch, even if the writing is good. Use docs/PREMIUM_UI_DESIGN_SYSTEM.md as a mandatory design reference. The target is Apple-inspired polish: minimal, beautiful typography, glass depth, restrained colors, smooth premium animation, and no cheap cyberpunk clutter.
