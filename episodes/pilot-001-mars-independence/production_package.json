@@ -248,5 +248,13 @@
       "added quote template controls for future dynamic rendering"
     ],
     "next_manual_review": "Open Load Pilot Episode in app, preview each scene, and verify typography/readability at 1920x1080."
+  },
+  "audio_plan": {
+    "sound_design_plan": "audio/sound_design_plan.md",
+    "voiceover_timing_plan": "audio/voiceover_timing_plan.json",
+    "audio_cue_sheet": "audio/audio_cue_sheet.md",
+    "subtitles_draft": "audio/subtitles_draft.srt",
+    "voice_style": "calm international news anchor; premium, precise, credible",
+    "final_loudness_target": "~ -14 LUFS integrated, true peak below -1.0 dBTP"
   }
 }

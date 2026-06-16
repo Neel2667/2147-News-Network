@@ -1,0 +1,102 @@
+{
+  "episode_id": "2147-001-mars-independence",
+  "title": "Mars Votes for Independence From Earth",
+  "target_voice_style": "calm international news anchor, premium, precise, credible",
+  "target_words_per_minute": "135-150",
+  "data_section_words_per_minute": "120-135",
+  "scenes": [
+    {
+      "scene_id": "s01",
+      "scene": "Opening Transmission",
+      "duration_seconds": 16,
+      "voiceover_start": 3,
+      "voiceover_end": 13,
+      "estimated_words": 22,
+      "voiceover": "This is 2147 News Network, broadcasting from the New Delhi Orbital Broadcast Hub. Tonight, Mars enters its final voting cycle.",
+      "audio_notes": "Network sting first, then voice enters over soft orbital swell."
+    },
+    {
+      "scene_id": "s02",
+      "scene": "Anchor Lead-In",
+      "duration_seconds": 48,
+      "voiceover_start": 2,
+      "voiceover_end": 43,
+      "estimated_words": 92,
+      "voiceover": "Good evening. I’m Anaya Rao at the Earth-Orbit Media Ring. Across forty-two Martian settlement zones, voters are entering the final hours of a sovereignty referendum that could create the first independent off-world republic in human history.",
+      "audio_notes": "Music stays low. Lower-third reveal gets a soft glass pulse."
+    },
+    {
+      "scene_id": "s03",
+      "scene": "Top Headlines",
+      "duration_seconds": 38,
+      "voiceover_start": 1,
+      "voiceover_end": 35,
+      "estimated_words": 78,
+      "voiceover": "Tonight’s top stories: Mars votes on independence. Earth Union officials prepare an emergency legal review. Helion Grid Systems warns of energy-contract uncertainty. Lunar workers connect oxygen-credit demands to the Mars autonomy debate. And the Synthetic Rights Tribunal receives a petition over AI voting rights on Mars.",
+      "audio_notes": "Slightly quicker delivery. Soft card taps on each headline."
+    },
+    {
+      "scene_id": "s04",
+      "scene": "Mars Referendum Dashboard",
+      "duration_seconds": 78,
+      "voiceover_start": 3,
+      "voiceover_end": 70,
+      "estimated_words": 142,
+      "voiceover": "The Mars Civic Council Election Board reports projected turnout at ninety-one percent, with twenty-nine point four million eligible voters. The current settlement model shows fifty-seven percent supporting independence, thirty-nine percent supporting continued union administration, and four percent still undecided. Officials caution that remote settlement certification could shift the final count.",
+      "audio_notes": "Slow down for numbers. Add quiet data ticks only when bars animate."
+    },
+    {
+      "scene_id": "s05",
+      "scene": "Historical Context",
+      "duration_seconds": 62,
+      "voiceover_start": 2,
+      "voiceover_end": 56,
+      "estimated_words": 118,
+      "voiceover": "This vote did not appear suddenly. In 2136, lunar oxygen-credit protests turned life-support pricing into a political rights issue. In 2142, Mars challenged Earth Union cargo tariff authority. Those disputes evolved into a larger question: who governs law, trade, and survival systems beyond Earth? Tonight’s referendum is the result of that unresolved chain.",
+      "audio_notes": "Documentary warmth. Soft tick per timeline event."
+    },
+    {
+      "scene_id": "s06",
+      "scene": "Expert Quote",
+      "duration_seconds": 34,
+      "voiceover_start": 2,
+      "voiceover_end": 28,
+      "estimated_words": 50,
+      "voiceover": "Dr. Ilyan Sen, political historian at the University of Valles Marineris, told 2147 News Network: Mars is no longer an outpost. It is a civilization asking for political recognition.",
+      "audio_notes": "Lower music. Add very soft archive waveform texture."
+    },
+    {
+      "scene_id": "s07",
+      "scene": "Market Ripple",
+      "duration_seconds": 52,
+      "voiceover_start": 2,
+      "voiceover_end": 47,
+      "estimated_words": 98,
+      "voiceover": "The political uncertainty is already moving through the economy. Helion Grid Systems CEO Jiang Lau warned that unresolved Earth-Mars treaty language could delay long-term fusion-grid contracts. The Outer Belt Trade Registry is also tracking higher cargo insurance pricing and early volatility in Mars infrastructure bonds.",
+      "audio_notes": "Restrained finance ticker pulse. Keep voice authoritative and measured."
+    },
+    {
+      "scene_id": "s08",
+      "scene": "Legal Ripple",
+      "duration_seconds": 50,
+      "voiceover_start": 2,
+      "voiceover_end": 45,
+      "estimated_words": 93,
+      "voiceover": "The Synthetic Rights Tribunal has received a petition asking whether registered memory-continuity residents in Martian settlement zones can be included in referendum certification. Senior counsel Selene Armitage says the case could shape voting rights for synthetic citizens across future off-world constitutional processes.",
+      "audio_notes": "Formal and quiet. Soft document reveal."
+    },
+    {
+      "scene_id": "s09",
+      "scene": "Closing Transmission",
+      "duration_seconds": 24,
+      "voiceover_start": 3,
+      "voiceover_end": 17,
+      "estimated_words": 28,
+      "voiceover": "For Earth, Luna, Mars, and the Outer Belt, this is 2147 News Network. End transmission.",
+      "audio_notes": "Music swells gently and fades. Teaser ticker remains visible."
+    }
+  ],
+  "estimated_total_voiceover_words": 721,
+  "estimated_voiceover_minutes_at_145_wpm": 4.97,
+  "notes": "Scene runtime includes visual breathing room, intro/outro stings, data readability, and transitions. Final edited episode may expand with additional narration or hold time."
+}

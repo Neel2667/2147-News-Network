@@ -197,3 +197,8 @@ The Export Center now shows download links for exported files and render package
 ## Pilot UI Polish Review
 
 The pilot episode has been reviewed and polished scene by scene. See `episodes/pilot-001-mars-independence/ui_polish_review.md` and `ui_review_contact_sheet.html`. The saved pilot draft has been updated. Quote card now has template-specific controls. Next: manually preview at 1920x1080 and do an OBS recording test.
+
+
+## Pilot Audio Plan
+
+Added sound design, voiceover timing, audio cue sheet, and subtitle draft under `episodes/pilot-001-mars-independence/audio/`. The audio direction is premium international news with restrained futuristic sound design. See `reports/REPORT_2026-06-16_AUDIO_PLAN.md`.
