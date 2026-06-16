@@ -227,3 +227,8 @@ The original demo MP4 used mp4v and may not play in browser previews. It has bee
 ## Broadcast V2 Rebuild
 
 The user strongly rejected the first demo as pathetic and not watchable. A new direction has started: real broadcast news package, not generic sci-fi UI. Read `docs/BROADCAST_REBUILD_RESEARCH_AND_PLAN.md`. New demo: `outputs/demo-video/2147-broadcast-v2-demo.mp4`. Next agent should rebuild templates around V2 broadcast style.
+
+
+## Core Broadcast Elements Review Page
+
+Created `static/core-broadcast-elements.html` as the review page for the new V2 news-channel identity system. It showcases the core elements first: bug, LIVE bug, clock, lower thirds, ticker, headline/breaking straps, source chips, motion tests, and palette. User wants to approve these before larger templates are rebuilt.

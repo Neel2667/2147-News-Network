@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2147 News Network — Core Broadcast Identity Elements</title>
+  <style>
+    :root{
+      --bg:#05070d;
+      --news-navy:#071426;
+      --studio-blue:#0e2a47;
+      --deep-blue:#092039;
+      --white:#f8fafc;
+      --muted:#94a3b8;
+      --line:rgba(255,255,255,.14);
+      --red:#d71920;
+      --red-dark:#8f1016;
+      --cyan:#00a6d6;
+      --mars:#e85d2a;
+      --green:#16a34a;
+      --amber:#f59e0b;
+      --ticker:#03050a;
+      --panel:#0b1728;
+      --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      --condensed: "Arial Narrow", "Roboto Condensed", "Helvetica Neue Condensed", Impact, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 20% 5%, rgba(0,166,214,.16), transparent 28%),
+        radial-gradient(circle at 82% 10%, rgba(215,25,32,.12), transparent 25%),
+        linear-gradient(135deg,#081120,#03050a 70%);
+      color:var(--white);
+      font-family:var(--font);
+    }
+    .page{max-width:1440px;margin:0 auto;padding:34px 28px 80px}
+    .hero{
+      display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px;
+      border-bottom:1px solid var(--line);padding-bottom:24px;
+    }
+    .eyebrow{margin:0 0 8px;color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    h1{margin:0;font-family:var(--condensed);font-size:clamp(42px,6vw,86px);line-height:.86;letter-spacing:-.055em;text-transform:uppercase}
+    .hero p{max-width:620px;color:var(--muted);font-size:17px;line-height:1.45;margin:0}
+    .status{display:flex;gap:10px;align-items:center;padding:10px 14px;border:1px solid rgba(22,163,74,.35);border-radius:999px;background:rgba(22,163,74,.09);font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#d9ffe7;white-space:nowrap}
+    .status i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}
+
+    .section{margin-top:34px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:16px}
+    h2{margin:0;font-family:var(--condensed);font-size:36px;letter-spacing:-.035em;text-transform:uppercase}
+    .section-head p{margin:0;color:var(--muted);font-size:14px;max-width:560px;line-height:1.4}
+
+    .stage{
+      position:relative;width:100%;aspect-ratio:16/9;min-height:520px;overflow:hidden;border-radius:18px;
+      background:
+        linear-gradient(135deg, rgba(14,42,71,.92), rgba(5,7,13,.98)),
+        var(--bg);
+      border:1px solid rgba(255,255,255,.16);box-shadow:0 28px 90px rgba(0,0,0,.42);
+    }
+    .stage::before{
+      content:"";position:absolute;inset:0;opacity:.38;
+      background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+      background-size:72px 72px;
+    }
+    .safe{position:absolute;inset:42px;border:1px dashed rgba(255,255,255,.20);pointer-events:none}
+    .safe::after{content:"16:9 BROADCAST SAFE AREA";position:absolute;right:10px;top:-22px;color:rgba(255,255,255,.45);font-size:10px;font-weight:800;letter-spacing:.12em}
+
+    /* Logo / bugs */
+    .bug{display:inline-flex;align-items:stretch;height:52px;box-shadow:0 10px 30px rgba(0,0,0,.26)}
+    .bug .mark{width:86px;background:#fff;color:var(--news-navy);display:grid;place-items:center;font-family:var(--condensed);font-size:27px;font-weight:1000;letter-spacing:-.04em}
+    .bug .word{width:110px;background:var(--studio-blue);display:grid;place-items:center;padding:0 10px;color:#fff;font-size:12px;line-height:1.05;font-weight:1000;letter-spacing:.10em;text-transform:uppercase;text-align:left}
+    .bug.compact{height:44px}.bug.compact .mark{width:70px;font-size:23px}.bug.compact .word{width:92px;font-size:10px}
+    .live-bug{display:inline-flex;height:42px;align-items:center;background:var(--red);color:#fff;padding:0 15px;font-weight:1000;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 10px 26px rgba(215,25,32,.28)}
+    .live-bug::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;margin-right:10px;animation:pulse 1.2s ease-in-out infinite}
+    @keyframes pulse{50%{opacity:.35}}
+    .clock{display:inline-flex;height:42px;align-items:center;padding:0 16px;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.22);font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#dbeafe}
+    .source-chip{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;border-radius:4px;background:rgba(255,255,255,.92);color:#172033;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+    .source-chip::before{content:"SOURCE";background:var(--news-navy);color:#fff;padding:5px 7px;border-radius:2px;font-size:10px;letter-spacing:.12em}
+
+    .top-left{position:absolute;left:44px;top:34px;display:flex;align-items:center;gap:10px}.top-right{position:absolute;right:44px;top:34px;display:flex;align-items:center;gap:10px}
+    .story-card{position:absolute;left:72px;top:150px;width:520px;background:rgba(255,255,255,.94);color:#111827;border-left:10px solid var(--red);padding:26px 30px;box-shadow:0 20px 55px rgba(0,0,0,.28)}
+    .story-card .k{color:var(--red);font-size:13px;font-weight:1000;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}.story-card h3{font-family:var(--condensed);font-size:54px;line-height:.9;letter-spacing:-.04em;margin:0;text-transform:uppercase}.story-card p{margin:14px 0 0;color:#4b5563;font-size:18px;line-height:1.3}
+    .ots{position:absolute;right:78px;top:150px;width:445px;height:250px;background:linear-gradient(135deg,#0b1b30,#05070d);border:1px solid rgba(255,255,255,.22);box-shadow:0 24px 65px rgba(0,0,0,.32);overflow:hidden}.ots::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:42px 42px}.mars-dot{position:absolute;right:45px;top:45px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle at 35% 28%,#ffb08d,#e85d2a 42%,#651c13 78%);box-shadow:0 0 45px rgba(232,93,42,.45)}.ots-title{position:absolute;left:28px;top:34px;font-family:var(--condensed);font-size:42px;line-height:.9;text-transform:uppercase}.ots-label{position:absolute;left:28px;bottom:28px;color:#bfdbfe;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+
+    /* Straps */
+    .headline-strap{position:absolute;left:0;right:0;bottom:92px;height:86px;background:#fff;color:#071426;display:flex;align-items:stretch;box-shadow:0 -14px 38px rgba(0,0,0,.28)}
+    .headline-strap .label{width:205px;background:var(--studio-blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:1000;letter-spacing:.12em;text-transform:uppercase}
+    .headline-strap.breaking .label{background:var(--red)}
+    .headline-strap .main{flex:1;padding:9px 24px}.headline-strap .main strong{display:block;font-family:var(--condensed);font-size:41px;line-height:.88;letter-spacing:-.03em;text-transform:uppercase}.headline-strap .main span{display:block;margin-top:5px;color:#556070;font-size:15px;font-weight:800}.headline-strap .tag{width:190px;background:#e5e7eb;color:#111827;display:grid;place-items:center;font-size:13px;font-weight:1000;letter-spacing:.10em;text-transform:uppercase;text-align:center;padding:0 12px}
+    .ticker{position:absolute;left:0;right:0;bottom:32px;height:60px;background:var(--ticker);display:flex;align-items:center;overflow:hidden}.ticker .ticker-label{width:168px;height:100%;background:var(--red);display:grid;place-items:center;font-weight:1000;letter-spacing:.13em;text-transform:uppercase}.ticker .crawl{white-space:nowrap;font-size:17px;font-weight:800;color:#f1f5f9;animation:crawl 26s linear infinite}.ticker .crawl span{padding-left:24px}.ticker .crawl b{color:#fca5a5}@keyframes crawl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    .lower-third-sample{position:relative;height:170px;background:linear-gradient(135deg,#0b1626,#05070d);border:1px solid var(--line);overflow:hidden;border-radius:14px}.lower-third{position:absolute;left:34px;right:34px;bottom:28px;height:78px;background:#fff;color:#071426;display:flex;box-shadow:0 12px 34px rgba(0,0,0,.28)}.lower-third .role{width:180px;background:var(--studio-blue);color:white;display:grid;place-items:center;font-size:14px;font-weight:1000;letter-spacing:.13em;text-transform:uppercase}.lower-third.breaking .role{background:var(--red)}.lower-third .name{flex:1;padding:10px 18px}.lower-third .name strong{display:block;font-family:var(--condensed);font-size:34px;line-height:.95;text-transform:uppercase}.lower-third .name span{font-size:14px;color:#4b5563;font-weight:800}.lower-third .loc{width:210px;background:#edf2f7;display:grid;place-items:center;text-align:center;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#1f2937;padding:0 12px}
+
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.tile{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:14px;padding:18px;min-height:155px;position:relative;overflow:hidden}.tile h3{font-family:var(--condensed);font-size:28px;margin:0 0 14px;text-transform:uppercase}.tile p{color:var(--muted);margin:14px 0 0;line-height:1.4;font-size:14px}.swatches{display:flex;gap:8px;margin-top:14px}.sw{height:34px;flex:1;border-radius:4px;border:1px solid rgba(255,255,255,.16)}
+
+    .motion-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.motion{height:130px;background:#071426;border:1px solid var(--line);border-radius:14px;position:relative;overflow:hidden}.motion .bar{position:absolute;left:18px;right:18px;bottom:22px;height:38px;background:#fff}.motion .bar::before{content:"";position:absolute;left:0;top:0;bottom:0;width:90px;background:var(--red)}.motion.slide .bar{animation:slideIn 2.6s var(--ease, cubic-bezier(.22,1,.36,1)) infinite}.motion.wipe::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);animation:lightWipe 2.2s infinite}.motion.pulse .bar::before{animation:redPulse 1.2s infinite}.motion.ticker-mini::after{content:"MARS TURNOUT 91% • EARTH UNION HEARING • ";position:absolute;left:18px;right:18px;bottom:26px;background:#03050a;color:#fff;height:30px;line-height:30px;font-size:12px;white-space:nowrap;animation:crawlMini 4s linear infinite}@keyframes slideIn{0%{transform:translateY(60px);opacity:0}20%,80%{transform:translateY(0);opacity:1}100%{transform:translateY(60px);opacity:0}}@keyframes lightWipe{from{transform:translateX(-100%)}to{transform:translateX(100%)}}@keyframes redPulse{50%{background:#ff3b3b}}@keyframes crawlMini{to{transform:translateX(-220px)}}
+
+    .note{margin-top:14px;color:var(--muted);font-size:13px;line-height:1.45}.review-link{display:inline-flex;margin-top:18px;color:#dbeafe;text-decoration:none;border:1px solid rgba(255,255,255,.18);padding:11px 14px;border-radius:8px;background:rgba(255,255,255,.06);font-weight:800}.review-link:hover{background:rgba(255,255,255,.1)}
+    @media(max-width:900px){.hero,.section-head{display:block}.grid,.motion-row{grid-template-columns:1fr}.stage{min-height:420px}.story-card,.ots{position:relative;left:auto;right:auto;top:auto;width:auto;margin:20px}.headline-strap .tag{display:none}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">2147 News Network / Broadcast Package V2</p>
+        <h1>Core Broadcast<br>Identity Elements</h1>
+      </div>
+      <div>
+        <p>This page is for reviewing the small on-air elements first: bug, LIVE label, clock, lower thirds, headline straps, ticker, and source labels. These must look like real TV news before we build bigger scenes.</p>
+        <div class="status"><i></i> Review Draft 01</div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">01 / Full Screen Test</p><h2>How all elements work together</h2></div><p>Mock broadcast frame with safe margins, live bug, timestamp, story card, over-the-shoulder graphic, headline strap, and ticker.</p></div>
+      <div class="stage">
+        <div class="safe"></div>
+        <div class="top-left"><div class="bug"><div class="mark">2147</div><div class="word">News<br>Network</div></div><div class="live-bug">Live</div></div>
+        <div class="top-right"><div class="clock">18 OCT 2147 / 19:42 UTC-O</div></div>
+        <div class="story-card"><div class="k">Breaking / Mars Sovereignty</div><h3>Mars Votes On Independence</h3><p>Final voting cycle underway across 42 recognized settlement zones.</p></div>
+        <div class="ots"><div class="mars-dot"></div><div class="ots-title">57%<br>Independence</div><div class="ots-label">Mars Civic Council Election Board</div></div>
+        <div class="source-chip" style="position:absolute;right:78px;top:424px">Mars Civic Council Election Board</div>
+        <div class="headline-strap breaking"><div class="label">Breaking</div><div class="main"><strong>Mars referendum enters final hours</strong><span>Earth Union officials prepare emergency legal review</span></div><div class="tag">Live 2147</div></div>
+        <div class="ticker"><div class="ticker-label">Headlines</div><div class="crawl"><span><b>MARS TURNOUT PROJECTED AT 91%</b> • EARTH UNION LEGAL REVIEW BEGINS • HELION GRID SYSTEMS WARNS OF CONTRACT RISK • SYNTHETIC RIGHTS TRIBUNAL RECEIVES PETITION • MARS TURNOUT PROJECTED AT 91% • EARTH UNION LEGAL REVIEW BEGINS • </span></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">02 / Logo System</p><h2>Channel bug and live metadata</h2></div><p>Persistent, readable, not decorative. The bug should work at small sizes and remain visible on dark or bright footage.</p></div>
+      <div class="grid">
+        <div class="tile"><h3>Main bug</h3><div class="bug"><div class="mark">2147</div><div class="word">News<br>Network</div></div><p>Primary on-air bug for studio and full-screen boards.</p></div>
+        <div class="tile"><h3>Compact bug</h3><div class="bug compact"><div class="mark">2147</div><div class="word">News<br>Network</div></div><p>Used when space is limited, e.g. split-screen or mobile-safe layouts.</p></div>
+        <div class="tile"><h3>Live + clock</h3><div style="display:flex;gap:10px;flex-wrap:wrap"><div class="live-bug">Live</div><div class="clock">19:42 UTC-O</div></div><p>LIVE bug and timestamp should be persistent during developing stories.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">03 / Lower Thirds</p><h2>Name straps and location straps</h2></div><p>Lower thirds must be readable on mobile and must never overcrowd the lower third of the frame.</p></div>
+      <div class="grid">
+        <div class="lower-third-sample"><div class="lower-third"><div class="role">Anchor</div><div class="name"><strong>Anaya Rao</strong><span>Senior Anchor • Earth-Orbit Media Ring</span></div><div class="loc">New Delhi Orbital Hub</div></div></div>
+        <div class="lower-third-sample"><div class="lower-third"><div class="role">Expert</div><div class="name"><strong>Dr. Ilyan Sen</strong><span>Political Historian • University of Valles Marineris</span></div><div class="loc">Archive Feed</div></div></div>
+        <div class="lower-third-sample"><div class="lower-third breaking"><div class="role">Breaking</div><div class="name"><strong>Mars Final Vote</strong><span>42 settlement zones enter final certification window</span></div><div class="loc">Live 2147</div></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">04 / Straps and Tickers</p><h2>Headline system</h2></div><p>Real news channels rely on straps and crawls. These should become the backbone of every scene.</p></div>
+      <div class="stage" style="aspect-ratio:21/7;min-height:310px">
+        <div class="headline-strap" style="bottom:92px"><div class="label">Developing</div><div class="main"><strong>Earth Union prepares sovereignty hearing</strong><span>Interplanetary Governance Committee expected to convene at 09:00 UTC-Orbital</span></div><div class="tag">Source: EU Senate</div></div>
+        <div class="headline-strap breaking" style="bottom:188px"><div class="label">Breaking</div><div class="main"><strong>Mars referendum enters final voting cycle</strong><span>Mars Civic Council Election Board reports projected turnout at 91%</span></div><div class="tag">Live 2147</div></div>
+        <div class="ticker"><div class="ticker-label">Headlines</div><div class="crawl"><span>MARS MODEL: INDEPENDENCE 57% • UNION 39% • UNDECIDED 4% • CARGO INSURANCE +18.6% • LUNAR WORKERS GUILD ISSUES STATEMENT • MARS MODEL: INDEPENDENCE 57% • </span></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">05 / Source Labels</p><h2>Credibility chips</h2></div><p>Every data board needs a visible source. This is what makes the fictional world feel journalistic.</p></div>
+      <div class="grid">
+        <div class="tile"><h3>Election source</h3><div class="source-chip">Mars Civic Council Election Board</div><p>Used for vote models, turnout, and settlement certification.</p></div>
+        <div class="tile"><h3>Legal source</h3><div class="source-chip">Synthetic Rights Tribunal</div><p>Used for rights cases, filings, jurisdiction reviews.</p></div>
+        <div class="tile"><h3>Market source</h3><div class="source-chip">Outer Belt Trade Registry</div><p>Used for cargo insurance, bonds, trade, energy markets.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">06 / Motion Language</p><h2>Broadcast animation tests</h2></div><p>Motion should be simple: straps slide, tickers crawl, alerts pulse, wipes move cleanly. No random sci-fi effects.</p></div>
+      <div class="motion-row">
+        <div class="motion slide"><div class="bar"></div></div>
+        <div class="motion wipe"><div class="bar"></div></div>
+        <div class="motion pulse"><div class="bar"></div></div>
+        <div class="motion ticker-mini"></div>
+      </div>
+      <p class="note">Next step after your review: we will refine these base elements first, then rebuild the full templates using only approved elements.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><p class="eyebrow">07 / Palette</p><h2>Broadcast colors</h2></div><p>Strong enough for news, restrained enough to avoid cheap sci-fi.</p></div>
+      <div class="tile">
+        <div class="swatches">
+          <div class="sw" style="background:var(--news-navy)"></div>
+          <div class="sw" style="background:var(--studio-blue)"></div>
+          <div class="sw" style="background:var(--red)"></div>
+          <div class="sw" style="background:var(--mars)"></div>
+          <div class="sw" style="background:var(--cyan)"></div>
+          <div class="sw" style="background:var(--green)"></div>
+          <div class="sw" style="background:var(--ticker)"></div>
+          <div class="sw" style="background:var(--white)"></div>
+        </div>
+        <p>News Navy, Studio Blue, Breaking Red, Mars Orange, Data Cyan, Market Green, Ticker Black, Broadcast White.</p>
+      </div>
+      <a class="review-link" href="/static/core-broadcast-elements.html">Review page URL: /static/core-broadcast-elements.html</a>
+    </section>
+  </main>
+</body>
+</html>

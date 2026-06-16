@@ -103,3 +103,9 @@ The MVP is complete when a user can:
 - Added `scripts/generate_broadcast_v2_demo.py`.
 - Generated `outputs/demo-video/2147-broadcast-v2-demo.mp4`.
 - Next: rebuild app templates around V2 broadcast package style.
+
+
+## Core Broadcast Elements Review
+
+- Created `static/core-broadcast-elements.html` to review logo bug, LIVE bug, clock, lower thirds, straps, ticker, source chips, motion tests, and palette before rebuilding full templates.
+- Added sidebar link from custom app.
