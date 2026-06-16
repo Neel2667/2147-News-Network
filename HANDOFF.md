@@ -292,3 +292,8 @@ User reported elements overlapping in the approval board. Fixed by creating prot
 ## Cropping Space Fix
 
 User reported elements cropping due to limited space. Compacted V2 templates and regenerated `static/pilot-v2-approval.html`. See `reports/REPORT_2026-06-16_CROPPING_SPACE_FIX.md`.
+
+
+## Asset Integration Review Page
+
+Created `static/asset-integration-review.html` for user approval. It shows how stock footage, maps, archive footage, field reports, and info cards will be integrated with the V2 broadcast graphics. No real stock assets yet; only procedural placeholders.

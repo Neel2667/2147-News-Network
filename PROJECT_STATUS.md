@@ -187,3 +187,8 @@ The MVP is complete when a user can:
 
 - Compacted V2 pilot templates to prevent cropped elements.
 - Regenerated standalone approval page.
+
+
+## Asset Integration Review Page
+
+- Created `static/asset-integration-review.html` showing how stock footage, maps, archive footage, field reports, and info cards will appear inside Broadcast System V2.
