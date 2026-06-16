@@ -337,3 +337,8 @@ Added `static/studio-video-wall-direct-review.html` because user could not see a
 ## Direct Image Review Fix
 
 User still could not see anchor/footage in HTML/CSS preview. Created `static/studio-video-wall-direct-review.png` and changed direct review page to display the rendered image. If user approves, convert this exact composition into animated reusable template.
+
+
+## Approved Studio Template Rebuild
+
+User approved the direct rendered Studio + Video Wall image. Converted that composition into `templates/broadcast-v2-studio-video-wall.html` with visible CSS anchor and footage wall. Direct image remains as reference.

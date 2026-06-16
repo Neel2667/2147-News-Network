@@ -245,3 +245,10 @@ The MVP is complete when a user can:
 ## Direct Image Review Fix
 
 - Created `static/studio-video-wall-direct-review.png` and simplified review page to show guaranteed rendered image preview with anchor and footage visible.
+
+
+## Approved Studio Template Rebuild
+
+- User approved direct Studio + Video Wall composition.
+- Rebuilt `broadcast-v2-studio-video-wall.html` to match approved image with visible anchor and footage wall.
+- Regenerated pilot approval page.
