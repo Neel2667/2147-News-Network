@@ -136,3 +136,9 @@ The MVP is complete when a user can:
 - Removed truncation from name straps.
 - Rebuilt lower-third review as full-width stacked examples.
 - Long names now wrap instead of disappearing.
+
+
+## Apple-Inspired Core Polish
+
+- Applied Apple-inspired polish to core broadcast elements: layered material surfaces, soft depth, rounded shapes, restrained colors, varied fluid motion, and clearer hierarchy.
+- Added Apple-inspired polish section to `static/core-broadcast-elements.html`.

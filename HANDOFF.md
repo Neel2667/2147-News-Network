@@ -252,3 +252,8 @@ User reported strap small text overflowing and anchor names disappearing in name
 ## Long Name Strap Fix
 
 User said long names cannot be truncated. Updated `static/core-broadcast-elements.html`: lower-third examples are now full-width stacked layouts, names wrap naturally, ellipsis removed, long-name example added. See `reports/REPORT_2026-06-16_LONG_NAME_STRAP_FIX.md`.
+
+
+## Apple-Inspired Core Polish
+
+User asked to take inspiration from Apple colors, shapes, and animations. Updated `static/core-broadcast-elements.html` with material-like depth, rounded shapes, subtle shadows, backdrop blur, refined pills, and varied fluid motion. Added report `reports/REPORT_2026-06-16_APPLE_INSPIRED_CORE_POLISH.md`.
