@@ -1,0 +1,15 @@
+.git
+.gitignore
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+exports/
+render_packages/
+.cache/
+.pytest_cache/
+.mypy_cache/
+node_modules/
+.DS_Store

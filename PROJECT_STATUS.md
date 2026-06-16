@@ -41,6 +41,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Reviewed and polished the pilot episode UI scene by scene; tightened pacing, improved tickers/source labels, added UI review notes, dynamic quote-card controls, and contact sheet.
 - Added pilot sound design plan, voiceover timing plan, audio cue sheet, and subtitle draft.
 - Added thumbnail and channel launch package for the pilot, including non-AI HTML/CSS thumbnail concept, channel About, YouTube description, pinned comment, upload checklist, and shorts plan.
+- Prepared Hugging Face deployment metadata, final deploy checklist, deployment status doc, and .dockerignore.
 
 
 ## In Progress
@@ -69,8 +70,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - scene template selection
    - export JSON/text files
 4. Connect app.py to data/events.json and generate stories from event ripples.
-5. Deploy the custom app to Hugging Face as Docker Space.
-6. Manually preview pilot in custom app at 1920x1080 and perform OBS recording test.
+5. Create Hugging Face Docker Space and connect GitHub repo.
+6. Manually preview pilot in deployed app at 1920x1080 and perform OBS recording test.
 6. Add video render/export workflow later.
    - anchor desk
    - Mars dashboard

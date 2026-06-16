@@ -151,3 +151,16 @@ Do not put GitHub tokens or API keys in the repo.
 - Add persistent storage.
 - Add download buttons for saved/exported packages.
 - Add video render queue when render workflow is ready.
+
+
+## Metadata Files Added
+
+The root `README.md` now includes Hugging Face Space metadata. Additional deployment references:
+
+```text
+docs/HF_SPACE_METADATA.md
+docs/FINAL_DEPLOY_CHECKLIST.md
+docs/DEPLOYMENT_STATUS.md
+```
+
+A `.dockerignore` file has also been added to keep runtime artifacts and local files out of Docker build context.

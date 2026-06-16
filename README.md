@@ -1,3 +1,13 @@
+---
+title: 2147 News Network Studio
+emoji: 🛰️
+colorFrom: blue
+colorTo: cyan
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # 2147 News Network
 
 **2147 News Network** is a fictional futuristic YouTube news-show production system. It creates scripts, scene plans, web-rendered motion graphics, and production notes for a speculative news broadcast set in the year **2147**.

@@ -207,3 +207,8 @@ Added sound design, voiceover timing, audio cue sheet, and subtitle draft under 
 ## Launch Package
 
 Added pilot launch package under `launch/` and non-AI HTML/CSS thumbnail concept under `thumbnails/pilot-001/`. Read `launch/LAUNCH_PACKAGE.md` and `reports/REPORT_2026-06-16_LAUNCH_PACKAGE.md`.
+
+
+## Final Hugging Face Deploy Prep
+
+Root README now has Hugging Face Space metadata for Docker. Added `.dockerignore`, `docs/HF_SPACE_METADATA.md`, `docs/FINAL_DEPLOY_CHECKLIST.md`, and `docs/DEPLOYMENT_STATUS.md`. Next action: create a Hugging Face Docker Space and connect this GitHub repo.
