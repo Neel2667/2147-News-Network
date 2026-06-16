@@ -327,3 +327,8 @@ User said Studio + Video Wall had no anchor or footage. Reintroduced CSS-rendere
 ## Studio Wall Visible Anchor and Footage Fix
 
 User still saw no anchor/footage. Added `static/demo-assets/earth-observations-sample-poster.jpg`, inserted visible poster under video, enlarged CSS anchor figure, and regenerated approval pages. If old page appears, hard refresh.
+
+
+## Studio Video Wall Direct Review
+
+Added `static/studio-video-wall-direct-review.html` because user could not see anchor/footage in previous review pages. This page is self-contained and should be used for direct visual approval.
