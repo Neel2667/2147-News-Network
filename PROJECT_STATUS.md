@@ -116,3 +116,9 @@ The MVP is complete when a user can:
 - Fixed ticker overlap with Headlines label.
 - Fixed lower-third/name-strap text overflow.
 - Added animation pass to core elements: bug, LIVE, clock, sources, story cards, OTS, straps, lower thirds, ticker, and tiles.
+
+
+## Ticker and Animation Variation Fix
+
+- Fixed ticker text disappearing by removing off-screen padding and using duplicated visible ticker spans.
+- Added varied animations: bug shine, live pulse, story slide, OTS zoom, strap wipe, breaking slide, lower-third variations, data bar grow, source sweep.

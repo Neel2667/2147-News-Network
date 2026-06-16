@@ -237,3 +237,8 @@ Created `static/core-broadcast-elements.html` as the review page for the new V2 
 ## Core Elements Polish Fixes
 
 User requested more polish: ticker overlapped label, name straps overflowed, and elements felt static. Fixed `static/core-broadcast-elements.html` with protected ticker window, safer lower-third text overflow handling, and animation loops for core elements. See `reports/REPORT_2026-06-16_CORE_ELEMENTS_POLISH_FIXES.md`.
+
+
+## Ticker and Animation Variation Fix
+
+User said ticker text disappeared and animations were too similar. Updated `static/core-broadcast-elements.html`: ticker text now visible immediately in a protected ticker window, and animations vary by element type. See `reports/REPORT_2026-06-16_TICKER_AND_ANIMATION_VARIATION_FIX.md`.
