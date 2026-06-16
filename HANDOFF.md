@@ -287,3 +287,8 @@ User hit fetch parse URL error on `/static/pilot-v2-approval.html`. The page is 
 ## Pilot V2 Overlap Fix
 
 User reported elements overlapping in the approval board. Fixed by creating protected lower graphics space in templates, moving anchor lower-third above ticker, making approval page full-size on large screens, and adding `scripts/build_pilot_v2_approval.py` to regenerate approval page. See `reports/REPORT_2026-06-16_PILOT_V2_OVERLAP_FIX.md`.
+
+
+## Cropping Space Fix
+
+User reported elements cropping due to limited space. Compacted V2 templates and regenerated `static/pilot-v2-approval.html`. See `reports/REPORT_2026-06-16_CROPPING_SPACE_FIX.md`.

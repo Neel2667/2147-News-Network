@@ -181,3 +181,9 @@ The MVP is complete when a user can:
 - Anchor lower third now sits above ticker.
 - Approval page now displays full-size 1280x720 scenes on large screens.
 - Added `scripts/build_pilot_v2_approval.py`.
+
+
+## Cropping / Space Fix
+
+- Compacted V2 pilot templates to prevent cropped elements.
+- Regenerated standalone approval page.
