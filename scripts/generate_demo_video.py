@@ -6,6 +6,7 @@ Pillow/OpenCV: gradients, typography, planets, charts, panels, and tickers.
 from __future__ import annotations
 
 import math
+import subprocess
 from pathlib import Path
 
 import cv2
@@ -17,6 +18,7 @@ FPS = 24
 DURATION = 42
 TOTAL = FPS * DURATION
 OUT = Path("outputs/demo-video/2147-demo-pilot-ui.mp4")
+TMP_OUT = Path("outputs/demo-video/2147-demo-pilot-ui-mp4v-temp.mp4")
 POSTER = Path("outputs/demo-video/2147-demo-poster.png")
 
 FONT_DIRS = [
@@ -344,10 +346,33 @@ def frame_at(n):
     return scene_close(t,1).convert('RGB')
 
 
+def transcode_to_browser_h264(src: Path, dst: Path):
+    """Transcode OpenCV's mp4v output into browser-friendly H.264.
+
+    GitHub/browser previews often do not play mp4v MP4 files. The
+    imageio-ffmpeg package ships a static ffmpeg binary with libx264.
+    """
+    try:
+        import imageio_ffmpeg
+        ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception as exc:
+        print("imageio-ffmpeg unavailable; leaving mp4v output in place:", exc)
+        if src != dst:
+            dst.write_bytes(src.read_bytes())
+        return
+    cmd = [
+        ffmpeg, "-y", "-i", str(src),
+        "-c:v", "libx264", "-pix_fmt", "yuv420p",
+        "-movflags", "+faststart", "-preset", "medium", "-crf", "23",
+        str(dst),
+    ]
+    subprocess.check_call(cmd)
+
+
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     fourcc=cv2.VideoWriter_fourcc(*'mp4v')
-    writer=cv2.VideoWriter(str(OUT), fourcc, FPS, (W,H))
+    writer=cv2.VideoWriter(str(TMP_OUT), fourcc, FPS, (W,H))
     if not writer.isOpened():
         raise RuntimeError('Could not open OpenCV VideoWriter with mp4v codec')
     for n in range(TOTAL):
@@ -359,7 +384,10 @@ def main():
         if n % (FPS*5)==0:
             print(f'frame {n}/{TOTAL}')
     writer.release()
-    print('wrote', OUT)
+    transcode_to_browser_h264(TMP_OUT, OUT)
+    if TMP_OUT.exists():
+        TMP_OUT.unlink()
+    print('wrote browser-compatible H.264', OUT)
     print('poster', POSTER)
 
 if __name__=='__main__':

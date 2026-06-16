@@ -43,6 +43,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Added thumbnail and channel launch package for the pilot, including non-AI HTML/CSS thumbnail concept, channel About, YouTube description, pinned comment, upload checklist, and shorts plan.
 - Prepared Hugging Face deployment metadata, final deploy checklist, deployment status doc, and .dockerignore.
 - Generated a silent code-rendered demo video preview of the pilot UI at 1280x720, 24fps, 42 seconds.
+- Re-encoded demo video as browser-compatible H.264/avc1 yuv420p with faststart because mp4v may not play in browser previews.
 
 
 ## In Progress

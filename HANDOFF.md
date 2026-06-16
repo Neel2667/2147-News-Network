@@ -217,3 +217,8 @@ Root README now has Hugging Face Space metadata for Docker. Added `.dockerignore
 ## Demo Video Generated
 
 A silent code-rendered demo video has been created at `outputs/demo-video/2147-demo-pilot-ui.mp4` with poster `outputs/demo-video/2147-demo-poster.png`. It is not AI-generated video; it is procedural Python/Pillow/OpenCV motion graphics. Generator script: `scripts/generate_demo_video.py`. See `reports/REPORT_2026-06-16_DEMO_VIDEO.md`.
+
+
+## Demo Video Browser Fix
+
+The original demo MP4 used mp4v and may not play in browser previews. It has been replaced with browser-compatible H.264/avc1 yuv420p faststart at `outputs/demo-video/2147-demo-pilot-ui.mp4`. `scripts/generate_demo_video.py` now transcodes with imageio-ffmpeg.

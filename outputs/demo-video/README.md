@@ -38,3 +38,14 @@ Audio: none / silent
 7. Financial Desk
 8. Legal Desk
 9. Closing Transmission
+
+
+## Browser compatibility fix
+
+The first MP4 was encoded as `mp4v`, which may not play in some browser previews. It has been replaced with a browser-compatible H.264 MP4:
+
+```text
+codec: h264 / avc1
+pixel format: yuv420p
+faststart: enabled
+```

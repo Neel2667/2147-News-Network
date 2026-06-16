@@ -62,3 +62,14 @@ The video is a motion-graphics demo for UI direction only.
 - 720p demo resolution to keep file size manageable.
 - Separate from final browser-template render workflow.
 - Intended for quick visual review, not final YouTube upload.
+
+
+## Browser compatibility fix
+
+The first MP4 was encoded as `mp4v`, which may not play in some browser previews. It has been replaced with a browser-compatible H.264 MP4:
+
+```text
+codec: h264 / avc1
+pixel format: yuv420p
+faststart: enabled
+```
