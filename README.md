@@ -126,3 +126,12 @@ The app provides download links for exported production files and render package
 ```text
 docs/DOWNLOADS_AND_PACKAGES.md
 ```
+
+
+## Master Handoff Report
+
+For the latest complete project status and continuation instructions, read:
+
+```text
+PROJECT_COMPLETION_AND_HANDOFF_REPORT.md
+```

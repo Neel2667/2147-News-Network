@@ -1,3 +1,14 @@
+
+# MASTER HANDOFF NOTICE
+
+Before doing anything else, read:
+
+```text
+PROJECT_COMPLETION_AND_HANDOFF_REPORT.md
+```
+
+It is the latest complete project status and continuation guide.
+
 # Handoff Guide for Future AI/Developer
 
 This file exists so another AI or developer can resume the project without confusion.
