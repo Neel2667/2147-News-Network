@@ -2,58 +2,82 @@
   {
     "id": "s01",
     "scene": "Opening Transmission",
-    "duration": 15,
+    "duration": 16,
     "template": "opening-intro-premium.html",
     "headline": "2147 News Network",
     "summary": "Broadcasting from the New Delhi Orbital Broadcast Hub.",
     "purpose": "Establish premium network identity and future-news world.",
-    "ticker": "EARTH • LUNA • MARS • OUTER BELT — LIVE FROM THE NEW DELHI ORBITAL BROADCAST HUB",
-    "source": "2147 News Network Transmission Desk"
+    "ticker": "EARTH • LUNA • MARS • OUTER BELT — TRANSMISSION VERIFIED — NEW DELHI ORBITAL BROADCAST HUB",
+    "source": "2147 News Network Transmission Desk",
+    "ui_review": {
+      "status": "polished",
+      "focus": "premium first impression, brand identity, orbital scale",
+      "notes": "Keep minimal and cinematic; no additional clutter."
+    }
   },
   {
     "id": "s02",
     "scene": "Anchor Lead-In",
-    "duration": 45,
+    "duration": 48,
     "template": "anchor-desk.html",
     "headline": "Mars Enters Final Voting Cycle",
-    "summary": "A historic referendum could create the first independent off-world republic.",
+    "summary": "A sovereignty referendum across 42 Martian settlement zones could create the first independent off-world republic.",
     "purpose": "Introduce lead story with Anaya Rao lower-third and premium studio environment.",
     "lower_name": "ANAYA RAO",
     "lower_title": "Senior Anchor • Earth-Orbit Media Ring",
-    "ticker": "MARS REFERENDUM FINAL VOTING CYCLE • EARTH UNION LEGAL REVIEW BEGINS • OUTER BELT MARKETS WATCH CLOSELY",
-    "source": "Mars Civic Council Election Board"
+    "ticker": "LIVE: MARS REFERENDUM FINAL CYCLE • PROJECTED TURNOUT 91% • EARTH UNION LEGAL REVIEW BEGINS",
+    "source": "Mars Civic Council Election Board • Provisional Count",
+    "ui_review": {
+      "status": "polished",
+      "focus": "anchor credibility and clear lead story",
+      "notes": "Headline kept short for premium studio readability."
+    }
   },
   {
     "id": "s03",
     "scene": "Top Headlines",
-    "duration": 45,
+    "duration": 38,
     "template": "headline-cards.html",
     "headline": "Mars Votes on Independence",
     "summary": "Five developing stories connected to the Mars sovereignty crisis.",
     "purpose": "Show top headlines and establish causal ripples.",
-    "ticker": "JIANG LAU WARNS OF CONTRACT INSTABILITY • LUNAR WORKERS GUILD EXPANDS DEMANDS • AI VOTING PETITION FILED",
-    "source": "2147 News Network Editorial Desk"
+    "ticker": "TOP STORIES • MARS VOTE • ENERGY CONTRACTS • LUNAR OXYGEN CREDITS • SYNTHETIC VOTING RIGHTS",
+    "source": "2147 News Network Editorial Desk",
+    "template_controls": {
+      "headline2": "Jiang Lau Warns of Energy-Contract Instability",
+      "headline3": "AI Voting Rights Petition Filed"
+    },
+    "ui_review": {
+      "status": "polished",
+      "focus": "fast editorial momentum",
+      "notes": "Reduced duration to improve pacing."
+    }
   },
   {
     "id": "s04",
     "scene": "Mars Referendum Dashboard",
-    "duration": 90,
+    "duration": 78,
     "template": "mars-dashboard.html",
     "headline": "Mars Independence Vote",
     "summary": "Turnout and vote model across 42 recognized settlement zones.",
     "purpose": "Show data, numbers, source label, and visual proof layer.",
-    "ticker": "PROJECTED TURNOUT 91% • ELIGIBLE VOTERS 29.4M • INDEPENDENCE MODEL 57%",
-    "source": "Mars Civic Council Election Board"
+    "ticker": "MARS MODEL: INDEPENDENCE 57% • UNION 39% • UNDECIDED 4% • ELIGIBLE VOTERS 29.4M",
+    "source": "Mars Civic Council Election Board",
+    "ui_review": {
+      "status": "polished",
+      "focus": "data authority and visual proof",
+      "notes": "Duration tightened; data remains on screen long enough for readability."
+    }
   },
   {
     "id": "s05",
     "scene": "Historical Context",
-    "duration": 65,
+    "duration": 62,
     "template": "historical-timeline.html",
     "headline": "Why This Vote Exists",
-    "summary": "The referendum follows the 2136 oxygen-credit protests and the 2142 Earth-Mars cargo tariff dispute.",
+    "summary": "The referendum is the result of decades of life-support pricing disputes, cargo tariff challenges, and settlement autonomy demands.",
     "purpose": "Explain causal history so the story feels real, not random.",
-    "ticker": "2136 LUNAR OXYGEN-CREDIT PROTESTS • 2142 MARS CARGO TARIFF CHALLENGE • 2147 REFERENDUM FINAL CYCLE",
+    "ticker": "CAUSAL TIMELINE • 2136 OXYGEN-CREDIT PROTESTS • 2142 CARGO TARIFF DISPUTE • 2147 REFERENDUM",
     "source": "2147 News Network Timeline Archive",
     "template_controls": {
       "timeline_year_1": "2136",
@@ -68,29 +92,45 @@
       "timeline_year_4": "Next",
       "timeline_title_4": "Emergency legal and market ripples",
       "timeline_desc_4": "Earth Union committees, energy companies, labor guilds, and tribunals prepare responses."
+    },
+    "ui_review": {
+      "status": "polished",
+      "focus": "cause-and-effect realism",
+      "notes": "Makes the story feel earned instead of randomly invented."
     }
   },
   {
     "id": "s06",
     "scene": "Expert Quote",
-    "duration": 35,
+    "duration": 34,
     "template": "quote-card.html",
     "headline": "Dr. Ilyan Sen",
     "summary": "Mars is no longer an outpost. It is a civilization asking for political recognition.",
     "purpose": "Add named expert credibility.",
-    "ticker": "UNIVERSITY OF VALLES MARINERIS • POLITICAL HISTORY DESK • ARCHIVE FEED VERIFIED",
-    "source": "University of Valles Marineris"
+    "ticker": "EXPERT ANALYSIS • UNIVERSITY OF VALLES MARINERIS • ARCHIVE FEED VERIFIED",
+    "source": "University of Valles Marineris",
+    "template_controls": {
+      "quote_person_name": "DR. ILYAN SEN",
+      "quote_person_title": "Political Historian • University of Valles Marineris",
+      "quote_text": "Mars is no longer an outpost. It is a civilization asking for political recognition.",
+      "quote_context": "Expert Analysis • University of Valles Marineris"
+    },
+    "ui_review": {
+      "status": "polished",
+      "focus": "named expert credibility",
+      "notes": "Short, memorable quote to improve retention."
+    }
   },
   {
     "id": "s07",
     "scene": "Market Ripple",
-    "duration": 55,
+    "duration": 52,
     "template": "financial-desk.html",
-    "headline": "Jiang Lau Warns of Energy-Contract Risk",
-    "summary": "Helion Grid Systems says unresolved treaty language could delay fusion-grid contracts and cargo insurance pricing.",
+    "headline": "Energy Markets Watch Mars Vote",
+    "summary": "Helion Grid Systems warns unresolved treaty language could delay fusion-grid contracts and cargo insurance pricing.",
     "purpose": "Show economic consequences and introduce Episode 3 ripple.",
-    "ticker": "HELION GRID SYSTEMS • EARTH-MARS ENERGY CONTRACTS • INFRASTRUCTURE BOND VOLATILITY",
-    "source": "Outer Belt Trade Registry",
+    "ticker": "HELION GRID SYSTEMS • CARGO INSURANCE +18.6% • MARS INFRASTRUCTURE BONDS −4.2% • CONTRACT RISK 14 MONTHS",
+    "source": "Outer Belt Trade Registry • Singapore Arcology Financial Feed",
     "template_controls": {
       "finance_person_name": "JIANG LAU",
       "finance_person_title": "CEO • Helion Grid Systems",
@@ -102,6 +142,11 @@
       "metric_3_value": "−4.2%",
       "metric_3_label": "Mars Infra Bonds",
       "finance_location": "Singapore Arcology Finance District"
+    },
+    "ui_review": {
+      "status": "polished",
+      "focus": "market consequence and named CEO realism",
+      "notes": "Headline reframed as market-news style rather than generic risk."
     }
   },
   {
@@ -110,10 +155,10 @@
     "duration": 50,
     "template": "legal-desk.html",
     "headline": "AI Voting Rights Petition Filed",
-    "summary": "The Synthetic Rights Tribunal receives a petition over AI residents registered in Martian settlement zones.",
+    "summary": "The Synthetic Rights Tribunal receives a petition over memory-continuity residents registered in Martian settlement zones.",
     "purpose": "Show legal consequences and introduce Episode 5 ripple.",
-    "ticker": "SYNTHETIC RIGHTS TRIBUNAL • MEMORY-CONTINUITY CITIZENS • OFF-WORLD VOTING LAW",
-    "source": "Synthetic Rights Tribunal",
+    "ticker": "SYNTHETIC RIGHTS TRIBUNAL • 3.8M SYNTHETIC RESIDENTS • REFERENDUM CERTIFICATION REVIEW",
+    "source": "Synthetic Rights Tribunal • Geneva Continuity Court Complex",
     "template_controls": {
       "legal_case_title": "Petition for referendum certification review",
       "legal_case_desc": "Filed on behalf of registered memory-continuity residents in Martian settlement zones.",
@@ -129,17 +174,27 @@
       "legal_metric_4_value": "2147-CV",
       "legal_metric_4_label": "Case Track",
       "legal_location": "Geneva Continuity Court Complex"
+    },
+    "ui_review": {
+      "status": "polished",
+      "focus": "legal stakes and future identity law",
+      "notes": "Language made more specific and less generic."
     }
   },
   {
     "id": "s09",
     "scene": "Closing Transmission",
-    "duration": 25,
+    "duration": 24,
     "template": "closing-transmission.html",
     "headline": "End Transmission",
     "summary": "For Earth, Luna, Mars, and the Outer Belt — this is 2147 News Network.",
     "purpose": "Premium signoff and continuity handoff to next episode.",
     "ticker": "NEXT: EARTH UNION EMERGENCY SOVEREIGNTY HEARING • 2147 NEWS NETWORK",
-    "source": "2147 News Network Transmission Desk"
+    "source": "2147 News Network Transmission Desk",
+    "ui_review": {
+      "status": "polished",
+      "focus": "premium signoff and next-episode continuity",
+      "notes": "Clean ending with teaser for episode 2."
+    }
   }
 ]

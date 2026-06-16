@@ -192,3 +192,8 @@ The app now has a render package workflow via `POST /api/render/package` and a U
 ## Download Buttons
 
 The Export Center now shows download links for exported files and render packages, including ZIP bundles. `/exports` serves production exports; `/renders` serves render packages. Runtime artifacts are ignored by Git. Read `docs/DOWNLOADS_AND_PACKAGES.md`.
+
+
+## Pilot UI Polish Review
+
+The pilot episode has been reviewed and polished scene by scene. See `episodes/pilot-001-mars-independence/ui_polish_review.md` and `ui_review_contact_sheet.html`. The saved pilot draft has been updated. Quote card now has template-specific controls. Next: manually preview at 1920x1080 and do an OBS recording test.

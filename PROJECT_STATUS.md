@@ -38,6 +38,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Added polished one-click pilot loader, dashboard pilot card, health endpoint, and Hugging Face Docker deployment guide.
 - Built render/export workflow that creates standalone 1920x1080 scene HTML files, manifest.json, README, and draft.json for OBS/browser recording.
 - Added download buttons/links and ZIP bundles for exported production files and render packages.
+- Reviewed and polished the pilot episode UI scene by scene; tightened pacing, improved tickers/source labels, added UI review notes, dynamic quote-card controls, and contact sheet.
 
 
 ## In Progress
@@ -66,8 +67,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - scene template selection
    - export JSON/text files
 4. Connect app.py to data/events.json and generate stories from event ripples.
-5. Add optional Playwright/FFmpeg automated scene recording later.
-6. Add persistent storage/download strategy for Hugging Face production use.
+5. Manually preview pilot in custom app at 1920x1080 and perform OBS recording test.
+6. Add optional Playwright/FFmpeg automated scene recording later.
 6. Add video render/export workflow later.
    - anchor desk
    - Mars dashboard
