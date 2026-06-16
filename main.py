@@ -6,6 +6,7 @@ we can control the UI, controls, layout, and future production workflow.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -21,6 +22,7 @@ ROOT = Path(__file__).parent
 DATA_DIR = ROOT / "data"
 STATIC_DIR = ROOT / "static"
 EXPORT_DIR = ROOT / "exports"
+SAVED_EPISODES_DIR = ROOT / "episodes" / "saved"
 
 app = FastAPI(title="2147 News Network Studio", version="0.2.0")
 app.add_middleware(
@@ -59,7 +61,19 @@ class ScenePreviewRequest(BaseModel):
 class ExportRequest(BaseModel):
     script: str = ""
     scene_plan: Any = None
-    metadata: str = ""
+    metadata: Any = ""
+
+
+class SaveEpisodeRequest(BaseModel):
+    episode_id: str | None = None
+    title: str = "Untitled 2147 News Episode"
+    draft: dict[str, Any]
+
+
+def slugify(value: str) -> str:
+    value = value.lower().strip()
+    value = re.sub(r"[^a-z0-9]+", "-", value)
+    return value.strip("-") or "untitled-episode"
 
 
 def read_json(path: Path, fallback: Any) -> Any:
@@ -213,6 +227,46 @@ For Earth, Luna, Mars, and the Outer Belt, this is 2147 News Network. End transm
     }
 
 
+def saved_episode_path(episode_id: str) -> Path:
+    safe_id = slugify(episode_id)
+    return SAVED_EPISODES_DIR / f"{safe_id}.json"
+
+
+def save_episode_payload(req: SaveEpisodeRequest) -> dict[str, Any]:
+    SAVED_EPISODES_DIR.mkdir(parents=True, exist_ok=True)
+    episode_id = slugify(req.episode_id or req.title)
+    payload = {
+        "episode_id": episode_id,
+        "title": req.title,
+        "draft": req.draft,
+        "save_format": "2147nn-studio-draft-v1",
+    }
+    saved_episode_path(episode_id).write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    return payload
+
+
+def list_saved_episodes() -> list[dict[str, Any]]:
+    SAVED_EPISODES_DIR.mkdir(parents=True, exist_ok=True)
+    items = []
+    for path in sorted(SAVED_EPISODES_DIR.glob("*.json")):
+        data = read_json(path, {})
+        draft = data.get("draft", {})
+        items.append({
+            "episode_id": data.get("episode_id", path.stem),
+            "title": data.get("title") or draft.get("title") or path.stem,
+            "path": str(path.relative_to(ROOT)),
+            "scene_count": len(draft.get("scene_plan", [])),
+        })
+    return items
+
+
+def load_saved_episode(episode_id: str) -> dict[str, Any]:
+    path = saved_episode_path(episode_id)
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="Saved episode not found")
+    return read_json(path, {})
+
+
 @app.get("/", response_class=HTMLResponse)
 def home() -> HTMLResponse:
     return HTMLResponse((STATIC_DIR / "index.html").read_text(encoding="utf-8"))
@@ -287,6 +341,22 @@ def api_scene_preview(req: ScenePreviewRequest) -> HTMLResponse:
         headline3="Synthetic Rights Tribunal Receives AI Voting Petition",
     )
     return HTMLResponse(html)
+
+
+@app.get("/api/episodes")
+def api_list_saved_episodes() -> JSONResponse:
+    return JSONResponse({"episodes": list_saved_episodes()})
+
+
+@app.get("/api/episodes/{episode_id}")
+def api_load_saved_episode(episode_id: str) -> JSONResponse:
+    return JSONResponse(load_saved_episode(episode_id))
+
+
+@app.post("/api/episodes/save")
+def api_save_episode(req: SaveEpisodeRequest) -> JSONResponse:
+    payload = save_episode_payload(req)
+    return JSONResponse({"status": "ok", "episode": {"episode_id": payload["episode_id"], "title": payload["title"]}})
 
 
 @app.post("/api/export")

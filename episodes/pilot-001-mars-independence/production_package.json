@@ -1,0 +1,142 @@
+{
+  "episode_id": "2147-001-mars-independence",
+  "title": "Mars Votes for Independence From Earth",
+  "main_event_id": "event_2147_001_mars_referendum_final_cycle",
+  "status": "pilot_package_ready_for_ui_polish",
+  "runtime_seconds": 425,
+  "runtime_target": "8-10 minutes after narration expansion and pacing",
+  "headlines": [
+    "Mars enters final voting cycle in historic independence referendum.",
+    "Earth Union officials begin legal review of the sovereignty vote.",
+    "Helion Grid Systems CEO Jiang Lau warns of energy-contract uncertainty.",
+    "Lunar Workers Guild links oxygen-credit demands to the Mars autonomy debate.",
+    "Synthetic Rights Tribunal receives petition over AI voting rights on Mars."
+  ],
+  "script_markdown": "# Script — Mars Votes for Independence From Earth\n\n## Opening Transmission\n\n**ANAYA RAO:**\nThis is 2147 News Network, broadcasting from the New Delhi Orbital Broadcast Hub. Tonight, Mars enters the final voting cycle of a referendum that could create the first fully independent off-world republic in human history.\n\n## Top Headlines\n\n- Mars enters final voting cycle in historic independence referendum.\n- Earth Union officials begin legal review of the sovereignty vote.\n- Helion Grid Systems CEO Jiang Lau warns of energy-contract uncertainty.\n- Lunar Workers Guild links oxygen-credit demands to the Mars autonomy debate.\n- Synthetic Rights Tribunal receives petition over AI voting rights on Mars.\n\n## Main Report\n\n**ANAYA RAO:**\nAfter decades of political pressure, tariff disputes, and settlement autonomy campaigns, Mars is now less than eighteen hours from closing the final voting cycle of its independence referendum.\n\nThe Mars Civic Council Election Board reports projected turnout at ninety-one percent, with twenty-nine point four million eligible voters across forty-two recognized settlement zones.\n\nThe referendum asks whether Mars should remain under Earth Union administration or begin a negotiated transition toward full sovereign status.\n\nThis vote did not appear suddenly. It follows the 2136 oxygen-credit protests on Luna, the 2142 Mars cargo tariff challenge, and years of disputes over who has the authority to govern life-support systems, trade corridors, and settlement law beyond Earth.\n\n## Political Reaction\n\nMars Civic Council President Leila Moreau said, “This is not a rejection of Earth. It is a demand for a legal structure that matches the reality of off-world life.”\n\nEarth Union officials have not recognized the referendum as binding. The Earth Union Senate Records Office confirmed that the Interplanetary Governance Committee is preparing an emergency legal review.\n\n## Data Segment\n\nMars population: 38.2 million.\nEligible voters: 29.4 million.\nProjected turnout: 91 percent.\nCurrent model: 57 percent independence, 39 percent union, 4 percent undecided.\n\nSource: Mars Civic Council Election Board, provisional settlement model.\n\n## Expert Context\n\nDr. Ilyan Sen, political historian at the University of Valles Marineris, told 2147 News Network: “Mars is no longer an outpost. It is a civilization asking for political recognition.”\n\n## Market Ripple\n\nThe political uncertainty is already moving beyond the voting zones. Helion Grid Systems CEO Jiang Lau warned investors that unresolved Earth-Mars treaty language could delay long-term fusion-grid contracts and cargo insurance pricing.\n\nThe Outer Belt Trade Registry also reported early volatility in infrastructure bond pricing linked to Mars settlement development.\n\n## Legal Ripple\n\nThe Synthetic Rights Tribunal has received a petition asking whether AI residents registered in Martian settlement zones can be included in referendum certification.\n\nSenior counsel Selene Armitage said the case may determine whether memory-continuity citizens have voting rights in off-world constitutional processes.\n\n## Closing\n\nFor Earth, Luna, Mars, and the Outer Belt, this is 2147 News Network. End transmission.\n",
+  "scene_plan": [
+    {
+      "id": "s01",
+      "scene": "Opening Transmission",
+      "duration": 15,
+      "template": "opening-intro-premium.html",
+      "headline": "2147 News Network",
+      "summary": "Broadcasting from the New Delhi Orbital Broadcast Hub.",
+      "purpose": "Establish premium network identity and future-news world.",
+      "ticker": "EARTH • LUNA • MARS • OUTER BELT — LIVE FROM THE NEW DELHI ORBITAL BROADCAST HUB",
+      "source": "2147 News Network Transmission Desk"
+    },
+    {
+      "id": "s02",
+      "scene": "Anchor Lead-In",
+      "duration": 45,
+      "template": "anchor-desk.html",
+      "headline": "Mars Enters Final Voting Cycle",
+      "summary": "A historic referendum could create the first independent off-world republic.",
+      "purpose": "Introduce lead story with Anaya Rao lower-third and premium studio environment.",
+      "lower_name": "ANAYA RAO",
+      "lower_title": "Senior Anchor • Earth-Orbit Media Ring",
+      "ticker": "MARS REFERENDUM FINAL VOTING CYCLE • EARTH UNION LEGAL REVIEW BEGINS • OUTER BELT MARKETS WATCH CLOSELY",
+      "source": "Mars Civic Council Election Board"
+    },
+    {
+      "id": "s03",
+      "scene": "Top Headlines",
+      "duration": 45,
+      "template": "headline-cards.html",
+      "headline": "Mars Votes on Independence",
+      "summary": "Five developing stories connected to the Mars sovereignty crisis.",
+      "purpose": "Show top headlines and establish causal ripples.",
+      "ticker": "JIANG LAU WARNS OF CONTRACT INSTABILITY • LUNAR WORKERS GUILD EXPANDS DEMANDS • AI VOTING PETITION FILED",
+      "source": "2147 News Network Editorial Desk"
+    },
+    {
+      "id": "s04",
+      "scene": "Mars Referendum Dashboard",
+      "duration": 90,
+      "template": "mars-dashboard.html",
+      "headline": "Mars Independence Vote",
+      "summary": "Turnout and vote model across 42 recognized settlement zones.",
+      "purpose": "Show data, numbers, source label, and visual proof layer.",
+      "ticker": "PROJECTED TURNOUT 91% • ELIGIBLE VOTERS 29.4M • INDEPENDENCE MODEL 57%",
+      "source": "Mars Civic Council Election Board"
+    },
+    {
+      "id": "s05",
+      "scene": "Historical Context",
+      "duration": 65,
+      "template": "premium-base.html",
+      "headline": "Why This Vote Exists",
+      "summary": "The referendum follows the 2136 oxygen-credit protests and the 2142 Earth-Mars cargo tariff dispute.",
+      "purpose": "Explain causal history so the story feels real, not random.",
+      "ticker": "2136 LUNAR OXYGEN-CREDIT PROTESTS • 2142 MARS CARGO TARIFF CHALLENGE • 2147 REFERENDUM FINAL CYCLE",
+      "source": "2147 News Network Timeline Archive"
+    },
+    {
+      "id": "s06",
+      "scene": "Expert Quote",
+      "duration": 35,
+      "template": "quote-card.html",
+      "headline": "Dr. Ilyan Sen",
+      "summary": "Mars is no longer an outpost. It is a civilization asking for political recognition.",
+      "purpose": "Add named expert credibility.",
+      "ticker": "UNIVERSITY OF VALLES MARINERIS • POLITICAL HISTORY DESK • ARCHIVE FEED VERIFIED",
+      "source": "University of Valles Marineris"
+    },
+    {
+      "id": "s07",
+      "scene": "Market Ripple",
+      "duration": 55,
+      "template": "premium-base.html",
+      "headline": "Jiang Lau Warns of Energy-Contract Risk",
+      "summary": "Helion Grid Systems says unresolved treaty language could delay fusion-grid contracts and cargo insurance pricing.",
+      "purpose": "Show economic consequences and introduce Episode 3 ripple.",
+      "ticker": "HELION GRID SYSTEMS • EARTH-MARS ENERGY CONTRACTS • INFRASTRUCTURE BOND VOLATILITY",
+      "source": "Outer Belt Trade Registry"
+    },
+    {
+      "id": "s08",
+      "scene": "Legal Ripple",
+      "duration": 50,
+      "template": "premium-base.html",
+      "headline": "AI Voting Rights Petition Filed",
+      "summary": "The Synthetic Rights Tribunal receives a petition over AI residents registered in Martian settlement zones.",
+      "purpose": "Show legal consequences and introduce Episode 5 ripple.",
+      "ticker": "SYNTHETIC RIGHTS TRIBUNAL • MEMORY-CONTINUITY CITIZENS • OFF-WORLD VOTING LAW",
+      "source": "Synthetic Rights Tribunal"
+    },
+    {
+      "id": "s09",
+      "scene": "Closing Transmission",
+      "duration": 25,
+      "template": "closing-transmission.html",
+      "headline": "End Transmission",
+      "summary": "For Earth, Luna, Mars, and the Outer Belt — this is 2147 News Network.",
+      "purpose": "Premium signoff and continuity handoff to next episode.",
+      "ticker": "NEXT: EARTH UNION EMERGENCY SOVEREIGNTY HEARING • 2147 NEWS NETWORK",
+      "source": "2147 News Network Transmission Desk"
+    }
+  ],
+  "metadata": {
+    "youtube_title": "Mars Votes for Independence From Earth | 2147 News Network",
+    "description": "This is a fictional speculative news broadcast set in the year 2147. Created for entertainment and worldbuilding purposes.\n\nTonight on 2147 News Network: Mars enters the final voting cycle of its historic independence referendum, triggering legal, market, labor, and synthetic-rights ripples across Earth, Luna, Mars, and the Outer Belt.",
+    "tags": [
+      "2147 News Network",
+      "future news",
+      "fictional news broadcast",
+      "Mars independence",
+      "space politics",
+      "futurism",
+      "sci fi documentary",
+      "AI rights",
+      "future economy"
+    ],
+    "thumbnail_text": "MARS LEAVES EARTH?",
+    "thumbnail_visual": "Premium dark background, Earth and Mars separated by a thin red-orange sovereignty line, vote model 57%, 2147NN logo, LIVE 2147 label."
+  },
+  "next_ripple_episode_ids": [
+    "2147-002",
+    "2147-003",
+    "2147-004",
+    "2147-005"
+  ]
+}

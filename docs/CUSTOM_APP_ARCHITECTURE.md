@@ -54,6 +54,9 @@ POST /api/episode/generate     episode draft generator
 GET  /api/templates            list visual templates
 POST /api/templates/preview    render template preview
 POST /api/scenes/preview       render selected timeline scene with controls
+GET  /api/episodes             list saved drafts
+GET  /api/episodes/{id}        load saved draft
+POST /api/episodes/save        save current draft
 POST /api/export               export current draft
 ```
 

@@ -249,6 +249,62 @@ async function previewSelectedScene(){
   $('scenePreviewStage').innerHTML = html;
 }
 
+
+async function refreshSavedEpisodes(){
+  const data = await api('/api/episodes');
+  const select = $('savedEpisodeSelect');
+  if(!data.episodes.length){
+    select.innerHTML = '<option value="">No saved drafts yet</option>';
+    return;
+  }
+  select.innerHTML = data.episodes.map(e=>`<option value="${e.episode_id}">${e.episode_id} — ${e.title} (${e.scene_count} scenes)</option>`).join('');
+}
+
+function collectCurrentDraft(){
+  if(!state.currentDraft) state.currentDraft = { title: $('saveEpisodeTitle').value, headlines: [], script: '', scene_plan: [], metadata: {} };
+  try {
+    const sceneText = $('sceneOutput').textContent.trim();
+    if(sceneText) state.currentDraft.scene_plan = JSON.parse(sceneText);
+  } catch(err) {
+    console.warn('Scene JSON parse failed; using in-memory scene plan.', err);
+  }
+  state.currentDraft.script = $('scriptOutput').textContent || state.currentDraft.script || '';
+  state.currentDraft.title = $('saveEpisodeTitle').value || state.currentDraft.title || 'Untitled 2147 News Episode';
+  state.currentDraft.headlines = Array.from($('headlineOutput').querySelectorAll('li')).map(li => li.textContent);
+  return state.currentDraft;
+}
+
+async function saveDraft(){
+  const draft = collectCurrentDraft();
+  const result = await api('/api/episodes/save', { method:'POST', body: JSON.stringify({
+    episode_id: $('saveEpisodeId').value,
+    title: $('saveEpisodeTitle').value,
+    draft
+  })});
+  $('saveStatus').textContent = `Saved: ${result.episode.episode_id} — ${result.episode.title}`;
+  await refreshSavedEpisodes();
+  $('savedEpisodeSelect').value = result.episode.episode_id;
+}
+
+async function loadDraft(){
+  const id = $('savedEpisodeSelect').value;
+  if(!id){ $('loadStatus').textContent = 'No saved draft selected.'; return; }
+  const payload = await api(`/api/episodes/${id}`);
+  const draft = payload.draft || {};
+  state.currentDraft = draft;
+  state.selectedSceneIndex = 0;
+  $('saveEpisodeId').value = payload.episode_id || id;
+  $('saveEpisodeTitle').value = payload.title || draft.title || id;
+  $('headlineOutput').innerHTML = (draft.headlines || []).map(h=>`<li>${h}</li>`).join('');
+  $('scriptOutput').textContent = draft.script || '';
+  $('sceneOutput').textContent = JSON.stringify(draft.scene_plan || [], null, 2);
+  renderSceneTimeline();
+  loadSelectedSceneControls();
+  previewSelectedScene();
+  $('loadStatus').textContent = `Loaded: ${payload.episode_id} — ${payload.title}`;
+  switchPanel('timeline');
+}
+
 async function exportDraft(){
   if(!state.currentDraft) await generateEpisode();
   const result = await api('/api/export', { method:'POST', body: JSON.stringify({
@@ -265,6 +321,9 @@ $('generateBtn').addEventListener('click', generateEpisode);
 $('renderTemplateBtn').addEventListener('click', renderTemplate);
 $('templateSelect').addEventListener('change', renderTemplate);
 $('exportBtn').addEventListener('click', exportDraft);
+$('saveDraftBtn').addEventListener('click', saveDraft);
+$('loadDraftBtn').addEventListener('click', loadDraft);
+$('refreshSavedBtn').addEventListener('click', refreshSavedEpisodes);
 $('addSceneBtn').addEventListener('click', addScene);
 $('duplicateSceneBtn').addEventListener('click', duplicateScene);
 $('deleteSceneBtn').addEventListener('click', deleteScene);
@@ -277,6 +336,7 @@ $('previewSceneBtn').addEventListener('click', previewSelectedScene);
 (async function init(){
   await loadWorld();
   await loadTemplates();
+  await refreshSavedEpisodes();
   await analyzeEvent();
   await generateEpisode();
 })();

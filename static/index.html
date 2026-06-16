@@ -154,10 +154,31 @@
       <section id="exports" class="panel">
         <div class="section-heading">
           <p class="eyebrow">Production</p>
-          <h2>Export Center</h2>
-          <p>Export the current draft into files for editing, video production, and handoff.</p>
+          <h2>Save, Load & Export Center</h2>
+          <p>Save edited episodes, load existing drafts, and export production files for editing, video production, and handoff.</p>
+        </div>
+        <div class="save-load-grid">
+          <div class="glass card">
+            <h3>Save Current Episode</h3>
+            <div class="save-controls">
+              <label>Episode ID <input id="saveEpisodeId" value="2147-001-mars-independence" /></label>
+              <label>Episode Title <input id="saveEpisodeTitle" value="Mars Votes for Independence From Earth" /></label>
+              <button id="saveDraftBtn" class="primary-btn">Save Draft</button>
+            </div>
+            <div id="saveStatus" class="export-status">No save yet.</div>
+          </div>
+          <div class="glass card">
+            <h3>Load Saved Episode</h3>
+            <div class="save-controls">
+              <label>Saved Draft <select id="savedEpisodeSelect"></select></label>
+              <button id="loadDraftBtn" class="secondary-btn">Load Draft</button>
+              <button id="refreshSavedBtn" class="secondary-btn">Refresh List</button>
+            </div>
+            <div id="loadStatus" class="export-status">No draft loaded yet.</div>
+          </div>
         </div>
         <div class="glass card">
+          <h3>Export Current Draft</h3>
           <button id="exportBtn" class="primary-btn">Export Current Draft</button>
           <div id="exportStatus" class="export-status">No export yet.</div>
         </div>

@@ -1,0 +1,69 @@
+{
+  "season_id": "season-001",
+  "title": "The Mars Sovereignty Crisis",
+  "premise": "A connected ten-episode opening season where the Mars independence referendum triggers political, legal, labor, market, climate, and scientific ripples across the 2147 world system.",
+  "quality_target": "International-level premium news broadcast with Apple-inspired UI polish, named people, named institutions, exact source labels, and causal continuity.",
+  "episodes": [
+    {
+      "episode_id": "2147-001",
+      "title": "Mars Votes for Independence From Earth",
+      "main_event_id": "event_2147_001_mars_referendum_final_cycle",
+      "purpose": "Launch the channel and establish the Mars independence crisis as the first major world event.",
+      "ripple_to_next": ["Earth Union emergency sovereignty hearing", "energy-contract market warning", "Lunar oxygen-credit labor reaction", "AI voting-rights petition"]
+    },
+    {
+      "episode_id": "2147-002",
+      "title": "Earth Union Opens Emergency Hearing on Mars Sovereignty",
+      "purpose": "Show Earth institutional response and introduce legal stakes.",
+      "caused_by": ["2147-001"]
+    },
+    {
+      "episode_id": "2147-003",
+      "title": "CEO Jiang Lau Warns Mars Vote Could Shake Energy Markets",
+      "purpose": "Show market and corporate consequences through a named executive and energy infrastructure angle.",
+      "caused_by": ["2147-001", "2147-002"]
+    },
+    {
+      "episode_id": "2147-004",
+      "title": "Lunar Oxygen Strike Expands After Mars Autonomy Debate",
+      "purpose": "Connect Mars autonomy to Luna labor rights and life-support pricing.",
+      "caused_by": ["2147-001", "event_2136_oxygen_credit_protests"]
+    },
+    {
+      "episode_id": "2147-005",
+      "title": "Synthetic Rights Tribunal Receives Petition Over AI Voting on Mars",
+      "purpose": "Introduce AI citizenship, memory identity, and voting rights.",
+      "caused_by": ["2147-001"]
+    },
+    {
+      "episode_id": "2147-006",
+      "title": "Outer Belt Cooperative Offers to Mediate Earth-Mars Talks",
+      "purpose": "Expand the crisis beyond Earth and Mars into asteroid trade diplomacy.",
+      "caused_by": ["2147-002", "2147-003"]
+    },
+    {
+      "episode_id": "2147-007",
+      "title": "Pacific Floating Cities Activate Storm Shields",
+      "purpose": "Broaden the world with a major Earth climate story and link it to energy-grid stress.",
+      "caused_by": ["seasonal_superstorm_risk", "2147-003"]
+    },
+    {
+      "episode_id": "2147-008",
+      "title": "Europa Probe Detects Third Repeating Signal Beneath Ice",
+      "purpose": "Introduce premium science-desk storytelling and a longer mystery arc.",
+      "caused_by": ["europa_probe_signal_anomaly"]
+    },
+    {
+      "episode_id": "2147-009",
+      "title": "Mars Independence Result Delayed After Settlement Data Dispute",
+      "purpose": "Escalate Mars story through election integrity and remote settlement verification.",
+      "caused_by": ["2147-001", "2147-002"]
+    },
+    {
+      "episode_id": "2147-010",
+      "title": "Earth, Mars, and Luna Enter Emergency Negotiations",
+      "purpose": "Season-one culmination tying together sovereignty, energy, labor, and legal ripples.",
+      "caused_by": ["2147-002", "2147-003", "2147-004", "2147-005", "2147-006"]
+    }
+  ]
+}

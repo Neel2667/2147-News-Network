@@ -157,3 +157,8 @@ The user rejected a Gradio-first URL because they want a fully controlled custom
 ## Scene Timeline Editor
 
 The custom app now has a Scene Timeline panel and Template Control Panel. Users can edit scene order, duration, selected template, headline, summary, lower-third, ticker, and source label, then preview the selected scene. See reports/REPORT_2026-06-16_SCENE_TIMELINE_EDITOR.md.
+
+
+## Episode Save/Load and Pilot Package
+
+The custom app now supports saving and loading episode drafts via `/api/episodes` endpoints. Saved drafts live under `episodes/saved/`. The first pilot production package is at `episodes/pilot-001-mars-independence/`, and a loadable saved draft exists at `episodes/saved/2147-001-mars-independence.json`. See `reports/REPORT_2026-06-16_SAVE_LOAD_AND_PILOT.md`.
