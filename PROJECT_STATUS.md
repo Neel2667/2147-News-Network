@@ -28,6 +28,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Added causal event engine plan and initial data files for events, people, organizations, locations, and source agencies.
 - Added curated chat context file so future agents can understand the planning history without reading raw chat logs.
 - Added premium UI design system emphasizing Apple-inspired polish, minimalism, glass panels, typography, and smooth motion.
+- Built premium UI template system with opening intro, anchor desk, headline cards, Mars dashboard, quote card, closing transmission, template renderer, and Gradio preview tab.
+
 
 ## In Progress
 
@@ -55,7 +57,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - scene template selection
    - export JSON/text files
 4. Connect app.py to data/events.json and generate stories from event ripples.
-5. Add more visual templates:
+5. Add remaining premium visual templates: breaking news, financial desk, legal desk, science desk, Earth map, Lunar report.
    - anchor desk
    - Mars dashboard
    - breaking news alert

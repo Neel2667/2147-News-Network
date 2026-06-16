@@ -142,3 +142,8 @@ A curated planning record has been saved at docs/CHAT_CONTEXT.md. It excludes se
 ## Premium UI Priority
 
 The user emphasized that UI quality is the main success factor. If the UI looks cheap, nobody will watch, even if the writing is good. Use docs/PREMIUM_UI_DESIGN_SYSTEM.md as a mandatory design reference. The target is Apple-inspired polish: minimal, beautiful typography, glass depth, restrained colors, smooth premium animation, and no cheap cyberpunk clutter.
+
+
+## Premium UI Templates Built
+
+The first premium UI templates are implemented and pushed. See `reports/REPORT_2026-06-16_PREMIUM_UI_TEMPLATES.md`. The Gradio app now includes a Premium Visual Preview tab. Templates are self-contained HTML/CSS snippets under `templates/`, rendered via `src/template_renderer.py`.
