@@ -332,3 +332,8 @@ User still saw no anchor/footage. Added `static/demo-assets/earth-observations-s
 ## Studio Video Wall Direct Review
 
 Added `static/studio-video-wall-direct-review.html` because user could not see anchor/footage in previous review pages. This page is self-contained and should be used for direct visual approval.
+
+
+## Direct Image Review Fix
+
+User still could not see anchor/footage in HTML/CSS preview. Created `static/studio-video-wall-direct-review.png` and changed direct review page to display the rendered image. If user approves, convert this exact composition into animated reusable template.

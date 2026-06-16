@@ -240,3 +240,8 @@ The MVP is complete when a user can:
 ## Studio Video Wall Direct Review
 
 - Added `static/studio-video-wall-direct-review.html` as a self-contained page to verify anchor and footage visibility.
+
+
+## Direct Image Review Fix
+
+- Created `static/studio-video-wall-direct-review.png` and simplified review page to show guaranteed rendered image preview with anchor and footage visible.
