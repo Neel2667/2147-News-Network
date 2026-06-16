@@ -214,3 +214,10 @@ The MVP is complete when a user can:
 - Mounted `/assets` in FastAPI for video assets.
 - Updated pilot scene s02 to use official Studio + Video Wall template.
 - Added `static/studio-video-wall-approval.html`.
+
+
+## Studio Video Wall Check Fix
+
+- Removed fake anchor silhouette from official Studio + Video Wall template.
+- Replaced with cleaner anchor desk information card and animated broadcast lines.
+- Regenerated Studio Video Wall and Pilot V2 approval pages.

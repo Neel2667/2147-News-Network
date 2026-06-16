@@ -312,3 +312,8 @@ User requested actual downloaded sample video, not wireframes. Downloaded NASA/p
 ## Official Studio Video Wall Template
 
 User chose Option B as preferred direction. Built `templates/broadcast-v2-studio-video-wall.html`, mounted `/assets`, updated pilot scene s02, and added `static/studio-video-wall-approval.html` for approval. See `reports/REPORT_2026-06-16_OFFICIAL_STUDIO_VIDEO_WALL_TEMPLATE.md`.
+
+
+## Studio Video Wall Check Fix
+
+User said Studio + Video Wall was not proper. Removed fake anchor silhouette from `broadcast-v2-studio-video-wall.html` and replaced it with a clean anchor desk info card. Regenerated `/static/studio-video-wall-approval.html` and `/static/pilot-v2-approval.html`.
