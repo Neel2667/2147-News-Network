@@ -36,6 +36,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Built template-specific controls for Historical Timeline, Financial Desk, Legal Desk, and Breaking News templates.
 - Built Science Desk, Earth Climate Map, and Lunar Report premium templates with template-specific controls.
 - Added polished one-click pilot loader, dashboard pilot card, health endpoint, and Hugging Face Docker deployment guide.
+- Built render/export workflow that creates standalone 1920x1080 scene HTML files, manifest.json, README, and draft.json for OBS/browser recording.
 
 
 ## In Progress
@@ -64,8 +65,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - scene template selection
    - export JSON/text files
 4. Connect app.py to data/events.json and generate stories from event ripples.
-5. Add render/export workflow for recording scenes into video.
-6. Add download buttons for exported production packages.
+5. Add download buttons for exported production packages.
+6. Add optional Playwright/FFmpeg automated scene recording later.
 6. Add video render/export workflow later.
    - anchor desk
    - Mars dashboard

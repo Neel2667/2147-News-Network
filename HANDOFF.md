@@ -182,3 +182,8 @@ Built `science-desk.html`, `earth-climate-map.html`, and `lunar-report.html` wit
 ## Pilot Loader and Deployment Guide
 
 The custom app now has a one-click Load Pilot Episode button in the top bar and dashboard. It loads `2147-001-mars-independence` from `episodes/saved/`. A Hugging Face Docker deployment guide exists at `docs/HUGGING_FACE_DEPLOYMENT.md`. The app has `/health` endpoint.
+
+
+## Render Export Workflow
+
+The app now has a render package workflow via `POST /api/render/package` and a UI button in Save, Load & Export Center. It creates standalone 1920x1080 HTML scene pages under `render_packages/{episode_id}/`, served from `/renders/{episode_id}/`. Read `docs/RENDER_EXPORT_WORKFLOW.md` and `reports/REPORT_2026-06-16_RENDER_EXPORT_WORKFLOW.md`.

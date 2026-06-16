@@ -23,6 +23,8 @@ DATA_DIR = ROOT / "data"
 STATIC_DIR = ROOT / "static"
 EXPORT_DIR = ROOT / "exports"
 SAVED_EPISODES_DIR = ROOT / "episodes" / "saved"
+RENDER_DIR = ROOT / "render_packages"
+RENDER_DIR.mkdir(exist_ok=True)
 
 app = FastAPI(title="2147 News Network Studio", version="0.2.0")
 app.add_middleware(
@@ -33,6 +35,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+app.mount("/renders", StaticFiles(directory=RENDER_DIR), name="renders")
 
 
 class EpisodeRequest(BaseModel):
@@ -68,6 +71,14 @@ class SaveEpisodeRequest(BaseModel):
     episode_id: str | None = None
     title: str = "Untitled 2147 News Episode"
     draft: dict[str, Any]
+
+
+class RenderPackageRequest(BaseModel):
+    episode_id: str = "2147-001-mars-independence"
+    title: str = "Untitled 2147 News Episode"
+    draft: dict[str, Any]
+    resolution_width: int = 1920
+    resolution_height: int = 1080
 
 
 def slugify(value: str) -> str:
@@ -357,6 +368,118 @@ def build_template_context(*contexts: dict[str, Any]) -> dict[str, str]:
     return {k: str(v) for k, v in merged.items() if v is not None}
 
 
+def scene_render_context(scene: dict[str, Any]) -> dict[str, str]:
+    return build_template_context(scene.get("template_controls", {}), {
+        "headline": scene.get("headline") or scene.get("scene") or "2147 News Network",
+        "summary": scene.get("summary") or scene.get("purpose") or scene.get("visual") or "Premium future-news scene.",
+        "ticker": scene.get("ticker"),
+        "lower_name": scene.get("lower_name"),
+        "lower_title": scene.get("lower_title"),
+        "source": scene.get("source"),
+        "headline1": scene.get("headline") or scene.get("scene"),
+    })
+
+
+def standalone_scene_html(scene: dict[str, Any], index: int, total: int, width: int, height: int) -> str:
+    template_name = scene.get("template") or "premium-base.html"
+    inner = render_template(template_name, **scene_render_context(scene))
+    title = scene.get("scene") or f"Scene {index + 1}"
+    duration = scene.get("duration") or scene.get("duration_seconds") or 30
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title} - 2147 News Network Render</title>
+  <style>
+    html, body {{ margin:0; width:100%; height:100%; background:#03040A; overflow:hidden; }}
+    body {{ display:grid; place-items:center; font-family:Inter,-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,sans-serif; }}
+    .render-frame {{ width:{width}px; height:{height}px; transform-origin:center; }}
+    .render-frame > div {{ width:100% !important; height:100% !important; min-height:{height}px !important; border-radius:0 !important; }}
+    .render-meta {{ position:fixed; left:18px; top:14px; z-index:99999; padding:8px 10px; border-radius:999px; background:rgba(0,0,0,.42); color:#DDFBFF; font:700 11px/1.2 system-ui; letter-spacing:.08em; text-transform:uppercase; opacity:.28; }}
+    @media (max-width: {width}px) {{ .render-frame {{ transform:scale(calc(100vw / {width})); }} }}
+    @media (max-height: {height}px) {{ .render-frame {{ transform:scale(min(calc(100vw / {width}), calc(100vh / {height}))); }} }}
+  </style>
+</head>
+<body>
+  <div class="render-meta">Scene {index + 1}/{total} - {duration}s - {template_name}</div>
+  <main class="render-frame">{inner}</main>
+</body>
+</html>"""
+
+
+def create_render_package(req: RenderPackageRequest) -> dict[str, Any]:
+    package_id = slugify(req.episode_id or req.title)
+    package_dir = RENDER_DIR / package_id
+    scenes_dir = package_dir / "scenes"
+    scenes_dir.mkdir(parents=True, exist_ok=True)
+
+    draft = req.draft or {}
+    scenes = draft.get("scene_plan") or []
+    manifest_scenes = []
+    for index, scene in enumerate(scenes):
+        scene_id = slugify(scene.get("id") or f"scene-{index+1}")
+        file_name = f"{index+1:02d}-{scene_id}.html"
+        html = standalone_scene_html(scene, index, len(scenes), req.resolution_width, req.resolution_height)
+        (scenes_dir / file_name).write_text(html, encoding="utf-8")
+        duration = int(scene.get("duration") or scene.get("duration_seconds") or 30)
+        manifest_scenes.append({
+            "index": index + 1,
+            "id": scene.get("id") or scene_id,
+            "title": scene.get("scene") or f"Scene {index+1}",
+            "duration_seconds": duration,
+            "template": scene.get("template"),
+            "file": f"scenes/{file_name}",
+            "url": f"/renders/{package_id}/scenes/{file_name}",
+        })
+
+    manifest = {
+        "package_id": package_id,
+        "title": req.title,
+        "resolution": {"width": req.resolution_width, "height": req.resolution_height},
+        "total_runtime_seconds": sum(s["duration_seconds"] for s in manifest_scenes),
+        "scene_count": len(manifest_scenes),
+        "scenes": manifest_scenes,
+        "workflow": {
+            "manual_recording": "Open each scene URL, record with OBS at 1920x1080, then assemble according to duration_seconds.",
+            "future_automation": "Use Playwright/Chromium frame capture or OBS automation to record scenes."
+        }
+    }
+    (package_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    (package_dir / "draft.json").write_text(json.dumps(draft, indent=2, ensure_ascii=False), encoding="utf-8")
+    readme = f"""# Render Package - {req.title}
+
+Package ID: `{package_id}`
+
+Resolution: {req.resolution_width}x{req.resolution_height}
+Scenes: {len(manifest_scenes)}
+Total runtime: {manifest['total_runtime_seconds']} seconds
+
+## Manual Recording Workflow
+
+1. Open each scene HTML URL in order.
+2. Record browser window with OBS at {req.resolution_width}x{req.resolution_height}.
+3. Use each scene's `duration_seconds` from `manifest.json`.
+4. Assemble clips in DaVinci Resolve, Premiere, CapCut, or FFmpeg.
+5. Add voiceover, music, SFX, subtitles, and final color/sound polish.
+
+## Files
+
+- `manifest.json` - scene list and durations
+- `draft.json` - source episode draft
+- `scenes/*.html` - standalone video-ready scene pages
+"""
+    (package_dir / "README.md").write_text(readme, encoding="utf-8")
+    return {
+        "status": "ok",
+        "package_id": package_id,
+        "manifest_url": f"/renders/{package_id}/manifest.json",
+        "readme_url": f"/renders/{package_id}/README.md",
+        "scene_urls": [s["url"] for s in manifest_scenes],
+        "manifest": manifest,
+    }
+
+
 @app.get("/", response_class=HTMLResponse)
 def home() -> HTMLResponse:
     return HTMLResponse((STATIC_DIR / "index.html").read_text(encoding="utf-8"))
@@ -452,6 +575,11 @@ def api_load_saved_episode(episode_id: str) -> JSONResponse:
 def api_save_episode(req: SaveEpisodeRequest) -> JSONResponse:
     payload = save_episode_payload(req)
     return JSONResponse({"status": "ok", "episode": {"episode_id": payload["episode_id"], "title": payload["title"]}})
+
+
+@app.post("/api/render/package")
+def api_create_render_package(req: RenderPackageRequest) -> JSONResponse:
+    return JSONResponse(create_render_package(req))
 
 
 @app.post("/api/export")

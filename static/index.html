@@ -195,10 +195,23 @@
             <div id="loadStatus" class="export-status">No draft loaded yet.</div>
           </div>
         </div>
-        <div class="glass card">
-          <h3>Export Current Draft</h3>
-          <button id="exportBtn" class="primary-btn">Export Current Draft</button>
-          <div id="exportStatus" class="export-status">No export yet.</div>
+        <div class="render-export-grid">
+          <div class="glass card">
+            <h3>Export Current Draft</h3>
+            <button id="exportBtn" class="primary-btn">Export Current Draft</button>
+            <div id="exportStatus" class="export-status">No export yet.</div>
+          </div>
+          <div class="glass card">
+            <h3>Create Render Package</h3>
+            <p class="card-help">Generates standalone 1920×1080 HTML scene files and a manifest for OBS/browser recording.</p>
+            <div class="render-controls">
+              <label>Width <input id="renderWidth" type="number" value="1920" /></label>
+              <label>Height <input id="renderHeight" type="number" value="1080" /></label>
+              <button id="renderPackageBtn" class="primary-btn">Create Video-Ready Scene Package</button>
+            </div>
+            <div id="renderStatus" class="export-status">No render package yet.</div>
+            <div id="renderLinks" class="render-links"></div>
+          </div>
         </div>
       </section>
     </main>

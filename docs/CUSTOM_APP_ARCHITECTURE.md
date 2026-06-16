@@ -57,6 +57,7 @@ POST /api/scenes/preview       render selected timeline scene with controls
 GET  /api/episodes             list saved drafts
 GET  /api/episodes/{id}        load saved draft
 POST /api/episodes/save        save current draft
+POST /api/render/package       create standalone HTML scene render package
 POST /api/export               export current draft
 ```
 

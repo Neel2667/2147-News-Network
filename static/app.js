@@ -391,6 +391,24 @@ async function loadPilotEpisode(){
   await loadDraftById('2147-001-mars-independence');
 }
 
+async function createRenderPackage(){
+  const draft = collectCurrentDraft();
+  const result = await api('/api/render/package', { method:'POST', body: JSON.stringify({
+    episode_id: $('saveEpisodeId').value || '2147-001-mars-independence',
+    title: $('saveEpisodeTitle').value || draft.title || 'Untitled 2147 News Episode',
+    draft,
+    resolution_width: Number($('renderWidth').value || 1920),
+    resolution_height: Number($('renderHeight').value || 1080)
+  })});
+  $('renderStatus').textContent = `Render package created: ${result.package_id} • ${result.manifest.scene_count} scenes • ${result.manifest.total_runtime_seconds}s`;
+  const links = [
+    `<a href="${result.manifest_url}" target="_blank">Open manifest.json</a>`,
+    `<a href="${result.readme_url}" target="_blank">Open render README</a>`,
+    ...result.scene_urls.map((url, index)=>`<a href="${url}" target="_blank">Open Scene ${String(index+1).padStart(2,'0')} Render Page</a>`)
+  ];
+  $('renderLinks').innerHTML = links.join('');
+}
+
 async function exportDraft(){
   if(!state.currentDraft) await generateEpisode();
   const result = await api('/api/export', { method:'POST', body: JSON.stringify({
@@ -407,6 +425,7 @@ $('generateBtn').addEventListener('click', generateEpisode);
 $('renderTemplateBtn').addEventListener('click', renderTemplate);
 $('templateSelect').addEventListener('change', renderTemplate);
 $('exportBtn').addEventListener('click', exportDraft);
+$('renderPackageBtn').addEventListener('click', createRenderPackage);
 $('saveDraftBtn').addEventListener('click', saveDraft);
 $('loadDraftBtn').addEventListener('click', loadDraft);
 $('refreshSavedBtn').addEventListener('click', refreshSavedEpisodes);

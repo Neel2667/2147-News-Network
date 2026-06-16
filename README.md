@@ -86,3 +86,24 @@ Deploy as a **Docker Space**. See:
 ```text
 docs/HUGGING_FACE_DEPLOYMENT.md
 ```
+
+
+## Render / Export Workflow
+
+The custom app can create video-ready scene packages. In the app, open **Save, Load & Export Center** and click:
+
+```text
+Create Video-Ready Scene Package
+```
+
+This creates standalone 1920×1080 HTML scene files under:
+
+```text
+render_packages/{episode_id}/
+```
+
+Read:
+
+```text
+docs/RENDER_EXPORT_WORKFLOW.md
+```
