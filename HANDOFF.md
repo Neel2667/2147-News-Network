@@ -162,3 +162,8 @@ The custom app now has a Scene Timeline panel and Template Control Panel. Users 
 ## Episode Save/Load and Pilot Package
 
 The custom app now supports saving and loading episode drafts via `/api/episodes` endpoints. Saved drafts live under `episodes/saved/`. The first pilot production package is at `episodes/pilot-001-mars-independence/`, and a loadable saved draft exists at `episodes/saved/2147-001-mars-independence.json`. See `reports/REPORT_2026-06-16_SAVE_LOAD_AND_PILOT.md`.
+
+
+## Specialized Premium Templates
+
+Built `historical-timeline.html`, `financial-desk.html`, `legal-desk.html`, and `breaking-news.html`. The pilot saved draft now uses specialized templates for historical context, market ripple, and legal ripple scenes. See `reports/REPORT_2026-06-16_SPECIALIZED_PREMIUM_TEMPLATES.md`.

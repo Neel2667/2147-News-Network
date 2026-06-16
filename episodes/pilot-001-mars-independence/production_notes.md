@@ -50,3 +50,14 @@ Allowed supporting footage:
 - Is the UI elegant, not cluttered?
 - Does the episode clearly show cause → event → ripple?
 - Is the disclaimer included in YouTube description?
+
+
+## Specialized Templates Added
+
+The pilot now uses specialized premium templates for:
+
+- Historical Context → `historical-timeline.html`
+- Market Ripple → `financial-desk.html`
+- Legal Ripple → `legal-desk.html`
+
+A `breaking-news.html` template also exists for urgent future updates and later episodes.
