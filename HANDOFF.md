@@ -222,3 +222,8 @@ A silent code-rendered demo video has been created at `outputs/demo-video/2147-d
 ## Demo Video Browser Fix
 
 The original demo MP4 used mp4v and may not play in browser previews. It has been replaced with browser-compatible H.264/avc1 yuv420p faststart at `outputs/demo-video/2147-demo-pilot-ui.mp4`. `scripts/generate_demo_video.py` now transcodes with imageio-ffmpeg.
+
+
+## Broadcast V2 Rebuild
+
+The user strongly rejected the first demo as pathetic and not watchable. A new direction has started: real broadcast news package, not generic sci-fi UI. Read `docs/BROADCAST_REBUILD_RESEARCH_AND_PLAN.md`. New demo: `outputs/demo-video/2147-broadcast-v2-demo.mp4`. Next agent should rebuild templates around V2 broadcast style.

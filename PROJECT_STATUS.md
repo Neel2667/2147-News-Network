@@ -93,3 +93,13 @@ The MVP is complete when a user can:
 5. Generate a scene-by-scene visual plan.
 6. Preview at least 5 browser-rendered visual scenes.
 7. Export script, subtitles draft, scene JSON, and production notes.
+
+
+## Broadcast V2 Rebuild
+
+- User rejected first demo as poor quality.
+- Started Broadcast V2 rebuild based on real TV news package structure.
+- Added `docs/BROADCAST_REBUILD_RESEARCH_AND_PLAN.md`.
+- Added `scripts/generate_broadcast_v2_demo.py`.
+- Generated `outputs/demo-video/2147-broadcast-v2-demo.mp4`.
+- Next: rebuild app templates around V2 broadcast package style.
