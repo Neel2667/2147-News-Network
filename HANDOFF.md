@@ -317,3 +317,8 @@ User chose Option B as preferred direction. Built `templates/broadcast-v2-studio
 ## Studio Video Wall Check Fix
 
 User said Studio + Video Wall was not proper. Removed fake anchor silhouette from `broadcast-v2-studio-video-wall.html` and replaced it with a clean anchor desk info card. Regenerated `/static/studio-video-wall-approval.html` and `/static/pilot-v2-approval.html`.
+
+
+## Studio Wall Anchor and Footage Fix
+
+User said Studio + Video Wall had no anchor or footage. Reintroduced CSS-rendered anchor figure and moved sample footage to `static/demo-assets/earth-observations-sample.mp4` for reliable preview. Template has fallback animated footage layer if video fails.

@@ -221,3 +221,10 @@ The MVP is complete when a user can:
 - Removed fake anchor silhouette from official Studio + Video Wall template.
 - Replaced with cleaner anchor desk information card and animated broadcast lines.
 - Regenerated Studio Video Wall and Pilot V2 approval pages.
+
+
+## Studio Wall Anchor and Footage Fix
+
+- Reintroduced a CSS-rendered anchor figure in Studio + Video Wall.
+- Added visible real video wall support and fallback footage layer.
+- Copied sample footage to `static/demo-assets/` for reliable preview.
