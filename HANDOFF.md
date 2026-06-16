@@ -262,3 +262,8 @@ User asked to take inspiration from Apple colors, shapes, and animations. Update
 ## Label Alignment Fix
 
 User noted the BREAKING red label extended farther than the HEADLINES label. Fixed by matching ticker label width to strap label width in `static/core-broadcast-elements.html`.
+
+
+## Broadcast System V2 Extraction
+
+Approved core elements have been extracted into `static/broadcast-system.css` and `static/broadcast-components.js`. Showcase: `/static/broadcast-system-showcase.html`. Documentation: `docs/BROADCAST_SYSTEM_V2.md`. Next: rebuild V2 templates using these components only.

@@ -147,3 +147,11 @@ The MVP is complete when a user can:
 ## Label Alignment Fix
 
 - Aligned `BREAKING` and `HEADLINES` red label widths in the core broadcast elements page.
+
+
+## Broadcast System V2 Extraction
+
+- Created `static/broadcast-system.css` and `static/broadcast-components.js`.
+- Created `static/broadcast-system-showcase.html`.
+- Added `docs/BROADCAST_SYSTEM_V2.md`.
+- Future V2 templates must use these reusable components.

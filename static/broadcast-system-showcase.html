@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2147 Broadcast System V2 Showcase</title>
+  <link rel="stylesheet" href="/static/broadcast-system.css" />
+  <style>
+    body{margin:0;background:#05070d;color:#f8fafc;font-family:var(--bcast-font);padding:32px}.wrap{max-width:1400px;margin:auto}.head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:24px}.eyebrow{color:var(--bcast-cyan);font-size:12px;font-weight:950;letter-spacing:.18em;text-transform:uppercase}h1{font-family:var(--bcast-condensed);font-size:72px;line-height:.85;margin:0;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}.card{background:rgba(255,255,255,.075);border:1px solid var(--bcast-line);border-radius:22px;padding:18px;min-height:150px}.card h2{font-family:var(--bcast-condensed);font-size:30px;margin:0 0 16px;text-transform:uppercase}.sample{position:relative;height:180px;border-radius:18px;background:linear-gradient(135deg,#0b1626,#05070d);overflow:hidden;border:1px solid var(--bcast-line)}@media(max-width:900px){.grid,.head{display:block}.card{margin-bottom:18px}}
+  </style>
+</head>
+<body class="bcast-reset">
+  <main class="wrap">
+    <div class="head"><div><div class="eyebrow">Reusable System</div><h1>Broadcast Components V2</h1></div><p style="max-width:520px;color:var(--bcast-muted);line-height:1.45">This page uses <code>broadcast-system.css</code> and <code>broadcast-components.js</code>. These are the reusable approved building blocks for the new templates.</p></div>
+    <section class="bcast-frame" id="mainFrame"><div class="bcast-safe"></div></section>
+    <section class="grid">
+      <div class="card"><h2>Bug / Live / Clock</h2><div id="meta"></div></div>
+      <div class="card"><h2>Source</h2><div id="source"></div></div>
+      <div class="card"><h2>Lower Third</h2><div class="sample" id="lower"></div></div>
+    </section>
+  </main>
+  <script src="/static/broadcast-components.js"></script>
+  <script>
+    const B = window.Broadcast2147;
+    document.getElementById('mainFrame').insertAdjacentHTML('beforeend', `
+      <div class="bcast-top-left">${B.bug()}${B.live()}</div>
+      <div class="bcast-top-right">${B.clock()}</div>
+      ${B.storyPanel()}
+      ${B.marsOts()}
+      <div style="position:absolute;right:76px;top:442px;z-index:6">${B.source('Mars Civic Council Election Board',{dark:true})}</div>
+      ${B.strap({label:'Breaking',headline:'Mars referendum enters final hours',sub:'Earth Union officials prepare emergency legal review',tag:'Live 2147',breaking:true})}
+      ${B.ticker()}
+    `);
+    document.getElementById('meta').innerHTML = `<div style="display:flex;gap:10px;flex-wrap:wrap">${B.bug({compact:true})}${B.live()}${B.clock('19:42 UTC-O')}</div>`;
+    document.getElementById('source').innerHTML = B.source('Outer Belt Trade Registry');
+    document.getElementById('lower').innerHTML = B.lowerThird({role:'Expert',name:'Dr. Alexandria Sen-Moreau',title:'Political Historian • University of Valles Marineris',location:'Archive Feed'});
+  </script>
+</body>
+</html>
