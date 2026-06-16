@@ -620,17 +620,51 @@ body{margin:0;background:#05070d;color:#f8fafc;font-family:var(--bcast-font);pad
 </div>
 </div></div>
 </section><section class="approval-scene">
-  <div class="scene-head"><strong>02. Anchor Lead-In</strong><span>broadcast-v2-anchor-studio.html • 48s</span></div>
+  <div class="scene-head"><strong>02. Anchor Lead-In</strong><span>broadcast-v2-studio-video-wall.html • 48s</span></div>
   <div class="stage"><div class="stage-inner">
-<div class="bcast-reset bcast-frame">
+<div class="bcast-reset bcast-frame studio-wall-frame">
   <div class="bcast-safe"></div>
-  <div class="bcast-top-left"><div class="bcast-bug"><div class="bcast-bug__mark">2147</div><div class="bcast-bug__word">News<br>Network</div><div class="bcast-bug__accent"></div></div><div class="bcast-live">Live</div></div>
+  <div class="bcast-top-left">
+    <div class="bcast-bug"><div class="bcast-bug__mark">2147</div><div class="bcast-bug__word">News<br>Network</div><div class="bcast-bug__accent"></div></div>
+    <div class="bcast-live">Live</div>
+  </div>
   <div class="bcast-top-right"><div class="bcast-clock">18 Oct 2147 / 19:42 UTC-O</div></div>
+
   <style>
-    .studio{position:absolute;inset:116px 54px 205px;z-index:3;display:grid;grid-template-columns:365px 1fr;gap:22px}.anchor-box,.studio-screen{border-radius:24px;background:linear-gradient(135deg,rgba(11,27,48,.88),rgba(5,7,13,.96));backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.22);box-shadow:0 28px 75px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.10);overflow:hidden}.anchor-box{position:relative;animation:bcast-story-slide 7.2s var(--bcast-ease) infinite}.anchor-head{position:absolute;left:142px;top:58px;width:82px;height:82px;border-radius:50%;background:linear-gradient(135deg,rgba(255,255,255,.86),rgba(205,226,240,.38));box-shadow:0 18px 45px rgba(0,0,0,.22)}.anchor-body{position:absolute;left:102px;top:156px;width:158px;height:148px;border-radius:56px 56px 20px 20px;background:linear-gradient(135deg,rgba(255,255,255,.20),rgba(255,255,255,.065));border:1px solid rgba(255,255,255,.16)}.desk{position:absolute;left:42px;right:42px;bottom:28px;height:58px;border-radius:30px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}.studio-screen{position:relative;animation:bcast-ots-zoom 7.2s .2s var(--bcast-ease) infinite}.studio-screen:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:46px 46px}.studio-content{position:absolute;left:34px;top:32px;right:34px}.studio-content .k{color:var(--bcast-cyan);font-size:13px;font-weight:1000;letter-spacing:.16em;text-transform:uppercase}.studio-content h1{margin:16px 0 12px;font-family:var(--bcast-condensed);font-size:62px;line-height:.84;text-transform:uppercase}.studio-content p{max-width:620px;color:#cbd5e1;font-size:19px;line-height:1.3;margin:0}.mars-board{position:absolute;right:44px;bottom:42px;width:260px;height:126px;border-radius:22px;background:rgba(255,255,255,.92);color:#071426;padding:20px;box-shadow:0 18px 45px rgba(0,0,0,.28)}.mars-board strong{font-family:var(--bcast-condensed);font-size:34px;line-height:.9}.mars-board span{display:block;color:#536071;font-weight:900;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:8px}
-   .anchor-l3{left:60px;right:60px;bottom:108px;z-index:8}</style>
-  <section class="studio"><div class="anchor-box"><div class="anchor-head"></div><div class="anchor-body"></div><div class="desk"></div></div><div class="studio-screen"><div class="studio-content"><div class="k">Mars Political Desk</div><h1>Mars Enters Final Voting Cycle</h1><p>A sovereignty referendum across 42 Martian settlement zones could create the first independent off-world republic.</p></div><div class="mars-board"><strong>91%<br>Turnout</strong><span>Projected model</span></div></div></section>
-  <div class="bcast-lower-third anchor-l3"><div class="bcast-lower-third__role">Anchor</div><div class="bcast-lower-third__name"><strong>ANAYA RAO</strong><span>Senior Anchor • Earth-Orbit Media Ring</span></div><div class="bcast-lower-third__loc">Earth-Orbit Media Ring</div></div>
+    .studio-wall-frame{background:radial-gradient(circle at 72% 18%,rgba(0,166,214,.22),transparent 26%),linear-gradient(135deg,#0b1728,#02040a 78%)}
+    .studio-wall{position:absolute;inset:112px 54px 202px;z-index:4;display:grid;grid-template-columns:380px 1fr;gap:24px;align-items:stretch}
+    .studio-anchor,.studio-video-wall{position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(135deg,rgba(11,27,48,.90),rgba(5,7,13,.98));backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.22);box-shadow:0 30px 80px rgba(0,0,0,.36),inset 0 1px 0 rgba(255,255,255,.10)}
+    .studio-anchor{animation:bcast-story-slide 7.2s var(--bcast-ease) infinite}
+    .studio-video-wall{animation:bcast-ots-zoom 7.2s .18s var(--bcast-ease) infinite}
+    .studio-anchor::before,.studio-video-wall::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:48px 48px;opacity:.42}
+    .anchor-silhouette{position:absolute;left:50%;top:54px;width:170px;height:270px;transform:translateX(-50%)}
+    .anchor-silhouette::before{content:"";position:absolute;left:50%;top:0;width:82px;height:82px;border-radius:50%;transform:translateX(-50%);background:linear-gradient(135deg,#fff,#b8c6d6);box-shadow:0 18px 45px rgba(0,0,0,.24)}
+    .anchor-silhouette::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;border-radius:62px 62px 18px 18px;background:linear-gradient(135deg,rgba(255,255,255,.19),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.18)}
+    .studio-desk{position:absolute;left:42px;right:42px;bottom:32px;height:70px;border-radius:34px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.20);box-shadow:0 18px 45px rgba(0,0,0,.24)}
+    .video-layer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.06) brightness(.82)}
+    .video-gradient{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,6,12,.72),rgba(2,6,12,.20) 48%,rgba(2,6,12,.42)),linear-gradient(180deg,rgba(0,0,0,.10),rgba(0,0,0,.50));pointer-events:none}
+    .wall-copy{position:absolute;left:34px;top:32px;right:36px;color:#fff;text-shadow:0 14px 34px rgba(0,0,0,.45)}
+    .wall-copy .k{color:#bfefff;font-size:13px;font-weight:1000;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+    .wall-copy h1{font-family:var(--bcast-condensed);font-size:72px;line-height:.82;text-transform:uppercase;letter-spacing:-.04em;margin:0 0 14px}
+    .wall-copy p{max-width:640px;color:#dbeafe;font-size:21px;line-height:1.32;margin:0;font-weight:750}
+    .wall-data-card{position:absolute;right:34px;bottom:34px;width:330px;border-radius:24px;background:rgba(248,250,252,.95);backdrop-filter:blur(22px);color:#071426;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.50)}
+    .wall-data-card strong{display:block;font-family:var(--bcast-condensed);font-size:48px;line-height:.86;text-transform:uppercase}.wall-data-card span{display:block;margin-top:8px;color:#536071;font-size:12px;font-weight:950;letter-spacing:.10em;text-transform:uppercase}.wall-source{position:absolute;right:34px;top:32px;z-index:6}
+    .studio-lower-third{left:60px;right:60px;bottom:108px;z-index:9}
+    @media(max-width:980px){.studio-wall{display:block;inset:100px 24px 210px}.studio-anchor{display:none}.wall-copy h1{font-size:52px}.wall-data-card{width:280px}.studio-lower-third{left:24px;right:24px}}
+  </style>
+
+  <section class="studio-wall">
+    <aside class="studio-anchor"><div class="anchor-silhouette"></div><div class="studio-desk"></div></aside>
+    <main class="studio-video-wall">
+      <video class="video-layer" src="/assets/footage/nasa/earth-observations-sample.mp4" autoplay muted loop playsinline></video>
+      <div class="video-gradient"></div>
+      <div class="wall-source"><div class="bcast-source bcast-source--dark"><b class="bcast-source__label">Source</b><span class="bcast-source__text">Mars Civic Council Election Board • Provisional Count</span></div></div>
+      <div class="wall-copy"><div class="k">Mars Political Desk</div><h1>Mars Enters Final Voting Cycle</h1><p>A sovereignty referendum across 42 Martian settlement zones could create the first independent off-world republic.</p></div>
+      <div class="wall-data-card"><strong>91%</strong><span>Projected Turnout</span></div>
+    </main>
+  </section>
+
+  <div class="bcast-lower-third studio-lower-third"><div class="bcast-lower-third__role">Anchor</div><div class="bcast-lower-third__name"><strong>ANAYA RAO</strong><span>Senior Anchor • Earth-Orbit Media Ring</span></div><div class="bcast-lower-third__loc">Studio</div></div>
   <div class="bcast-ticker"><div class="bcast-ticker__label">Headlines</div><div class="bcast-ticker__window"><div class="bcast-ticker__crawl"><span>LIVE: MARS REFERENDUM FINAL CYCLE • PROJECTED TURNOUT 91% • EARTH UNION LEGAL REVIEW BEGINS</span><span>LIVE: MARS REFERENDUM FINAL CYCLE • PROJECTED TURNOUT 91% • EARTH UNION LEGAL REVIEW BEGINS</span></div></div></div>
 </div>
 </div></div>

@@ -307,3 +307,8 @@ User said the asset integration page looked like a wireframe. Created `static/as
 ## Real Footage Final Look Options
 
 User requested actual downloaded sample video, not wireframes. Downloaded NASA/public-domain sample footage to `assets/footage/nasa/earth-observations-sample.mp4`, created `static/asset-final-look-options.html`, and generated `outputs/final-look-options/2147-real-footage-options.mp4`. See `reports/REPORT_2026-06-16_REAL_FOOTAGE_OPTIONS_DEMO.md`.
+
+
+## Official Studio Video Wall Template
+
+User chose Option B as preferred direction. Built `templates/broadcast-v2-studio-video-wall.html`, mounted `/assets`, updated pilot scene s02, and added `static/studio-video-wall-approval.html` for approval. See `reports/REPORT_2026-06-16_OFFICIAL_STUDIO_VIDEO_WALL_TEMPLATE.md`.

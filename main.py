@@ -22,6 +22,7 @@ from src.template_renderer import available_templates, render_template
 ROOT = Path(__file__).parent
 DATA_DIR = ROOT / "data"
 STATIC_DIR = ROOT / "static"
+ASSETS_DIR = ROOT / "assets"
 EXPORT_DIR = ROOT / "exports"
 SAVED_EPISODES_DIR = ROOT / "episodes" / "saved"
 RENDER_DIR = ROOT / "render_packages"
@@ -36,6 +37,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+app.mount("/assets", StaticFiles(directory=ASSETS_DIR), name="assets")
 EXPORT_DIR.mkdir(exist_ok=True)
 app.mount("/exports", StaticFiles(directory=EXPORT_DIR), name="exports")
 app.mount("/renders", StaticFiles(directory=RENDER_DIR), name="renders")
@@ -364,6 +366,15 @@ def template_default_context() -> dict[str, str]:
         "lunar_metric_4_label": "Helium-3 Delayed",
         "lunar_person_name": "TARO VENN",
         "lunar_person_title": "Lunar Labor Analyst • Shackleton Habitat Cluster",
+        "asset_video": "/assets/footage/nasa/earth-observations-sample.mp4",
+        "live_label": "Live",
+        "timestamp": "18 Oct 2147 / 19:42 UTC-O",
+        "segment_label": "Studio Video Wall",
+        "wall_metric_value": "91%",
+        "wall_metric_label": "Projected Turnout",
+        "lower_role": "Anchor",
+        "lower_location": "Studio",
+        "ticker_label": "Headlines",
     }
 
 

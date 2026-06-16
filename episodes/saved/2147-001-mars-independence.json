@@ -33,7 +33,7 @@
         "id": "s02",
         "scene": "Anchor Lead-In",
         "duration": 48,
-        "template": "broadcast-v2-anchor-studio.html",
+        "template": "broadcast-v2-studio-video-wall.html",
         "headline": "Mars Enters Final Voting Cycle",
         "summary": "A sovereignty referendum across 42 Martian settlement zones could create the first independent off-world republic.",
         "purpose": "Introduce lead story with Anaya Rao lower-third and premium studio environment.",
@@ -46,7 +46,19 @@
           "focus": "anchor credibility and clear lead story",
           "notes": "Headline kept short for premium studio readability."
         },
-        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
+        "v2_rebuild_status": "rebuilt_with_broadcast_system_v2",
+        "template_controls": {
+          "asset_video": "/assets/footage/nasa/earth-observations-sample.mp4",
+          "live_label": "Live",
+          "timestamp": "18 Oct 2147 / 19:42 UTC-O",
+          "segment_label": "Mars Political Desk",
+          "wall_metric_value": "91%",
+          "wall_metric_label": "Projected Turnout",
+          "lower_role": "Anchor",
+          "lower_location": "Studio",
+          "ticker_label": "Headlines"
+        },
+        "v2_primary_style": "official_option_b_studio_video_wall"
       },
       {
         "id": "s03",
@@ -289,7 +301,9 @@
       ],
       "note": "All nine pilot scenes now use reusable Broadcast System V2 components.",
       "remaining_scene_ids": []
-    }
+    },
+    "primary_visual_style": "Option B — Studio + Video Wall",
+    "official_primary_template": "broadcast-v2-studio-video-wall.html"
   },
   "save_format": "2147nn-studio-draft-v1"
 }

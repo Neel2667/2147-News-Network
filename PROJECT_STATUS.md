@@ -205,3 +205,12 @@ The MVP is complete when a user can:
 - Created `static/asset-final-look-options.html` with more finished options.
 - Generated `outputs/final-look-options/2147-real-footage-options.mp4` showing four final-look directions with real sample footage.
 - Added asset license log and manifest.
+
+
+## Official Studio Video Wall Template
+
+- User selected Option B as preferred style.
+- Built `templates/broadcast-v2-studio-video-wall.html`.
+- Mounted `/assets` in FastAPI for video assets.
+- Updated pilot scene s02 to use official Studio + Video Wall template.
+- Added `static/studio-video-wall-approval.html`.
