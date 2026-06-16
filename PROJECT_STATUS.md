@@ -155,3 +155,9 @@ The MVP is complete when a user can:
 - Created `static/broadcast-system-showcase.html`.
 - Added `docs/BROADCAST_SYSTEM_V2.md`.
 - Future V2 templates must use these reusable components.
+
+
+## First Broadcast V2 Templates
+
+- Built first five full templates using `broadcast-system.css`: cold open, anchor studio, top stories, Mars data board, and timeline.
+- Updated first five pilot scenes to use V2 templates.

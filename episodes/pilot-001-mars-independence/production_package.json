@@ -2,7 +2,7 @@
   "episode_id": "2147-001-mars-independence",
   "title": "Mars Votes for Independence From Earth",
   "main_event_id": "event_2147_001_mars_referendum_final_cycle",
-  "status": "pilot_ui_reviewed_and_polished",
+  "status": "pilot_partially_rebuilt_with_broadcast_v2_templates",
   "runtime_seconds": 402,
   "runtime_target": "8-10 minutes after narration expansion and pacing",
   "headlines": [
@@ -18,7 +18,7 @@
       "id": "s01",
       "scene": "Opening Transmission",
       "duration": 16,
-      "template": "opening-intro-premium.html",
+      "template": "broadcast-v2-cold-open.html",
       "headline": "2147 News Network",
       "summary": "Broadcasting from the New Delhi Orbital Broadcast Hub.",
       "purpose": "Establish premium network identity and future-news world.",
@@ -28,13 +28,14 @@
         "status": "polished",
         "focus": "premium first impression, brand identity, orbital scale",
         "notes": "Keep minimal and cinematic; no additional clutter."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     },
     {
       "id": "s02",
       "scene": "Anchor Lead-In",
       "duration": 48,
-      "template": "anchor-desk.html",
+      "template": "broadcast-v2-anchor-studio.html",
       "headline": "Mars Enters Final Voting Cycle",
       "summary": "A sovereignty referendum across 42 Martian settlement zones could create the first independent off-world republic.",
       "purpose": "Introduce lead story with Anaya Rao lower-third and premium studio environment.",
@@ -46,13 +47,14 @@
         "status": "polished",
         "focus": "anchor credibility and clear lead story",
         "notes": "Headline kept short for premium studio readability."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     },
     {
       "id": "s03",
       "scene": "Top Headlines",
       "duration": 38,
-      "template": "headline-cards.html",
+      "template": "broadcast-v2-top-stories.html",
       "headline": "Mars Votes on Independence",
       "summary": "Five developing stories connected to the Mars sovereignty crisis.",
       "purpose": "Show top headlines and establish causal ripples.",
@@ -66,13 +68,14 @@
         "status": "polished",
         "focus": "fast editorial momentum",
         "notes": "Reduced duration to improve pacing."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     },
     {
       "id": "s04",
       "scene": "Mars Referendum Dashboard",
       "duration": 78,
-      "template": "mars-dashboard.html",
+      "template": "broadcast-v2-mars-data.html",
       "headline": "Mars Independence Vote",
       "summary": "Turnout and vote model across 42 recognized settlement zones.",
       "purpose": "Show data, numbers, source label, and visual proof layer.",
@@ -82,13 +85,14 @@
         "status": "polished",
         "focus": "data authority and visual proof",
         "notes": "Duration tightened; data remains on screen long enough for readability."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     },
     {
       "id": "s05",
       "scene": "Historical Context",
       "duration": 62,
-      "template": "historical-timeline.html",
+      "template": "broadcast-v2-timeline.html",
       "headline": "Why This Vote Exists",
       "summary": "The referendum is the result of decades of life-support pricing disputes, cargo tariff challenges, and settlement autonomy demands.",
       "purpose": "Explain causal history so the story feels real, not random.",
@@ -112,7 +116,8 @@
         "status": "polished",
         "focus": "cause-and-effect realism",
         "notes": "Makes the story feel earned instead of randomly invented."
-      }
+      },
+      "v2_rebuild_status": "rebuilt_with_broadcast_system_v2"
     },
     {
       "id": "s06",
@@ -256,5 +261,28 @@
     "subtitles_draft": "audio/subtitles_draft.srt",
     "voice_style": "calm international news anchor; premium, precise, credible",
     "final_loudness_target": "~ -14 LUFS integrated, true peak below -1.0 dBTP"
+  },
+  "broadcast_v2_rebuild": {
+    "rebuilt_scene_ids": [
+      "s01",
+      "s02",
+      "s03",
+      "s04",
+      "s05"
+    ],
+    "templates": {
+      "s01": "broadcast-v2-cold-open.html",
+      "s02": "broadcast-v2-anchor-studio.html",
+      "s03": "broadcast-v2-top-stories.html",
+      "s04": "broadcast-v2-mars-data.html",
+      "s05": "broadcast-v2-timeline.html"
+    },
+    "next_scene_ids": [
+      "s06",
+      "s07",
+      "s08",
+      "s09"
+    ],
+    "note": "First five pilot scenes now use reusable Broadcast System V2 components."
   }
 }

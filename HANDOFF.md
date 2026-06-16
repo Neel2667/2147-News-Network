@@ -267,3 +267,8 @@ User noted the BREAKING red label extended farther than the HEADLINES label. Fix
 ## Broadcast System V2 Extraction
 
 Approved core elements have been extracted into `static/broadcast-system.css` and `static/broadcast-components.js`. Showcase: `/static/broadcast-system-showcase.html`. Documentation: `docs/BROADCAST_SYSTEM_V2.md`. Next: rebuild V2 templates using these components only.
+
+
+## First Broadcast V2 Templates
+
+Built the first five full Broadcast V2 templates and updated pilot scenes s01-s05 to use them. See `reports/REPORT_2026-06-16_BROADCAST_V2_FIRST_TEMPLATES.md`. Next rebuild s06-s09: expert split, financial board, legal board, close.
