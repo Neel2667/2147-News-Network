@@ -122,3 +122,10 @@ The MVP is complete when a user can:
 
 - Fixed ticker text disappearing by removing off-screen padding and using duplicated visible ticker spans.
 - Added varied animations: bug shine, live pulse, story slide, OTS zoom, strap wipe, breaking slide, lower-third variations, data bar grow, source sweep.
+
+
+## Strap and Name Strap Layout Fix
+
+- Fixed small text overflow in headline/breaking straps.
+- Fixed name strap spacing so anchor/expert names remain visible.
+- Added safer ellipsis behavior and longer animation hold times.

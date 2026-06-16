@@ -242,3 +242,8 @@ User requested more polish: ticker overlapped label, name straps overflowed, and
 ## Ticker and Animation Variation Fix
 
 User said ticker text disappeared and animations were too similar. Updated `static/core-broadcast-elements.html`: ticker text now visible immediately in a protected ticker window, and animations vary by element type. See `reports/REPORT_2026-06-16_TICKER_AND_ANIMATION_VARIATION_FIX.md`.
+
+
+## Strap and Name Strap Layout Fix
+
+User reported strap small text overflowing and anchor names disappearing in name straps. Fixed `static/core-broadcast-elements.html` by reducing side column widths, adding overflow/ellipsis handling, reducing font sizes, and extending animation hold time. See `reports/REPORT_2026-06-16_STRAP_AND_NAMESTRAP_LAYOUT_FIX.md`.
