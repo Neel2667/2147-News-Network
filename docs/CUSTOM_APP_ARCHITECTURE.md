@@ -40,8 +40,9 @@ Dockerfile              Hugging Face custom deployment
 1. World Dashboard
 2. Event Analyzer
 3. Episode Builder
-4. Visual Preview
-5. Export Center
+4. Scene Timeline
+5. Visual Preview
+6. Export Center
 
 ## API Endpoints
 
@@ -52,6 +53,7 @@ GET  /api/events/{id}/analysis event causal analysis
 POST /api/episode/generate     episode draft generator
 GET  /api/templates            list visual templates
 POST /api/templates/preview    render template preview
+POST /api/scenes/preview       render selected timeline scene with controls
 POST /api/export               export current draft
 ```
 

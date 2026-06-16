@@ -152,3 +152,8 @@ The first premium UI templates are implemented and pushed. See `reports/REPORT_2
 ## Custom App Direction
 
 The user rejected a Gradio-first URL because they want a fully controlled custom app with all newsroom controls. The production direction is now FastAPI + custom HTML/CSS/JS. Read docs/CUSTOM_APP_ARCHITECTURE.md and prioritize main.py/static files over app.py.
+
+
+## Scene Timeline Editor
+
+The custom app now has a Scene Timeline panel and Template Control Panel. Users can edit scene order, duration, selected template, headline, summary, lower-third, ticker, and source label, then preview the selected scene. See reports/REPORT_2026-06-16_SCENE_TIMELINE_EDITOR.md.

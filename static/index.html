@@ -20,6 +20,7 @@
         <button class="nav-btn active" data-panel="dashboard">World Dashboard</button>
         <button class="nav-btn" data-panel="analyzer">Event Analyzer</button>
         <button class="nav-btn" data-panel="episode">Episode Builder</button>
+        <button class="nav-btn" data-panel="timeline">Scene Timeline</button>
         <button class="nav-btn" data-panel="preview">Visual Preview</button>
         <button class="nav-btn" data-panel="exports">Export Center</button>
       </nav>
@@ -83,6 +84,56 @@
           <div class="glass card"><h3>Headlines</h3><ul id="headlineOutput"></ul></div>
           <div class="glass card wide"><h3>Script</h3><pre id="scriptOutput"></pre></div>
           <div class="glass card wide"><h3>Scene Plan</h3><pre id="sceneOutput"></pre></div>
+        </div>
+      </section>
+
+      <section id="timeline" class="panel">
+        <div class="section-heading">
+          <p class="eyebrow">Production Timeline</p>
+          <h2>Scene Timeline Editor</h2>
+          <p>Edit scene order, duration, template selection, lower-thirds, tickers, and preview the selected scene with premium controls.</p>
+        </div>
+
+        <div class="timeline-layout">
+          <div class="glass card timeline-card">
+            <div class="timeline-header">
+              <h3>Episode Timeline</h3>
+              <div class="timeline-actions">
+                <button id="addSceneBtn" class="secondary-btn">Add Scene</button>
+                <button id="duplicateSceneBtn" class="secondary-btn">Duplicate</button>
+                <button id="deleteSceneBtn" class="danger-btn">Delete</button>
+              </div>
+            </div>
+            <div id="sceneTimeline" class="scene-timeline"></div>
+            <div class="timeline-total"><span>Total Runtime</span><strong id="totalRuntime">0:00</strong></div>
+          </div>
+
+          <div class="glass card control-card">
+            <h3>Template Control Panel</h3>
+            <div class="template-controls">
+              <label>Scene Name <input id="sceneNameInput" /></label>
+              <label>Duration Seconds <input id="sceneDurationInput" type="number" min="1" /></label>
+              <label>Template <select id="sceneTemplateInput"></select></label>
+              <label>Headline <input id="sceneHeadlineInput" /></label>
+              <label>Summary / Purpose <textarea id="sceneSummaryInput"></textarea></label>
+              <label>Lower-third Name <input id="lowerNameInput" value="ANAYA RAO" /></label>
+              <label>Lower-third Title <input id="lowerTitleInput" value="Senior Anchor • Earth-Orbit Media Ring" /></label>
+              <label>Ticker <textarea id="tickerInput">MARS TURNOUT PROJECTION RISES TO 91% • LUNAR OXYGEN-CREDIT STRIKE ENTERS NINTH DAY • EUROPA SIGNAL UNDER REVIEW</textarea></label>
+              <label>Source Label <input id="sourceInput" value="Mars Civic Council Election Board" /></label>
+              <div class="control-buttons">
+                <button id="saveSceneBtn" class="primary-btn">Apply Scene Changes</button>
+                <button id="previewSceneBtn" class="secondary-btn">Preview Selected Scene</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scene-preview-wrap">
+          <div class="scene-preview-head">
+            <h3>Selected Scene Preview</h3>
+            <span id="selectedSceneLabel">No scene selected</span>
+          </div>
+          <div id="scenePreviewStage" class="template-stage"></div>
         </div>
       </section>
 

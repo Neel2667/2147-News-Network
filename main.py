@@ -45,6 +45,15 @@ class TemplatePreviewRequest(BaseModel):
     template_name: str
     headline: str = "Mars Enters Final Voting Cycle"
     summary: str = "A historic referendum could reshape political authority across Earth, Mars, Luna, and the Outer Belt."
+    ticker: str = "MARS TURNOUT PROJECTION RISES TO 91% • LUNAR OXYGEN-CREDIT STRIKE ENTERS NINTH DAY • EUROPA SIGNAL UNDER REVIEW"
+    lower_name: str = "ANAYA RAO"
+    lower_title: str = "Senior Anchor • Earth-Orbit Media Ring"
+    source: str = "Mars Civic Council Election Board"
+
+
+class ScenePreviewRequest(BaseModel):
+    scene: dict[str, Any]
+    controls: dict[str, Any] = {}
 
 
 class ExportRequest(BaseModel):
@@ -249,8 +258,31 @@ def api_template_preview(req: TemplatePreviewRequest) -> HTMLResponse:
         req.template_name,
         headline=req.headline,
         summary=req.summary,
-        ticker="MARS TURNOUT PROJECTION RISES TO 91% • LUNAR OXYGEN-CREDIT STRIKE ENTERS NINTH DAY • EUROPA SIGNAL UNDER REVIEW",
-        headline1="Mars Enters Final Voting Cycle",
+        ticker=req.ticker,
+        lower_name=req.lower_name,
+        lower_title=req.lower_title,
+        source=req.source,
+        headline1=req.headline,
+        headline2="CEO Jiang Lau Warns of Energy Contract Instability",
+        headline3="Synthetic Rights Tribunal Receives AI Voting Petition",
+    )
+    return HTMLResponse(html)
+
+
+@app.post("/api/scenes/preview")
+def api_scene_preview(req: ScenePreviewRequest) -> HTMLResponse:
+    scene = req.scene or {}
+    controls = req.controls or {}
+    template_name = scene.get("template") or controls.get("template_name") or "premium-base.html"
+    html = render_template(
+        template_name,
+        headline=controls.get("headline") or scene.get("scene") or "Mars Enters Final Voting Cycle",
+        summary=controls.get("summary") or scene.get("purpose") or "A developing story from the 2147 causal timeline.",
+        ticker=controls.get("ticker") or "MARS TURNOUT PROJECTION RISES TO 91% • LUNAR OXYGEN-CREDIT STRIKE ENTERS NINTH DAY • EUROPA SIGNAL UNDER REVIEW",
+        lower_name=controls.get("lower_name") or "ANAYA RAO",
+        lower_title=controls.get("lower_title") or "Senior Anchor • Earth-Orbit Media Ring",
+        source=controls.get("source") or "Mars Civic Council Election Board",
+        headline1=controls.get("headline") or "Mars Enters Final Voting Cycle",
         headline2="CEO Jiang Lau Warns of Energy Contract Instability",
         headline3="Synthetic Rights Tribunal Receives AI Voting Petition",
     )

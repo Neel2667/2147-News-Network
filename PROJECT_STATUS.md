@@ -30,6 +30,7 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
 - Added premium UI design system emphasizing Apple-inspired polish, minimalism, glass panels, typography, and smooth motion.
 - Built premium UI template system with opening intro, anchor desk, headline cards, Mars dashboard, quote card, closing transmission, template renderer, and preview support.
 - Started custom FastAPI app to replace Gradio-first workflow, with a premium custom UI and API endpoints.
+- Built scene timeline editor and template control panel for editing scene order, duration, templates, lower-thirds, tickers, source labels, and previews.
 
 
 ## In Progress
@@ -58,7 +59,8 @@ A GitHub token was shared in chat by the user. It must **not** be committed, cop
    - scene template selection
    - export JSON/text files
 4. Connect app.py to data/events.json and generate stories from event ripples.
-5. Add remaining premium visual templates: breaking news, financial desk, legal desk, science desk, Earth map, Lunar report.
+5. Add episode save/load support for edited scene timelines.
+6. Add remaining premium visual templates: breaking news, financial desk, legal desk, science desk, Earth map, Lunar report.
    - anchor desk
    - Mars dashboard
    - breaking news alert
