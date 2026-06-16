@@ -342,3 +342,8 @@ User still could not see anchor/footage in HTML/CSS preview. Created `static/stu
 ## Approved Studio Template Rebuild
 
 User approved the direct rendered Studio + Video Wall image. Converted that composition into `templates/broadcast-v2-studio-video-wall.html` with visible CSS anchor and footage wall. Direct image remains as reference.
+
+
+## Studio Wall Variant Templates
+
+Built variants: `broadcast-v2-studio-wall-footage.html`, `broadcast-v2-studio-wall-map.html`, `broadcast-v2-studio-wall-data.html`, `broadcast-v2-studio-wall-quote.html`, `broadcast-v2-studio-wall-archive.html`. Next create approval page for all variants.

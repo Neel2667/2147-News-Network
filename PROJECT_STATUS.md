@@ -252,3 +252,9 @@ The MVP is complete when a user can:
 - User approved direct Studio + Video Wall composition.
 - Rebuilt `broadcast-v2-studio-video-wall.html` to match approved image with visible anchor and footage wall.
 - Regenerated pilot approval page.
+
+
+## Studio Wall Variant Templates
+
+- Built Studio Wall variants: footage, map, data, quote, archive.
+- These extend the approved Studio + Video Wall direction into reusable story formats.

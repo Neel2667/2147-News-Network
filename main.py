@@ -376,6 +376,10 @@ def template_default_context() -> dict[str, str]:
         "lower_role": "Anchor",
         "lower_location": "Studio",
         "ticker_label": "Headlines",
+
+        "archive_label": "Archive Feed",
+        "archive_year": "2136",
+        "archive_metric_label": "Timeline Archive",
     }
 
 
