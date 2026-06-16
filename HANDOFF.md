@@ -297,3 +297,8 @@ User reported elements cropping due to limited space. Compacted V2 templates and
 ## Asset Integration Review Page
 
 Created `static/asset-integration-review.html` for user approval. It shows how stock footage, maps, archive footage, field reports, and info cards will be integrated with the V2 broadcast graphics. No real stock assets yet; only procedural placeholders.
+
+
+## Asset Final Look Options
+
+User said the asset integration page looked like a wireframe. Created `static/asset-final-look-options.html` with more finished visual directions for approval: Clean Global News, Studio Video Wall, Apple-Clean Premium Report, and Data-Heavy Bloomberg Style.
