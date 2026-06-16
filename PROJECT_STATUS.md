@@ -258,3 +258,10 @@ The MVP is complete when a user can:
 
 - Built Studio Wall variants: footage, map, data, quote, archive.
 - These extend the approved Studio + Video Wall direction into reusable story formats.
+
+
+## Studio Wall Variants Approval Page
+
+- Created `static/studio-wall-variants-approval.html`.
+- Added generator script `scripts/build_studio_wall_variants_approval.py`.
+- Page shows footage, map, data, quote, and archive variants for approval.

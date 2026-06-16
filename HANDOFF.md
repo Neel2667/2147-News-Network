@@ -347,3 +347,8 @@ User approved the direct rendered Studio + Video Wall image. Converted that comp
 ## Studio Wall Variant Templates
 
 Built variants: `broadcast-v2-studio-wall-footage.html`, `broadcast-v2-studio-wall-map.html`, `broadcast-v2-studio-wall-data.html`, `broadcast-v2-studio-wall-quote.html`, `broadcast-v2-studio-wall-archive.html`. Next create approval page for all variants.
+
+
+## Studio Wall Variants Approval Page
+
+Created `/static/studio-wall-variants-approval.html` with all five Studio Wall variants. Generator: `scripts/build_studio_wall_variants_approval.py`. User should approve variants before pilot scenes are updated.
