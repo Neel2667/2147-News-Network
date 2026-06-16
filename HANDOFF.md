@@ -377,3 +377,8 @@ User said `outputs/pilot-exact-render/index.html` was not loading. Created `/sta
 ## Final Pilot Render Package
 
 Created final render package at `outputs/final-pilot-render-package/`. It contains 1920x1080 HTML scene pages, manifest, README, and ZIP. Use this for OBS/browser recording. Generator: `scripts/build_final_pilot_render_package.py`.
+
+
+## Final Recording Guide and Auto Renderer
+
+Added `FINAL_RECORDING_GUIDE.md`, `FINAL_EDIT_ASSEMBLY.md`, `FINAL_UPLOAD_PACKAGE.md` under pilot episode. Added optional Playwright/FFmpeg renderer at `scripts/render/render_html_scenes.py` with `requirements-render.txt`. Manual OBS remains recommended for first pilot.

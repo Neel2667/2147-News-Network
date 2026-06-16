@@ -300,3 +300,10 @@ The MVP is complete when a user can:
 - Created `outputs/final-pilot-render-package/` from approved exact HTML scenes.
 - Includes 1920x1080 scene pages, manifest, README, and ZIP package.
 - Generator: `scripts/build_final_pilot_render_package.py`.
+
+
+## Final Recording Guide and Auto Renderer
+
+- Added final recording, edit assembly, and upload package guides.
+- Added optional Playwright/FFmpeg renderer in `scripts/render/render_html_scenes.py`.
+- Added `requirements-render.txt`.
