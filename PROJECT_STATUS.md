@@ -197,3 +197,11 @@ The MVP is complete when a user can:
 ## Asset Final Look Options
 
 - Created `static/asset-final-look-options.html` with four finished-looking directions for footage/maps/info integration: clean global news, studio video wall, Apple-clean premium report, and data-heavy Bloomberg style.
+
+
+## Real Footage Final Look Options
+
+- Downloaded NASA/public-domain Earth observations sample footage.
+- Created `static/asset-final-look-options.html` with more finished options.
+- Generated `outputs/final-look-options/2147-real-footage-options.mp4` showing four final-look directions with real sample footage.
+- Added asset license log and manifest.

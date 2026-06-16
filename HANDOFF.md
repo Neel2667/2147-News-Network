@@ -302,3 +302,8 @@ Created `static/asset-integration-review.html` for user approval. It shows how s
 ## Asset Final Look Options
 
 User said the asset integration page looked like a wireframe. Created `static/asset-final-look-options.html` with more finished visual directions for approval: Clean Global News, Studio Video Wall, Apple-Clean Premium Report, and Data-Heavy Bloomberg Style.
+
+
+## Real Footage Final Look Options
+
+User requested actual downloaded sample video, not wireframes. Downloaded NASA/public-domain sample footage to `assets/footage/nasa/earth-observations-sample.mp4`, created `static/asset-final-look-options.html`, and generated `outputs/final-look-options/2147-real-footage-options.mp4`. See `reports/REPORT_2026-06-16_REAL_FOOTAGE_OPTIONS_DEMO.md`.

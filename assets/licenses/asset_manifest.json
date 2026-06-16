@@ -1,0 +1,14 @@
+[
+  {
+    "id": "asset_nasa_earth_observations_sample",
+    "type": "stock_footage_public_domain",
+    "title": "NASA Crew Earth Observations sample",
+    "file_path": "assets/footage/nasa/earth-observations-sample.mp4",
+    "source": "NASA / Internet Archive",
+    "source_url": "https://archive.org/download/NASA-Ultra-High-Definition/4K-Crew-Earth-Observations_DEC-2015.mp4",
+    "license": "Public domain NASA source material via Internet Archive item",
+    "ai_generated": false,
+    "attribution_required": false,
+    "usage": "Demo options for final stock footage integration look"
+  }
+]
