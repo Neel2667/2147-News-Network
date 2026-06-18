@@ -95,5 +95,6 @@
     }
   ],
   "approved_review_page": "static/pilot-exact-static-review.html",
+  "source": "APPROVED_EXACT_STATIC_REVIEW",
   "recording_method": "Open each scene HTML and record with OBS/browser capture at 1920x1080 for duration_seconds."
 }
